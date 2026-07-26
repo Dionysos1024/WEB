@@ -32,11 +32,12 @@ body {
     margin: auto;
     display: grid;
     grid-template-columns: 200px calc(100vw - 200px);
-    grid-template-rows: calc(400px + 200px + 250px);
+    grid-template-rows: calc(400px + 150px + 250px);
 }
 
+
 header {
-    height: calc(400px + 200px + 250px);
+    height: calc(400px + 150px + 250px);
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
@@ -105,7 +106,6 @@ header nav .main-menu li a:hover {
 
 
 
-
 header nav.sub {
     display: none;
     position: absolute;
@@ -146,13 +146,6 @@ header nav.sub .sub-menu > li a:hover {
 
 
 
-header .spot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    column-gap: 20px;
-}
 
 header .spot a {
     position: relative;
@@ -201,8 +194,7 @@ header .spot a:not(:first-of-type)::before {
 
 
 
-
-.banner {
+/* .banner {
     height: 200px;
     display: flex;
     justify-content: space-between;
@@ -221,7 +213,8 @@ header .spot a:not(:first-of-type)::before {
 
 .banner span { font-size: 14px; }
 
-.banner p { font-size: 18px; margin: 20px 0; }
+.banner p { font-size: 18px; margin: 20px 0; } */
+
 
 
 
@@ -229,8 +222,11 @@ header .spot a:not(:first-of-type)::before {
 
 
 .tab {
-    height: 250px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 40px;
     padding: 20px;
+    height: 250px;
 }
 
 .tab-menu {
@@ -245,23 +241,16 @@ header .spot a:not(:first-of-type)::before {
     height: calc(40px - 2px);
     line-height: calc(40px - 2px);
     text-align: center;
+    background-color: var(--main-color);
 }
 
 .tab-menu .menu-item a {
     display: inline-block;
     width: 100%;
     height: 100%;
-}
-
-.tab-menu .menu-item:hover,
-.tab-menu .menu-item.active {
-    background-color: var(--main-color);
-}
-
-.tab-menu .menu-item:hover a,
-.tab-menu .menu-item.active a {
     color: white;
 }
+
 
 
 
@@ -309,12 +298,11 @@ header .spot a:not(:first-of-type)::before {
 
 
 
-#content-gallery { display: none; }
 
 .gallery {
     width: 100%;
     height: 160px;
-    display: flex;
+    display: flex; /* 늘 그냥 지나치다가 갑자기 왜 눈에 보이기 시작한거지? 왜 속성을 주면 갑자기 아래 자식요소 이미지가 가로배치가 되지? 의문.... */
     justify-content: center;
     align-items: center;
     gap: calc( (100% - 300px) / 4);
@@ -331,21 +319,13 @@ header .spot a:not(:first-of-type)::before {
 
 
 
-
-
-.link {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
+.link { height: 150px; }
 
 .link nav {
     padding: 20px;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     row-gap: 20px;
 }
@@ -370,23 +350,13 @@ header .spot a:not(:first-of-type)::before {
 
 
 
-
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-footer .footer-logo a img {
-    width: 200px;
-    height: auto;
-    object-fit: contain;
-    filter: grayscale(100%);
-}
-
-
-
-
+footer .empty { width: 200px; }
 
 
 
@@ -394,12 +364,10 @@ footer .inner {
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
+    flex-direction: column;
     padding: 0 20px;
 }
-
-
 
 
 
@@ -426,21 +394,45 @@ footer .fnb a:hover {
 
 footer .fnb a:not(:first-of-type)::before {
     position: absolute;
+    content: "";
+    background-color: var(--text-color);
+    border: 1px solid 2px;
     top: 2px;
     left: -20px;
-    content: "";
     display: inline-block;
     width: 2px;
     height: 18px;
-    border: 1px solid 2px;
-    background-color: var(--text-color);
 }
 
 
 
 
 
+
+
 footer .copy { padding: 0 30px; }
+
+
+
+
+
+
+
+footer .family {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+footer .family select {
+    border-radius: 5px;
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    cursor: pointer;
+    padding: 5px 10px;
+}
 
 
 

@@ -9,10 +9,9 @@ a { text-decoration: none; color: var(--text-color); }
     --text-color: #333333;
     --container-width: 100vw;
     --container-height: 100vh;
-    --slide-width: calc(100vw - 200px);
-    --slide-height: 400px;
+    --slide-width: calc(100vw - 600px);
+    --slide-height: calc(100vh - 120px);
 }
-
 body {
     background-color: var(--back-color);
     color: var(--text-color);
@@ -31,12 +30,12 @@ body {
     width: var(--container-width);
     margin: auto;
     display: grid;
-    grid-template-columns: 200px calc(100vw - 200px);
-    grid-template-rows: calc(400px + 200px + 250px);
+    grid-template-columns: 200px 400px calc(100vw - 600px);
+    grid-template-rows: calc(100vh - 120px);
 }
 
 header {
-    height: calc(400px + 200px + 250px);
+    width: 100%;
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
@@ -47,7 +46,9 @@ header {
 }
 
 #contents {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: hidden;
 }
 
@@ -68,10 +69,6 @@ header .logo a img {
 
 
 
-header .menu {
-    position: relative;
-}
-
 header nav {
     position: relative;
     z-index: 10;
@@ -85,18 +82,16 @@ header nav .main-menu {
 }
 
 header nav .main-menu li {
-    width: 150px;
+    width: 200px;
     line-height: 50px;
     text-align: center;
 }
-
 header nav .main-menu li a {
     color: white;
     display: inline-block;
     width: 100%;
     height: 100%;
 }
-
 header nav .main-menu li a:hover {
     background-color: #333333;
 }
@@ -105,39 +100,17 @@ header nav .main-menu li a:hover {
 
 
 
+header nav .sub-menu { display: none; }
 
-header nav.sub {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: calc(100vw - 200px);
+header nav .sub-menu > li {
+    background-color: white;
 }
 
-header nav.sub .inner {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 0 40px;
-}
-
-header nav.sub .sub-menu > li {
-    width: 150px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    margin: 0 2vw;
-}
-
-header nav.sub .sub-menu > li a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
+header nav .sub-menu > li a {
     color: var(--main-color);
 }
 
-header nav.sub .sub-menu > li a:hover {
+header nav .sub-menu > li a:hover {
     background-color: var(--main-color);
     color: white;
 }
@@ -178,18 +151,12 @@ header .spot a:not(:first-of-type)::before {
 #slides {
     width: var(--slide-width);
     height: var(--slide-height);
-    overflow: hidden;
+    overflow: hidden; /* 어? 시험지랑 같은데 사이즈.... 100vh - 120px 맞는데?? var 사이즈 설정 그리됐는데? 왜 깔끔하게 안짤리지? 흐으음... 뭐지!? */
 }
 
 .slide-container {
     position: relative;
-    display: flex;
-}
-
-.slide-container .slide {
-    position: absolute;
-    width: var(--slide-width);
-    height: var(--slide-height);
+    display: flex; /* 어? 여기서 속성 주니 갑자기 깔끔하게 딱 됐네? 으으음... 뭔 원리였을까? 으으으... 궁금하다아! */
 }
 
 .slide-container .slide img {
@@ -202,36 +169,32 @@ header .spot a:not(:first-of-type)::before {
 
 
 
+
 .banner {
-    height: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px;
     background-color: var(--sub-color);
 }
 
 .banner .inner {
     display: flex;
     align-items: center;
-    column-gap: 40px;
+    column-gap: 10px;
 }
 
-.banner h1 { font-size: 28px; }
+.banner h1 { font-size: 20px; }
 
-.banner span { font-size: 14px; }
+.banner span { font-size: 12px; }
 
-.banner p { font-size: 18px; margin: 20px 0; }
-
-
+.banner p { font-size: 12px; margin: 0; }
 
 
 
 
-.tab {
-    height: 250px;
-    padding: 20px;
-}
+
+
 
 .tab-menu {
     display: flex;
@@ -245,23 +208,16 @@ header .spot a:not(:first-of-type)::before {
     height: calc(40px - 2px);
     line-height: calc(40px - 2px);
     text-align: center;
+    background-color: var(--main-color);
 }
 
 .tab-menu .menu-item a {
     display: inline-block;
     width: 100%;
     height: 100%;
-}
-
-.tab-menu .menu-item:hover,
-.tab-menu .menu-item.active {
-    background-color: var(--main-color);
-}
-
-.tab-menu .menu-item:hover a,
-.tab-menu .menu-item.active a {
     color: white;
 }
+
 
 
 
@@ -293,11 +249,6 @@ header .spot a:not(:first-of-type)::before {
     filter: brightness(90%);
 }
 
-.tab-content .content-item table td {
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
 
 
 
@@ -309,45 +260,33 @@ header .spot a:not(:first-of-type)::before {
 
 
 
-#content-gallery { display: none; }
-
 .gallery {
     width: 100%;
     height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: calc( (100% - 300px) / 4);
+    gap: calc( (100% - 300px) / 4);  /* 이미지가 2개인데, 왜 4등분 으로 한걸까? 흐으음.... 딱히 상관이없나? 뭔가 뒤에서 정리되려나? */
 }
 
 .gallery .item a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* 정리가 되긴한데... 뭔가 좀... 3으로 나누니까 좀더 이쁜데... 흐으음... */
 }
 
 
 
 
 
-
-
-.link {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
 
 .link nav {
-    padding: 20px;
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .link nav a {
@@ -364,6 +303,9 @@ header .spot a:not(:first-of-type)::before {
     transform: translateY(-10px);
     transition: all 0.3s;
 }
+/* 앞에서 계속 있다가 없으니까 뭔가 허전해서 그냥 냅다 넣어봄... 쓸데없는건 왜 기억이 나서... 이게 또 돼긴하네;; */
+
+
 
 
 
@@ -377,14 +319,15 @@ footer {
     align-items: center;
 }
 
+footer .footer-logo {
+    filter: grayscale(100%);
+}
+
 footer .footer-logo a img {
     width: 200px;
     height: auto;
     object-fit: contain;
-    filter: grayscale(100%);
 }
-
-
 
 
 
@@ -396,9 +339,8 @@ footer .inner {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0 20px;
+    padding: 0 40px;
 }
-
 
 
 
@@ -436,11 +378,7 @@ footer .fnb a:not(:first-of-type)::before {
     background-color: var(--text-color);
 }
 
-
-
-
-
-footer .copy { padding: 0 30px; }
+footer .copy { padding: 0 20px; }
 
 
 
@@ -486,6 +424,8 @@ footer .copy { padding: 0 30px; }
     font-size: 16px;
     color: var(--text-color);
 }
+
+
 
 #modal .close {
     background-color: var(--main-color);

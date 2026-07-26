@@ -24,22 +24,6 @@ $(function() {
 
 
 
-
-    $("#btn-notice").on("click", function() {
-        $("#content-notice").show()
-        $("#content-gallery").hide()
-        $(".menu-item").removeClass("active")
-        $(this).parent().addClass("active")
-    })
-    $("#btn-gallery").on("click", function() {
-        $("#content-notice").hide()
-        $("#content-gallery").show()
-        $(".menu-item").removeClass("active")
-        $(this).parent().addClass("active")
-    })
-
-
-
     $(".btn-modal").on("click", function() {
         $("#modal").show();
     });
@@ -47,5 +31,5 @@ $(function() {
     $(".close").on("click", function() {
         $("#modal").hide();
     });
-
+    
 })

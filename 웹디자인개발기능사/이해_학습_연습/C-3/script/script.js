@@ -11,14 +11,17 @@ $(function() {
     const speed = 500;
     const time = 2000;
     const $slide = $(".slide");
+    const $container = $(".slide-container")
+    const size = $slide.width()
     const count = $(".slide").length;
-    $slide.not(":first").hide()
+    
 
     setInterval(function() {
-        index = (index + 1) % count
-        $slide.fadeOut(speed)
-        $slide.eq(index).fadeIn(speed)
-        $slide.css("z-index", "-1")
+        $container.animate({
+            left: -size
+        }, speed, function() {
+            $container
+        })
     }, time);
 
 
