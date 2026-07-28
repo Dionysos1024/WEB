@@ -12,19 +12,19 @@ $(function() {
 
     const speed = 500;
     const time = 3000;
-    const $slide = $(".slide");
-    const $container = $(".slide-container");
-    const size = $slide.height();
+    const $slide = $(".slide")
+    const $container = $(".slide-container")
+    const size = $slide.width();
     const count = $slide.length;
-    $container.height(size * count)
+    $container.width(size * count)
 
     setInterval(function() {
         $container.animate({
-            top: -size
+            left: -size
         }, speed, function() {
-            $container.css('top','0')
+            $container.css('left','0')
             $container.append($(".slide").first());
-        });
+        } );
     }, time);
 
 
@@ -37,7 +37,4 @@ $(function() {
     $(".close").on("click", function() {
         $("#modal").hide();
     });
-
-
-
 })
