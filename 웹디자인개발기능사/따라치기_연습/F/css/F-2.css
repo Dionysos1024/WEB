@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 1340px;
+    --slide-width: 100vw;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+
+
+
+
+.container {
+    position: relative;
+    width: var(--container-width);
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+section { width: 100%; }
+
+footer {
+    width: 100%;
+    height: 120px;
+}
+
+
+
+
+
+
+header .logo a img {
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+header nav {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav .main-menu li a {
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+header nav .main-menu li a:hover {
+    background-color: #333333;
+}
+
+
+
+
+
+
+header nav .sub-menu { /* display: none; */ }
+
+header nav .sub-menu > li {
+    background-color: white;
+}
+
+header nav .sub-menu > li a {
+    color: var(--main-color);
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+
+
+
+
+#slides {
+    width: var(--slide-width);
+    height: 350px;
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    position: absolute;
+    width: var(--slide-width);
+    height: 350px;
+}
+
+.slide-container .slide img {
+    width: var(--slide-width);
+    height: 100%;
+}
+
+
+
+
+
+
+.link {
+    position: absolute;
+    top: -100px; /* ?????????? 누가 부모라서 위치가 여기 잡힌거지;; 어디지;; 못찾겠는데;; header nav??? slide-container??? container????;; */
+    width: 100px;
+}
+
+.link nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--sub-color);
+}
+
+
+
+
+
+.banner {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--sub-color);
+}
+
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.banner h1 { font-size: 28px; }
+
+.banner span { font-size: 14px; }
+
+.banner p { font-size: 18px; margin: 20px 0; }
+
+
+
+
+
+
+
