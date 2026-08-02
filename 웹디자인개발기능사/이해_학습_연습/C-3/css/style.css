@@ -188,8 +188,6 @@ header nav .sub-menu > li a:hover {
     filter: brightness(90%);
 }
 
-#content-notice {}
-
 .btn-modal { cursor: pointer;}
 
 #content-gallery { display: none;}
