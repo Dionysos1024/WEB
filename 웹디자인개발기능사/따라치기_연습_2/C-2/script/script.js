@@ -1,10 +1,10 @@
 
 $(function() {
 
-    $(".main-menu li").on("mouseover", function(){
+    $(".main-menu li").on("mouseover", function() {
         $(this).find(".sub-menu").stop().slideDown()
     })
-    $(".main-menu li").on("mouseout", function(){
+    $(".main-menu li").on("mouseout", function() {
         $(this).find(".sub-menu").stop().slideUp()
     })
 
@@ -26,26 +26,10 @@ $(function() {
 
 
 
-
-    $("#btn-notice").on("click", function() {
-        $("#content-notice").show()
-        $("#content-gallery").hide()
-        $(".menu-item").removeClass("active")
-        $(this).farent().addClass("active")
-    })
-    $("#btn-gallery").on("click", function() {
-        $("#content-notice").hide()
-        $("#content-gallery").show()
-        $(".menu-item").removeClass("active")
-        $(this).farent().addClass("active")
-    })
-
-
-
     $(".btn-modal").on("click", function() {
         $("#modal").show();
     });
-
+    
     $(".close").on("click", function() {
         $("#modal").hide();
     });

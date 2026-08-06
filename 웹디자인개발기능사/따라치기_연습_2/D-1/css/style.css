@@ -8,8 +8,9 @@ a { text-decoration: none; color: var(--text-color); }
     --sub-color: #eeeeee;
     --back-color: #ffffff;
     --text-color: #333333;
-    --slide-width: 800px;
-    --slide-height: 350px;
+    --slide-width: 100%;
+    --slide-height: 400px;
+    --container-width: 100%;
 }
 
 body {
@@ -17,42 +18,36 @@ body {
     color: var(--text-color);
 }
 
-
-
-
-
-
-
 .container {
-    width: 800px;
-    display: flex;
+    position: relative;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: calc(400px + 200px + 250px);
+    width: var(--container-width);
+    margin: auto;
+
 }
 
-section {
-    width: 100%;
-    display: flex;
+#contents {
+    position: relative;
+    overflow: hidden;
 }
 
-#slides { height: var(--slide-height); }
-
-#contents { height: 200px; }
-
-footer {
-    width: 100%;
-    height: 100px;
-}
+footer { height: 100px; }
 
 header {
-    width: 200px;
-    height: calc(350px + 200px + 100px);
-    background-color: var(--main-color);
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: start;
     align-items: center;
-    row-gap: 50px;
+    flex-direction: column;
+    height: calc(400px + 200px + 250px);
     padding: 0 20px;
+    background-color: var(--main-color);
+    row-gap: 50px;
 }
+
+
+
 
 
 
@@ -65,6 +60,10 @@ header .logo a img {
     height: auto;
     object-fit: contain;
 }
+
+
+
+
 
 
 
@@ -82,8 +81,7 @@ header nav .main-menu {
 }
 
 header nav .main-menu li {
-    width: 150px;
-    height: auto;
+    width: 200px;
     line-height: 50px;
     text-align: center;
 }
@@ -98,6 +96,7 @@ header nav .main-menu li a {
 header nav .main-menu li a:hover {
     background-color: #333333;
 }
+
 
 
 
@@ -127,6 +126,42 @@ header nav .sub-menu > li a:hover {
 
 
 
+
+
+
+header .spot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    column-gap: 20px;
+}
+
+header .spot a {
+    position: relative;
+    color: var(--back-color);
+}
+
+header .spot a:not(:first-of-type)::before {
+    position: absolute;
+    top: 2px;
+    left: -10px;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 16px;
+    background-color: var(--back-color);
+}
+
+
+
+
+
+
+
+
+
+
 #slides {
     width: var(--slide-width);
     height: var(--slide-height);
@@ -136,10 +171,10 @@ header nav .sub-menu > li a:hover {
 .slide-container {
     position: relative;
     display: flex;
+    flex-direction: column;
 }
 
 .slide-container .slide {
-    position: absolute;
     width: var(--slide-width);
     height: var(--slide-height);
 }
@@ -155,19 +190,46 @@ header nav .sub-menu > li a:hover {
 
 
 
-#contents {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px;
-    column-gap: 10px;
+
+
+
+
+
+.banner {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--sub-color);
 }
 
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.banner h1 { font-size: 28px; }
+
+.banner p { font-size: 18px; margin: 20px 0; }
+
+.banner span { font-size: 14px; }
 
 
 
 
 
-.tab { height: 200px; }
+
+
+
+
+
+
+.tab {
+    height: 250px;
+    padding: 20px;
+}
 
 .tab-menu {
     display: flex;
@@ -206,6 +268,8 @@ header nav .sub-menu > li a:hover {
 
 
 
+
+
 .tab-content {
     position: relative;
     top: -2px;
@@ -213,11 +277,11 @@ header nav .sub-menu > li a:hover {
 
 .tab-content .content-item ul li a {
     display: flex;
-    height: 40px;
+    height: 40px; /* 높이를 설정했는데, 왜 가로 스크롤이 사라지는거지??? 잉??? 이따가 살펴봐야함!! */
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    font-size: 12px;
+
 }
 
 .tab-content .content-item ul li:nth-of-type(odd) {
@@ -231,6 +295,8 @@ header nav .sub-menu > li a:hover {
 .tab-content .content-item ul li:hover {
     filter: brightness(90%);
 }
+
+
 
 
 
@@ -251,33 +317,58 @@ header nav .sub-menu > li a:hover {
     align-items: center;
 }
 
-
-
-
-
-
-
-
-.banner { height: 200px; }
-
-.banner img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
 
-.link { height: 200px; }
 
-.link img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
+
+
+.link {
+    position: absolute; /* 부모가 .slide-container 일까? 아니면 .container 일까? 둘다 딱 컨텐츠 상단 위치라... 흐으음.... */
+    top: 0;
+    right: 0;
+    z-index: 10;
+    /* header nav 에서도 z-index 가 10 인데, 다른 위치라서 같은 수치의 z-index 속성은 상관이없는건가 보네?
+    위치에따라 값이 같아도 괜찮은걸로? ㅇㅋㅇㅋ */
 }
+
+.link nav {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    /* 슬라이드 위에 겹치게 자리를 잡아야하는데, 왜 슬라이드 와 나누어져서 자리한거지? z-index 는 겹침에서 위로 가게 만들어 주는거 아닌가?
+    그럼 위치가 슬라이드 우측 상단 고정이고, 슬라이드 를 밀어내고 공간을 차지하는게 아닌, 이미지 위에 자리잡아야할텐데?? 뒤에서 뭔가 변화가 있으려나?? */
+}
+
+.link nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sub-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.link nav a:hover {
+    transform: rotateY(-10px);
+    transition: all 0.3s;
+}
+
+/* 또 내가 뭔가를 놓친거구나....? 선생님꺼는 이쁘게 겹쳐서 위치 잘 잡혀있는데... 또 내가 뭘 빼먹었지? ㅠ ㅠ 뭐지...? 똑같은데?? 어휴... */
+
+
 
 
 
@@ -294,46 +385,12 @@ footer {
 
 
 
-
-footer .footer-logo {
-    padding: 0 20px;
-    filter: grayscale(100%);
-}
-
 footer .footer-logo a img {
     width: 200px;
     height: auto;
     object-fit: contain;
+    filter: grayscale(100%);
 }
-
-
-
-
-
-footer .inner {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-
-
-
-
-footer .fnb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 40px;
-}
-
-footer .fnb a:hover {
-    color: var(--main-color);
-    font-weight: bold;
-}
-
 
 
 
@@ -344,54 +401,70 @@ footer .copy { text-align: center; }
 
 
 
+footer .sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+footer .sns a img {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
 
 
 
 
 #modal {
     position: fixed;
-    z-index: 100;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: none;
+    z-index: 100;
     background-color: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 #modal .inner {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
 }
 
 #modal .card {
-    width: 400px;
-    padding: 20px;
-    background-color: white;
     text-align: center;
-    border-radius: 10px;
+    width: 400px;
+    background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 #modal .card h1 {
-    color: var(--main-color);
-    font-size: 24px;
     margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
 }
 
 #modal .card p {
-    font-size: 16px;
     margin-bottom: 20px;
+    font-size: 16px;
     color: var(--text-color);
 }
 
 #modal .close {
+    border: none;
     background-color: var(--main-color);
     color: white;
-    border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;

@@ -24,7 +24,7 @@ body {
 
 
 .container {
-    width: 800px;
+    width: 1000px;
     display: flex;
 }
 
@@ -45,14 +45,15 @@ footer {
 header {
     width: 200px;
     height: calc(350px + 200px + 100px);
-    background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: var(--main-color);
     row-gap: 50px;
     padding: 0 20px;
 }
+
 
 
 
@@ -65,6 +66,9 @@ header .logo a img {
     height: auto;
     object-fit: contain;
 }
+
+
+
 
 
 
@@ -155,6 +159,7 @@ header nav .sub-menu > li a:hover {
 
 
 
+
 #contents {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -167,7 +172,6 @@ header nav .sub-menu > li a:hover {
 
 
 
-.tab { height: 200px; }
 
 .tab-menu {
     display: flex;
@@ -181,24 +185,15 @@ header nav .sub-menu > li a:hover {
     height: 40px;
     line-height: 40px;
     text-align: center;
+    background-color: var(--main-color);
 }
 
 .tab-menu .menu-item a {
     display: inline-block;
     width: 100%;
     height: 100%;
-}
-
-.tab-menu .menu-item:hover,
-.tab-menu .menu-item.active {
-    background-color: var(--main-color);
-}
-
-.tab-menu .menu-item:hover a,
-.tab-menu .menu-item.active a {
     color: white;
 }
-
 
 
 
@@ -235,13 +230,14 @@ header nav .sub-menu > li a:hover {
 
 
 
+
+
 .btn-modal { cursor: pointer; }
 
 
 
 
 
-#content-gallery { display: none; }
 
 .gallery {
     width: 100%;
@@ -249,8 +245,8 @@ header nav .sub-menu > li a:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    /* gap: calc( (100% -300px) / 4); */
 }
-
 
 
 
@@ -270,17 +266,6 @@ header nav .sub-menu > li a:hover {
 
 
 
-.link { height: 200px; }
-
-.link img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: contain;
-}
-
-
-
 
 
 
@@ -294,25 +279,17 @@ footer {
 
 
 
-
-footer .footer-logo {
-    padding: 0 20px;
-    filter: grayscale(100%);
+footer .copy {
+    width: 100%;
+    text-align: center;
 }
-
-footer .footer-logo a img {
-    width: 200px;
-    height: auto;
-    object-fit: contain;
-}
-
 
 
 
 
 footer .inner {
+    width: 200px;
     height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -322,69 +299,77 @@ footer .inner {
 
 
 
-footer .fnb {
+footer .sns {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 40px;
+    gap: 10px;
+    padding: 0 20px;
 }
 
-footer .fnb a:hover {
+footer .sns img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+footer .family {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+footer .family select {
+    border-radius: 5px;
+    background-color: var(--sub-color);
     color: var(--main-color);
-    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
 }
-
-
-
-
-
-footer .copy { text-align: center; }
-
-
-
-
-
 
 
 
 
 #modal {
     position: fixed;
-    z-index: 100;
     top: 0;
     left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     display: none;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #modal .inner {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
 }
 
 #modal .card {
     width: 400px;
     padding: 20px;
-    background-color: white;
-    text-align: center;
     border-radius: 10px;
+    text-align: center;
+    background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #modal .card h1 {
-    color: var(--main-color);
-    font-size: 24px;
     margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
 }
 
 #modal .card p {
-    font-size: 16px;
     margin-bottom: 20px;
+    font-size: 16px;
     color: var(--text-color);
 }
 
