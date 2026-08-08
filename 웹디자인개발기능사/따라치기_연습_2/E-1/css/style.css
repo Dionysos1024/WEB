@@ -1,0 +1,474 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 100vw;
+    --container-height:100vh;
+    --slide-width: calc(100vw - 600px);
+    --slide-height: calc(100vh - 120px);
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+
+
+
+
+
+.container {
+    position: relative;
+    width: var(--container-width);
+    display: grid;
+    grid-template-columns: 200px 400px calc(100vw - 600px);
+    grid-template-rows: calc(100vh - 120px);
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    padding: 0 20px;
+    row-gap: 50px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+footer { height: 120px; }
+
+
+
+
+
+
+
+
+
+
+
+
+header .logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+header nav {
+    position: relative;
+    z-index: 10;
+}
+
+header nav .main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    width: 200px;
+    line-height: 50px; /* 다 하고나서 50px 되돌리기~ 실험중임 이것은! */
+    text-align: center;
+}
+
+header nav .main-menu li a {
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+header nav .main-menu li a:hover {
+    background-color: #333333;
+}
+
+
+
+
+
+
+
+header nav .sub-menu { display: none; }
+
+header nav .sub-menu > li {
+    background-color: white;
+}
+
+header nav .sub-menu > li a {
+    color: var(--main-color);
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+header .spot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    column-gap: 20px;
+}
+
+header .spot a {
+    position: relative;
+    color: var(--back-color);
+}
+
+header .spot a:not(:first-of-type)::before {
+    position: absolute;
+    width: 1px;
+    height: 16px;
+    content: "";
+    background-color: var(--back-color);
+    top: 2;
+    left: -10px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--sub-color);
+}
+
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.banner h1 { font-size: 20px; }
+
+.banner span { font-size: 12px; }
+
+.banner p { font-size: 12px; margin: 0; }
+
+
+
+
+
+
+
+
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: var(--main-color);
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+.content-item ul li a {
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.content-item ul li:hover { filter: brightness(90%); }
+
+
+
+
+
+
+
+
+
+
+.gallery {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+.link nav {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.link nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--sub-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.link nav a:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+
+
+
+
+
+
+
+
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+footer .footer-logo {
+    filter: grayscale(100%);
+}
+
+footer .footer-logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+footer .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 40px;
+}
+
+
+
+
+
+
+footer .fnb {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 40px;
+    padding: 0 20px;
+}
+
+footer .fnb a {
+    position: relative;
+    width: 100px;
+    text-align: center;
+}
+
+footer .fnb a:hover {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+footer .fnb a:not(:first-of-type)::before {
+    position: absolute;
+    top: 2px;
+    left: -20px;
+    width: 1px;
+    height: 18px;
+    background-color: var(--main-color);
+    content: "";
+    display: inline-block;
+}
+
+
+
+
+
+
+footer .copy { padding: 0 30px; }
+
+
+
+
+
+
+
+
+
+
+
+#modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal .card {
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#modal .card h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
