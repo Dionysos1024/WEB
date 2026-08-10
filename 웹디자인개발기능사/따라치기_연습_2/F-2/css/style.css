@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-* { margin: 0; padding: 0; list-style: none; }
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
 a { text-decoration: none; color: var(--text-color); }
 
@@ -84,7 +84,7 @@ header nav .main-menu li a:hover {
     background-color: #333333;
 }/* 성공 ㅇㅇ */
 
-header nav .sub-menu { /* display: none; */ } /* 보면서 해야지 가능할것 같음 */
+header nav .sub-menu { display: none; } /* 보면서 해야지 가능할것 같음 */
 
 header nav .sub-menu > li {
     background-color: white;
@@ -118,6 +118,8 @@ header nav .sub-menu > li a:hover {
     height: var(--slide-height);
 }
 /* 슬라이드는 쉬워서 다 기억함... 제일 만만함;; */
+
+/* 하.... 일하면서 하는건 10분 20분... 시간이 너무 안돼네;; 일할땐 그냥 따라치기로만 호다닥 익숙해지는 연습만 하는거로 ㄱㄱ */
 
 .link {
     position: absolute;
@@ -266,4 +268,50 @@ footer .copy {
     padding: 5px 10px;
 }
 
-#modal
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#modal .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal .card {
+    background-color: white;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
