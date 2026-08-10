@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; list-style: none; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #1b3b86;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 1340px;
+    --slide-width: 100vw;
+    --slide-height: 350px;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    position: relative; /* 포지션 빼먹음 ㅠㅠ */
+    width: 1340px;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* 유일하게 다 기억해냄 */
+}
+
+#slides { height: 350px; } /* 기억 ㅇㅇ */
+
+section { width: 100%; } /* 아예 빼먹음;; */
+
+footer {
+    height: 120px; /* 기억 ㅇㅇ */
+    width: 100%; /* 빼먹음 */
+}
+
+
+
+header .logo a img {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+} /* 다 기억 성공 */
+
+header nav {
+    position: relative;
+    top: 10%;
+    z-index: 10;
+} /* 속성 다 엉뚱한거 씀... ㅠ ㅠ */
+
+header nav .main-menu {
+    display: flex;
+    /* flex-direction: column; */ /* 안써도 되는거 씀;;; 나머지 기억 ㅇㅇ */
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    /* 텍스트 정렬 . 높이 말고 는 엉뚱한거 씀;; */
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav .main-menu li a {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}/* 기억 성공 ㅇㅇ */
+
+header nav .main-menu li a:hover {
+    background-color: #333333;
+}/* 성공 ㅇㅇ */
+
+header nav .sub-menu { /* display: none; */ } /* 보면서 해야지 가능할것 같음 */
+
+header nav .sub-menu > li {
+    background-color: white;
+} /* 어? 얘 100% 멀티 아닌데?;; js 가 달라지나;;? */
+
+header nav .sub-menu > li a {
+    color: var(--main-color);
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+.slide-container {
+    position: relative;
+    display: flex;
+}
+.slide-container .slide {
+    position: absolute;
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+.slide-container .slide a img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+/* 슬라이드는 쉬워서 다 기억함... 제일 만만함;; */
+
+.link {
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+}
+
+.link nav {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    padding: 20px 40px;
+    background-color: var(--sub-color);
+}
+
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.banner h1 { font-size: 28px; }
+
+.banner span { font-size: 14px; }
+
+.banner p { font-size: 18px; margin: 20px 0; }
+
+.tab {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 40px;
+}
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: var(--main-color);
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.tab-content .content-item ul li a {
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+.btn-modal { cursor: pointer; }
+
+.gallery {
+    display: flex;
+    width: 100%;
+    height: 160px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .sns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+footer .sns img {
+    width: 28px;
+    height: 28px;
+}
+
+footer .inner {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+footer .copy {
+    width: 100%;
+    padding: 0 40px;
+}
+
+.footer .family {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer .family select {
+    border-radius: 5px;
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#modal
