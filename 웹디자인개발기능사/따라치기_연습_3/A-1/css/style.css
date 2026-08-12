@@ -1,0 +1,65 @@
+
+
+/* 일단 자신 없지만, 대충 이라도 한번 도전 해보겠음!
+           얘는 시간 체크 소용 없을 정도로 느릴테니, 따로 시간체크는 안함!
+                     12일 퇴근 후 HTML 마무리하고 잠들기 전 까지 최대한 해보고,
+                             13일 회사가서 점심 휴게 시간 이랑 저녁 휴게시간 이어서 할것! */
+
+    @charset "utf-8";
+
+    * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+    a { text-decoration: none; color: var(--text-color); }
+
+    :root {
+        --main-color: #0331aa;
+        --sub-color: #eeeeee;
+        --back-color: #ffffff;
+        --text-color: #333333;
+        --slide-width: 300px;
+        --slide-height: 1200px;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+
+    header {
+        width: 100%;
+        height: 100px;
+        background-color: var(--main-color);
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        z-index: 10;
+    }
+
+    #slides { height: 300px; }
+
+    #contents { width: 100%; }
+
+    footer { height: 100px; }
+
+    header .logo a img {
+        width: 200px;
+        object-fit: contain;
+        padding: 20px;
+    }
+
+    header nav {
+        display: flex;
+        
+    }
+
+    header nav .main-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header nav .main-menu ul li {
+        text-align: center;
+    }
