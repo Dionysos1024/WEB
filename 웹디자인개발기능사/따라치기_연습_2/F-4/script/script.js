@@ -27,6 +27,6 @@ $(function() {
 
 
     $(".btn-modal").on("click", function() {
-        $(".close btn-modal").toggle()
+        $("#modal").toggle()
     })
 })
