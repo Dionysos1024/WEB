@@ -1,9 +1,8 @@
 
 
 /* 일단 자신 없지만, 대충 이라도 한번 도전 해보겠음!
-           얘는 시간 체크 소용 없을 정도로 느릴테니, 따로 시간체크는 안함!
-                     12일 퇴근 후 HTML 마무리하고 잠들기 전 까지 최대한 해보고,
-                             13일 회사가서 점심 휴게 시간 이랑 저녁 휴게시간 이어서 할것! */
+        12일 퇴근 후 HTML 마무리하고 잠들기 전 까지 최대한 해보고,
+                13일 회사가서 점심 휴게 시간 이랑 저녁 휴게시간 이어서 할것! */
 
     @charset "utf-8";
 
@@ -154,7 +153,7 @@
         filter: brightness(90%);
     }
 
-    #content-gallery { /* display: none; */ }
+    #content-gallery { display: none; }
 
     .gallery {
         width: 100%;
@@ -166,5 +165,88 @@
 /* 회사 점심 시간 종료, 요기까지 40분....
 생각을 안하고 치는게 더 어려움;; 시간 낭비 너무 많이함... 망했음 */
     .gallery .item a img {
-
+        width: 100%;
+        height: 100%;
+        gap: 10px;
     }
+
+    .banner { width: 100%; }
+
+    .link { width: 100%; }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer .footer-logo a img {
+        width: 200px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    footer .copy { text-align: center; }
+
+    footer .sns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        gap: 10px;
+    }
+
+    footer .sns a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #modal {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        display: none;
+    }
+
+    #modal .inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #modal .card {
+        width: 400px;
+        background-color: white;
+        text-align: center;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #modal .card h1 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: var(--main-color);
+    }
+
+    #modal .card p {
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: var(--text-color);
+    }
+
+    #modal .close {
+        background-color: var(--main-color);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    /* 스스로 이해한것 토대로 치기 끝, 회사 저녁밥 휴식시간 15분 사용
+    점심 + 저녁 휴식시간 총 55분 소요함
+    이따 퇴근후, 집가서 선생님 코드 보고 틀린 부분 체크 후 고치기 */
