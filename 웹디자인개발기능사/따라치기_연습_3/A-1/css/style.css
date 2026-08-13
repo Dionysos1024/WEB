@@ -34,24 +34,24 @@
         padding: 0 20px;
     }
 
+    section { width: 100%; }   /* 틀린부분 체크1 : 빼먹었구낭.... 에휴... 왜 빼먹은거지(?) */
+
     #slides { height: 300px; }
 
     #contents { height: 200px; }
 
-    footer { height: 100px; }
+    footer { width: 100%; height: 100px; }  /* 틀린부분 체크2 : width 빼먹음.... 흐잉.. ㅠ ㅠ */
 
     header .logo a img {
         width: 200px;
         height: 40px;
-        object-fit: contain;
+       /* 틀린부분 체크3 : object-fit: contain 안해도 되는거였음 지우기 슝~ */
     }
 
     header nav {
         position: relative;
-        width: 100%;
-        height: 10%;
+        top: 10%;      /* 틀린부분 체크4 : 안써도될 height 에 다가 10% 넣음... 지우고, 제대로 top: 10% 넣기~ */
         z-index: 10;
-        align-items: center;
     }
 
     header nav .main-menu {
@@ -61,7 +61,7 @@
     }
 
     header nav .main-menu li {
-        width: 100%;
+        width: 200px;      /* 틀린부분 체크5 : 200px 을 안쓰고 100% 적어넣음... 왜 그랬는지 모르겠음;; 제대로 고치기! */
         height: 50px;
         line-height: 50px;
         text-align: center;
@@ -70,28 +70,32 @@
     header nav .main-menu li a {
         color: white;
         display: inline-block;
+        width: 100%;    /* 틀린부분 체크6 : width . height 두개 빼먹음... 기억이 안낫음... 추가~ */
+        height: 100%;
     }
 
     header nav .main-menu li a:hover {
-        color: #333333;
+        background-color: #333333;
     }
 
     header nav .sub-menu { display: none; }
 
     header nav .sub-menu > li {
-        background-color: var(--main-color);
+        background-color: white;    /* 틀린부분 체크7 : 메인 컬러 넣었는데... 아니였음..ㅋㅋ 민망;; */
     }
 
     header nav .sub-menu > li a {
-        color: white;
+        color: var(--main-color);    /* 틀린부분 체크8 : 얘가 메인 컬러였네;; 두개 바꿔서 적어부렸넹.... */
     }
     header nav .sub-menu > li a:hover {
-        background-color: white;
-        color: var(--main-color);
+        background-color: var(--main-color);
+        color: white;
+        /* 틀린부분 체크9 : 얘네도 색상이 바껴있음... ㅠ ㅠ 다시 본래 색상으로~ */
     }
 
     #slides {
         width: var(--slide-width);
+        height: var(--slide-height);   /* 틀린부분 체크10 : height  빼먹음....;; */
         overflow: hidden;
     }
 
@@ -108,7 +112,7 @@
 
     .slide-container .slide img {
         width: var(--slide-width);
-        height: var(--slide-height);
+        height: 100%;      /* 틀린부분 체크11 : var로 지정했는데... 그냥 100% 하면 되는건가봄;; */
     }
 
     #contents {
@@ -118,28 +122,46 @@
     }
 
     .tab-menu {
-        width: 100%;
         height: 40px;
         display: flex;
         align-items: center;
-        padding: 0 20px;
+        /* 틀린부분 체크12 : 필요없는 width 와 padding 써서 지워버림;; 머쓱;; */
     }
 
     .tab-menu .menu-item {
-        background-color: var(--main-color);
         text-align: center;
-        padding: 0 20px;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        /* 틀린부분 체크13 : width . height . line-height 다 빼먹음.... ㅠ ㅠ */
     }
 
     .tab-menu .menu-item a {
-        color: white;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        /* 틀린부분 체크14 : 아예 다 틀림... 큰일이네;; 멘탈이... 어휴... 수정~! */
+    }
+
+    .tab-menu .menu-item:hover,
+    .tab-menu .menu-item.active {
+    background-color: var(--main-color);
+    /* 틀린부분 체크15 : ...심각해짐;; 아예 통으로 빼먹음;; 기억이 안낫음;; */
+    }
+
+    .tab-menu .menu-item:hover a,
+    .tab-menu .menu-item.active a {
+    color: white;
+    /* 틀린부분 체크16 : ...심각해짐;; 아예 통으로 빼먹음;; 기억이 안낫음;; */
     }
 
     .tab-content .content-item ul li {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5px 10px;
+        padding: 0 20px;
+        height: 40px;
+        /* 틀린부분 체크 17 : padding 속성값 수치 다르게 적음~ 수정~ height 빼먹어서 넣기~ */
     }
 
     .tab-content .content-item ul li:nth-of-type(odd) {
@@ -153,6 +175,8 @@
         filter: brightness(90%);
     }
 
+    .btn-modal { cursor: pointer; }   /* 틀린부분 체크 18 : 통으로 빼먹음;; 기억이 안낫음;; 당황스럽;; */
+
     #content-gallery { display: none; }
 
     .gallery {
@@ -164,25 +188,26 @@
     }
 /* 회사 점심 시간 종료, 요기까지 40분....
 생각을 안하고 치는게 더 어려움;; 시간 낭비 너무 많이함... 망했음 */
-    .gallery .item a img {
-        width: 100%;
-        height: 100%;
-        gap: 10px;
-    }
 
-    .banner { width: 100%; }
+    .banner img { width: 100%; }
 
-    .link { width: 100%; }
+    .link img { width: 100%; }
 
     footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .footer .footer-logo a img {
+
+    footer .footer-logo {
+        padding: 0 20px;
+        filter: grayscale(100%);
+        /* 틀린부분 체크 19 : 통으로 안함;; 어후... 아니 이건 늘 기억하던건데; 왜 갑자기; */
+    }
+
+    footer .footer-logo a img {
         width: 200px;
-        height: auto;
-        object-fit: contain;
+        height: 40px;
     }
 
     footer .copy { text-align: center; }
@@ -222,14 +247,14 @@
         width: 400px;
         background-color: white;
         text-align: center;
-        padding: 10px 20px;
+        padding: 20px;    /* 틀린부분 체크 20 : padding 값 다르게 썻음.... 슬프다... */
         border-radius: 10px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     #modal .card h1 {
         margin-bottom: 20px;
-        font-size: 28px;
+        font-size: 24px;
         color: var(--main-color);
     }
 
@@ -245,8 +270,11 @@
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
+        cursor: pointer;     /* 틀린부분 체크 21 : cursor 빼먹음... 추가~ */
     }
 
     /* 스스로 이해한것 토대로 치기 끝, 회사 저녁밥 휴식시간 15분 사용
     점심 + 저녁 휴식시간 총 55분 소요함
     이따 퇴근후, 집가서 선생님 코드 보고 틀린 부분 체크 후 고치기 */
+
+    /* 수정 완료! 총 21부분 틀림, 그중 중요한 부분이 심각하게 틀려서 멘탈이 좀 많이 흔들렸음.... */
