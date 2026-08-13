@@ -16,50 +16,155 @@
         --sub-color: #eeeeee;
         --back-color: #ffffff;
         --text-color: #333333;
-        --slide-width: 300px;
-        --slide-height: 1200px;
+        --slide-width: 1200px;
+        --slide-height: 300px;
     }
 
     .container {
-        position: relative;
-        width: 100%;
-        margin: 0;
+        width: 1200px;
+        margin: auto;
     }
 
     header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
         height: 100px;
         background-color: var(--main-color);
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        z-index: 10;
+        padding: 0 20px;
     }
 
     #slides { height: 300px; }
 
-    #contents { width: 100%; }
+    #contents { height: 200px; }
 
     footer { height: 100px; }
 
     header .logo a img {
         width: 200px;
+        height: 40px;
         object-fit: contain;
-        padding: 20px;
     }
 
     header nav {
-        display: flex;
-        
+        position: relative;
+        width: 100%;
+        height: 10%;
+        z-index: 10;
+        align-items: center;
     }
 
     header nav .main-menu {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
 
-    header nav .main-menu ul li {
+    header nav .main-menu li {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
         text-align: center;
+    }
+
+    header nav .main-menu li a {
+        color: white;
+        display: inline-block;
+    }
+
+    header nav .main-menu li a:hover {
+        color: #333333;
+    }
+
+    header nav .sub-menu { display: none; }
+
+    header nav .sub-menu > li {
+        background-color: var(--main-color);
+    }
+
+    header nav .sub-menu > li a {
+        color: white;
+    }
+    header nav .sub-menu > li a:hover {
+        background-color: white;
+        color: var(--main-color);
+    }
+
+    #slides {
+        width: var(--slide-width);
+        overflow: hidden;
+    }
+
+    .slide-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slide-container .slide {
+        width: var(--slide-width);
+        height: var(--slide-height);
+    }
+
+    .slide-container .slide img {
+        width: var(--slide-width);
+        height: var(--slide-height);
+    }
+
+    #contents {
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr);
+        grid-template-rows: 200px;
+    }
+
+    .tab-menu {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .tab-menu .menu-item {
+        background-color: var(--main-color);
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .tab-menu .menu-item a {
+        color: white;
+    }
+
+    .tab-content .content-item ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px;
+    }
+
+    .tab-content .content-item ul li:nth-of-type(odd) {
+        background-color: var(--sub-color);
+    }
+
+    .tab-content .content-item ul li:nth-of-type(even) {
+        background-color: var(--back-color);
+    }
+    .tab-content .content-item ul li:hover {
+        filter: brightness(90%);
+    }
+
+    #content-gallery { /* display: none; */ }
+
+    .gallery {
+        width: 100%;
+        height: 160px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+/* 회사 점심 시간 종료, 요기까지 40분....
+생각을 안하고 치는게 더 어려움;; 시간 낭비 너무 많이함... 망했음 */
+    .gallery .item a img {
+
     }
