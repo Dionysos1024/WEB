@@ -19,7 +19,9 @@
         <header>
 
             <div class="logo">
-                <a href="#"><img src="images/logo.png" alt="로고"></a>
+                <a href="#">
+                    <img src="images/logo.png" alt="로고">
+                </a>
             </div>
 
 
@@ -95,68 +97,78 @@
 
             <section id="contents">
 
-            <div>
-                <div class="tab-menu">
-                    <div class="menu-item" id="menu-notice">
-                        <div id="btn-notice"><a href="#">공지사항</a></div>
-                    </div>
-                </div>
-
-                <div class="content">
-
-                    <ul>
-                        <li>
-                            <a href="#" class="btn-modal"></a>
-                            <span>레이어 팝업 - 공지사항1</span>
-                            <span>2026.08.14</span>
-                        </li>
-                        <li>
-                            <a href="#"></a>
-                            <span>---------------- 공지사항2</span>
-                            <span>2026.08.14</span>
-                        </li>
-                        <li>
-                            <a href="#"></a>
-                            <span>---------------- 공지사항3</span>
-                            <span>2026.08.14</span>
-                        </li>
-                        <li>
-                            <a href="#"></a>
-                            <span>---------------- 공지사항4</span>
-                            <span>2026.08.14</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div>
-                <div class="tab-menu">
-                    <div class="menu-item" id="menu-gallery">
-                         <div id="btn-gallery"><a href="#">갤러리</a></div>
-                    </div>
-                </div>
-
-                <div class="content-item" id="content-gallery">
-                    <div class="gallery">
-                        <div class="item">
-                            <a href="#"><img src="images/g1.jpg" alt="갤러리 이미지"></a>
+                <div>
+                    <div class="tab-menu">
+                        <div class="menu-item active">   <!-- 틀린 부분 체크 1 : menu-item active 인데... 엉뚱한거!! 수정 ㅇㅇ -->
+                            <a href="#" id="btn-notice">공지사항</a>
                         </div>
-                        <div class="item">
-                            <a href="#"><img src="images/g2.jpg" alt="갤러리 이미지"></a>
-                        </div>
-                        <div class="item">
-                            <a href="#"><img src="images/g3.jpg" alt="갤러리 이미지"></a>
+                    </div>
+
+                    <div class="tab-content">       <!-- 틀린 부분 체크 2 : 그냥 content 아님... 수정!! -->
+                        <div class="content-item" id="content-notice">    <!-- 틀린 부분 체크 3 : 아까 위에 적은게 요기 들어가는 거였음;; -->
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="btn-modal">
+                                    <span>레이어 팝업 - 공지사항1</span>
+                                    <span>2026.08.14</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <span>---------------- 공지사항2</span>
+                                    <span>2026.08.14</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <span>---------------- 공지사항3</span>
+                                    <span>2026.08.14</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    <span>---------------- 공지사항4</span>
+                                    <span>2026.08.14</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+
+
+                <div>
+                    <div class="tab-menu">
+                        <div class="menu-item">     <!-- 틀린 부분 체크 4 : gallery 는 빼도 됌! 수정~!! -->
+                             <a href="#" id="btn-gallery">갤러리</a>    <!-- 틀린 부분 체크 5 : 얘도 잘못 적음...ㅇㅇ 수정 -->
+                        </div>
+                    </div>
+
+                    <div class="tab-content">   <!-- 틀린 부분 체크 6 : tab 좀 붙여주자.... ㅠ ㅠ -->
+                        <div class="content-item" id="content-gallery">
+                            <div class="gallery">
+                                <div class="item">
+                                    <a href="#"><img src="images/g1.jpg" alt="갤러리 이미지"></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="images/g2.jpg" alt="갤러리 이미지"></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="images/g3.jpg" alt="갤러리 이미지"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
-            <div class="banner">
-                <a href="#"><img src="images/banner.jpg" alt="배너"></a>
-            </div>
+                <div>
+                    <a href="#" class="banner">
+                        <img src="images/banner.jpg" alt="배너">
+                    </a>
+                </div>
 
 
             </section>
@@ -168,7 +180,7 @@
 
             <footer>
 
-                <div class="logo">
+                <div class="footer-logo">
                     <a href="#"><img src="images/logo.png" alt="푸터 로고"></a>
                 </div>
 
@@ -188,7 +200,7 @@
 
             </footer>
 
-        </div>
+    </div>
 
 
 
@@ -212,6 +224,9 @@
     
 
         <!-- 14일 점심시간 휴식 짬 내서 한것 30분 소요 -->
+
+
+        <!-- 총 7부분 틀림, 수정 완료! 계속 헷갈리는 부분 컨텐츠 ㅠ - ㅠ -->
     
 </body>
 </html>
