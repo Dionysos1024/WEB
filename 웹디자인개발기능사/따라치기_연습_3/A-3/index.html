@@ -95,7 +95,7 @@
 
                     <div class="tab-content">
 
-                        <div class="content-menu" id="content-item">
+                        <div class="content-item" id="content-notice">   <!-- 틀린 부분 체크 1 : content-menu 아니고, content-item 임;; content-item 아니고, content-notice 임;; 수정~ -->
                             <ul>
                                 <li>
                                     <a href="#" class="btn-modal">
@@ -123,22 +123,23 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                      <!-- 틀린 부분 체크 2 : content 를 요기서 끝내버림.. 이러면 안돼;; ㅠ ㅠ -->
 
-                    <div class="content-gallery">
-                        <div class="gallery">
-                            <div class="item">
-                                <a href="#"><img src="images/g1.jpg" alt="갤러리 이미지1"></a>
-                            </div>
-                            <div class="item">
-                                <a href="#"><img src="images/g2.jpg" alt="갤러리 이미지2"></a>
-                            </div>
-                            <div class="item">
-                                <a href="#"><img src="images/g3.jpg" alt="갤러리 이미지3"></a>
+                    
+                        <div class="content-item" id="content-gallery">  <!-- class . id 혼동 해버림.... -->
+                            <div class="gallery">
+                                <div class="item">
+                                    <a href="#"><img src="images/g1.jpg" alt="갤러리 이미지1"></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="images/g2.jpg" alt="갤러리 이미지2"></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="images/g3.jpg" alt="갤러리 이미지3"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
+                    </div> <!-- 제자리 에서 닫아줌... -->
                 </div>
             </div>
 
@@ -164,15 +165,17 @@
                 <a href="#"><img src="images/logo.png" alt="푸터 로고"></a>
             </div>
 
-            <div class="fnb">
-                <nav>
-                    <a href="#">하단 메뉴</a>
+            <div class="inner">
+                <nav class="fnb">   <!-- 틀린 부분 체크 3 : inner 빼먹음.... 그리고 nav 따로 아니고... 안에 fnb 클래스 지정해야함... ㅠ ㅠ -->
+                    <a href="#">하단 메뉴1</a>
+                    <a href="#">하단 메뉴2</a>
+                    <a href="#">하단 메뉴3</a>
                 </nav>
-            </div>
 
-            <div class="copy">
-                <p>나중에 가면 텍스트 준다고 했음.....</p>
-            </div>
+                <div class="copy">
+                    <p>나중에 가면 텍스트 준다고 했음.....</p>
+                </div>
+            </div>    <!-- 틀린 부분 체크 4 : 어쩐지 아무리 해도 안되더라니.... inner 안에 들어가야할게 안들어가있네;; -->
 
         </footer>
 
@@ -192,7 +195,7 @@
                     레이어 팝업 내용 입니다. <br>
                     ------------------------------ <br>
                 </p>
-                <button class="close btn-modal"></button>
+                <button class="close btn-modal">닫기</button>
             </div>
         </div>
     </div>
