@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --slide-width: 1200px;
+    --slide-height: 300px;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container { width: 1200px; margin: auto; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: var(--main-color);
+    padding: 0 20px;
+}
+
+#slides { height: 300px; }
+
+section { width: 100%; }
+
+#contents { width: 100%; height: 200px; }
+
+footer { width: 100%; height: 100px; }
+
+header .logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+header nav {
+    position: relative;
+    top: 10%;
+    /* 속성 하나더 있는데... 기억 안남 패스 */
+}
+
+header nav .main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav .main-menu li a {
+    color: white;
+}
+
+/* 점심시간 종료.... 나중에 퇴근후 집가서 하는걸로..... */
+header nav .main-menu li a:hover
+header nav .sub-menu
+header nav .sub-menu > li 
+header nav .sub-menu > li a
+header nav .sub-menu > li a:hover
