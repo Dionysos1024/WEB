@@ -1,10 +1,9 @@
-
+@charset "utf-8";
 
 /* 일단 자신 없지만, 대충 이라도 한번 도전 해보겠음!
         12일 퇴근 후 HTML 마무리하고 잠들기 전 까지 최대한 해보고,
                 13일 회사가서 점심 휴게 시간 이랑 저녁 휴게시간 이어서 할것! */
 
-    @charset "utf-8";
 
     * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
