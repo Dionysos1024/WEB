@@ -2,7 +2,9 @@
 
 /* 스스로 치기 12시 46분 시작 / 13시 00분 종료 */
 /* 스스로 치기 17시 05분 시작 / 17시 25분 종료 */
-/* 스스로 치기 21시 20분 시작 / ......... */
+/* 스스로 치기 21시 40분 시작 / 22시 20분 종료 */
+/* 기억 잘 안나는건 그냥 배운것 토대로 생각해서 한거라 선생님꺼랑 다른거 많음 */
+/* 일단 화면에서 보이는건 시험지랑 비슷하긴 해서... 다 수정하기 피곤... 너무 틀린것 몇개만 수정함... */
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -74,6 +76,9 @@ header nav .main-menu li {
 
 header nav .main-menu li a {
     color: white;
+    display: inline-block;
+    width: 100px;
+    height: 100%;
 }
 
 header nav .main-menu li a:hover {
@@ -83,36 +88,36 @@ header nav .main-menu li a:hover {
 header nav.sub {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     width: 100%;
+    display: none;
+    height: 200px;
 }
 
 header nav.sub .inner {
     display: flex;
+    justify-content: end;
     align-items: center;
     width: 100%;
-    height: calc(40px * 4);
+    height: 200px;
+    background-color: var(--sub-color);
 }
 
-header nav.sub .sub-menu {
-    background-color: white;
-}
-
-header nav.sub .sub-menu li {
+header nav.sub .sub-menu > li {
     width: 200px;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
 }
 
-header nav.sub .sub-menu li a {
+header nav.sub .sub-menu > li a {
     display: inline-block;
     color: var(--main-color);
     width: 100%;
     height: 100%;
 }
 
-header nav.sub .sub-menu li a:hover {
+header nav.sub .sub-menu > li a:hover {
     background-color: var(--main-color);
     color: white;
 }
@@ -130,18 +135,18 @@ header nav.sub .sub-menu li a:hover {
     overflow: hidden;
 }
 
-.slide-notainer {
+.slide-container {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.slide-notainer .slide {
+.slide-container .slide {
     width: 1200px;
     height: 300px;
 }
 
-.slide-notainer .slide a img {
+.slide-container .slide a img {
     width: 1200px;
     height: 100%;
 }
@@ -161,11 +166,149 @@ header nav.sub .sub-menu li a:hover {
 
 .tab-menu {
     display: flex;
+    align-items: center;
+    height: 40px;
 }
 
 .tab-menu .menu-item {
     width: 100px;
     height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: var(--main-color);
 }
 
-.tab-menu .menu-item a {}
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    color: white;
+}
+
+.content-item ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+.btn-modal { cursor: pointer; }
+
+.gallery {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link img { width: 100%; }
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+footer .copy { text-align: center; }
+
+footer .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 10px 20px;
+}
+
+footer .sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+footer .sns a img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .family {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+footer .family select {
+    padding: 5px 10px;
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .card {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    color: var(--main-color);
+    font-size: 24px;
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    border: none;
+    color: white;
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
