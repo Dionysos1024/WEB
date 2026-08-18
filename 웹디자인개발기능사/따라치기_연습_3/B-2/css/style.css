@@ -168,8 +168,4 @@ header nav.sub .sub-menu li a:hover {
     height: 40px;
 }
 
-.tab-menu .menu-item:hover,
-.tab-menu .menu-item.active {}
-
-.tab-menu .menu-item:hover a,
-.tab-menu .menu-item.active a {}
+.tab-menu .menu-item a {}
