@@ -56,7 +56,8 @@ header .logo a img {
 
 header nav {
     z-index: 10;
-
+    display: flex;
+    height: 100%;
 }
 
 header nav .main-menu {
@@ -78,3 +79,97 @@ header nav .main-menu li a {
 header nav .main-menu li a:hover {
     background-color: #333333;
 }
+
+header nav.sub {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+}
+
+header nav.sub .inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc(40px * 4);
+}
+
+header nav.sub .sub-menu {
+    background-color: white;
+}
+
+header nav.sub .sub-menu li {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+header nav.sub .sub-menu li a {
+    display: inline-block;
+    color: var(--main-color);
+    width: 100%;
+    height: 100%;
+}
+
+header nav.sub .sub-menu li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+
+
+
+
+
+
+#slides {
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide-notainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-notainer .slide {
+    width: 1200px;
+    height: 300px;
+}
+
+.slide-notainer .slide a img {
+    width: 1200px;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+#contents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
+}
+
+.tab-menu {
+    display: flex;
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+}
+
+.tab-menu .menu-item:hover,
+.tab-menu .menu-item.active {}
+
+.tab-menu .menu-item:hover a,
+.tab-menu .menu-item.active a {}
