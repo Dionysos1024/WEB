@@ -1,7 +1,113 @@
 @charset "utf-8";
 
-    /* 시험지만 보고 스스로 치기 시작 07시 20분 / 종료 07시 55분  */
+    /* 시험지만 보고 스스로 치기 시작 07시 25분 / 종료 07시 55분  */
     /* 시험지만 보고 스스로 치기 시작 00시 00분 / 종료 00시 00분  */
     /* 선생님꺼 보고 확인 수정 작업 : 틀린 부분 00개 */
 
-    
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: var(--main-color);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#slides { height: 300px; }
+
+section { height: 200px; }
+
+#contents { width: 100%; }
+
+footer { width: 100%; height: 100px; }
+
+
+
+
+
+
+
+
+header .logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+header nav {
+    z-index: 10;
+    top: 100%;
+    /* 하나가 기억 상실 */
+}
+
+header nav .main-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+
+header nav .main-menu li {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+
+}
+
+header nav .main-menu li a {
+    color: white;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+header nav .main-menu li a:hover {
+    background-color: #333333;
+}
+
+header nav.sub {
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+header nav.sub .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--sub-color);
+}
+
+header nav.sub .sub-menu {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: calc(40px * 4);
+}
+header nav.sub .sub-menu > li 
+header nav.sub .sub-menu > li a 
+header nav.sub .sub-menu > li a:hover 
