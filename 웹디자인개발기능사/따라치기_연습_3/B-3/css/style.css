@@ -2,8 +2,8 @@
 
 /* 스스로 치기 시작 12시 15분 / 13시 00분 종료  */
 /* 스스로 치기 시작 17시 05분 / 17시 28분 종료  */
-/* 확인 및 고치기 작업 퇴근후 진행 해야함... */
-/* banner 늘 문제임.... */
+/* 확인 및 고치기 작업 21시 48분 완료 */
+/* 속성 값 width . height . padding 6개 틀림 */
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -33,6 +33,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--main-color);
+    padding: 0 20px;
 }
 
 #slides { height: 300px; }
@@ -50,12 +51,9 @@ footer { width: 100%; height: 100px; }
 
 
 
-header .logo {
-    width: 200px;
-    padding: 0 20px;
-}
 
 header .logo a img {
+    width: 200px;
     height: auto;
     object-fit: contain;
 }
@@ -82,8 +80,7 @@ header nav .main-menu li {
 header nav .main-menu li a {
     display: inline-block;
     width: 100%;
-    height: 50px;
-    line-height: 50px;
+    height: 100%;
     color: white;
 }
 
@@ -91,29 +88,14 @@ header nav .main-menu li a:hover {
     background-color: #333333;
 }
 
-header nav .sub-menu {
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-    line-height: 50px;
-    display: none;
-}
+header nav .sub-menu { display: none; }
 
 header nav .sub-menu > li {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    background-color: var(--sub-color);
+    background-color: white;
 }
 
 header nav .sub-menu > li a {
-    display: inline-block;
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
+    color: var(--main-color);
 }
 
 header nav .sub-menu > li a:hover {
@@ -166,6 +148,7 @@ header nav .sub-menu > li a:hover {
 .tab-menu {
     display: flex;
     align-items: center;
+    height: 40px;
 }
 
 .tab-menu .menu-item {
@@ -181,7 +164,6 @@ header nav .sub-menu > li a:hover {
     color: white;
     width: 100%;
     height: 100%;
-    text-align: center;
 }
 
 .tab-content .content-item ul li a {
@@ -233,30 +215,30 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 100px;
-    padding: 0 20px;
 }
 
 footer .footer-logo {
+    filter: grayscale(100%);
+    padding: 0 20px;
+}
+
+footer .footer-logo a img {
     width: 200px;
     height: auto;
-    filter: grayscale(100%);
     object-fit: contain;
-    padding: 0 20px;
 }
 
 footer .copy { text-align: center; }
 
 footer .sns {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 0 20px;
 }
 
-footer .sns img {
+footer .sns a img {
     width: 40px;
     height: 40px;
 }
@@ -292,7 +274,7 @@ footer .sns img {
 #modal .card {
     width: 400px;
     background-color: white;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
