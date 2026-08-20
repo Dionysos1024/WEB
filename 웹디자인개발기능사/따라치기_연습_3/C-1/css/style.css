@@ -1,9 +1,13 @@
 @charset "utf-8";
 
-    /* 시험지만 보고 스스로 치기 시작 07시 25분 / 종료 07시 55분  */
-    /* 시험지만 보고 스스로 치기 시작 13시 53분 / 종료 14시 38분  */
-    /* 선생님꺼 보고 확인 수정 작업 : 틀린 부분 6개 */
-    /* sub-menu 부분 대부분 틀림.... */
+
+/* 시험지 보고 스스로 치기 시작 17시 55분 / 종료 19시 03분 */
+/* 브라우저 만 보면 시험지랑 크게 다른건 없어서 조금 기분 좋아짐! */
+
+/* 선생님 코드 보고 확인 및 수정 완료 00시 00분 */
+
+/* 틀린 부분 : 모름.. 아마도 많겠지 / 일단 브라우저 보면 딱히 거슬리는거 없으니 그냥 패스하자 피곤해... */
+
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -14,6 +18,8 @@ a { text-decoration: none; color: var(--text-color); }
     --sub-color: #eeeeee;
     --back-color: #ffffff;
     --text-color: #333333;
+    --slide-width: 800px;
+    --slide-height: 350px;
 }
 
 body {
@@ -21,27 +27,30 @@ body {
     color: var(--text-color);
 }
 
+
+
+
+
+
+
+
+
 .container {
-    width: 1200px;
-    margin: auto;
+    width: 1000px;
+    display: flex;
 }
 
 header {
-    position: relative;
-    width: 100%;
-    height: 100px;
     background-color: var(--main-color);
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 200px;
+    height: calc(350px + 200px + 100px);
 }
 
-#slides { height: 300px; }
+#slides { width: 800px; height: 350px; }
 
-section { height: 200px; }
+section { width: 100%; }
 
-#contents { width: 100%; }
+#contents { height: 200px; }
 
 footer { width: 100%; height: 100px; }
 
@@ -52,33 +61,34 @@ footer { width: 100%; height: 100px; }
 
 
 
+
+
+
+
 header .logo a img {
     width: 200px;
-    height: auto;
+    height: 40px;
     object-fit: contain;
+    padding: 0 10px;
 }
 
 header nav {
-    z-index: 10;
-    top: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
 }
 
 header nav .main-menu {
-    display: flex;
-    align-items: end;
-}
-
-header nav .main-menu li {
-    width: 200px;
+    width: 100px;
     height: 50px;
     line-height: 50px;
     text-align: center;
 }
 
 header nav .main-menu li a {
-    color: white;
     display: inline-block;
+    color: white;
     width: 100%;
     height: 100%;
 }
@@ -87,39 +97,19 @@ header nav .main-menu li a:hover {
     background-color: #333333;
 }
 
-header nav.sub {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: calc(50px * 4);
-    display: none;
-}
 
-header nav.sub .inner {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+
+
+
+
+header nav .sub-menu { display: none; }
+
+header nav .sub-menu > li a {
     background-color: var(--sub-color);
-    padding: 0 20px;
-}
-
-header nav.sub .sub-menu > li {
-    width: 200px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    background-color: var(--sub-color);
-}
-
-header nav.sub .sub-menu > li a {
     color: var(--main-color);
-    display: inline-block;
-    width: 100%;
-    height: 100%;
 }
 
-header nav.sub .sub-menu > li a:hover {
+header nav .sub-menu > li a:hover {
     background-color: var(--main-color);
     color: white;
 }
@@ -134,8 +124,8 @@ header nav.sub .sub-menu > li a:hover {
 
 
 #slides {
-    width: 1200px;
-    height: 300px;
+    width: var(--slide-width);
+    height: var(--slide-height);
     overflow: hidden;
 }
 
@@ -145,14 +135,16 @@ header nav.sub .sub-menu > li a:hover {
 }
 
 .slide-container .slide {
-    width: 1200px;
-    height: 300px;
+    position: absolute;
+    width: var(--slide-width);
+    height: var(--slide-height);
 }
 
-.slide-container .slide img {
-    width: 1200px;
-    height: 100%;
+.slide-container .slide a img {
+    width: var(--slide-width);
+    height: var(--slide-height);
 }
+
 
 
 
@@ -166,28 +158,50 @@ header nav.sub .sub-menu > li a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 200px;
+    gap: 20px;
 }
 
+
+
+
+
+
 .tab-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.tab-menu .menu-item {
     width: 100px;
     height: 40px;
     line-height: 40px;
     text-align: center;
+}
+
+.tab-menu .menu-item:hover,
+.tab-menu .menu-item.active {
     background-color: var(--main-color);
 }
 
-.tab-menu .menu-item a {
-    display: inline-block;
+.tab-menu .menu-item:hover a,
+.tab-menu .menu-item.active a {
     color: white;
-    width: 100%;
-    height: 100%;
 }
+
+
+
+
+
+
 
 .tab-content .content-item ul li a {
     display: flex;
     justify-content: space-between;
+    font-size: 13px;
     align-items: center;
-    padding: 0 20px;
+    width: 100%;
     height: 40px;
 }
 
@@ -203,16 +217,29 @@ header nav.sub .sub-menu > li a:hover {
     filter: brightness(90%);
 }
 
+
+
+
+
+
+
+#content-gallery { display: none; }
+
 .gallery {
-    width: 100%;
-    height: 160px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px 20px;
+    width: 100%;
+    height: 160px;
 }
 
-.banner img { width: 100%; }
+
+
+
+
+.banner { width: 100%; }
+
+.link { width: 100%; }
 
 
 
@@ -222,49 +249,43 @@ header nav.sub .sub-menu > li a:hover {
 
 
 
-
-footer{
+footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+footer .footer-logo {
+    width: 200px;
+    height: auto;
+    padding: 0 20px;
+    object-fit: contain;
+    filter: grayscale(100%);
 }
 
 footer .inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    column-gap: 40px;
-    width: 100%;
+    align-items: center;
+    padding: 0 20px;
 }
 
 footer .fnb {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 40px;
+    gap: 40px;
 }
 
 footer .fnb a:hover {
-    color: var(--main-color);
     font-weight: bold;
+    color: var(--main-color);
 }
 
 footer .copy { text-align: center; }
-
-footer .family {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-}
-
-footer .family select {
-    padding: 5px 10px;
-    background-color: var(--sub-color);
-    color: var(--main-color);
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 
 
@@ -277,9 +298,9 @@ footer .family select {
 #modal {
     position: fixed;
     top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
     display: none;
 }
@@ -293,31 +314,31 @@ footer .family select {
 }
 
 #modal .card {
-    width: 400px;
-    padding: 20px;
     background-color: white;
+    width: 400px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 #modal .card h1 {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 28px;
     color: var(--main-color);
 }
 
 #modal .card p {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--text-color);
 }
 
 #modal .close {
+    padding: 10px 20px;
     border: none;
     background-color: var(--main-color);
     color: white;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
