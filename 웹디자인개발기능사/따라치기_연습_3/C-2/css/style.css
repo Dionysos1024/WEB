@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/* 시험지 보고 스스로 치기 시작 07시 41분 / 종료 07시 48분 */
+/* 시험지 보고 스스로 치기 시작 12시 15분 / 종료 12시 58분 */
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --slide-width: 800px;
+    --slide-height: 350px;
+}
