@@ -21,24 +21,31 @@ $(function() {
 
 
 
-    const speed = 500
-    const time = 2000
-    const $slide = $(".slide")
-    const $container = $(".slide-container")
-    const size = $slide.height()
-    const count = $slide.length
-    $container.height(size * count)
-    /* .height(size * count) 여기서 부터 기억 못함....*/
+   /* ------------------- ↕️ 세로 슬라이드      ------------------- */
+    // 1. 슬라이드 시간 : 2초씩, 넘김 0.5초
+    // 2. 슬라이드 높이, 개수 : 300px, 3개
+    // 3. 컨테이너 높이 : 슬라이드 높이 x 3장
+    // 4. 타이머 동작 :
+    //  - 2초마다 동작
+    //  - 0.5초 동안 슬라이드 높이 만큼 위로 올라감 - animiate
+    //  - 동작 후 원 위치, 맨 앞의 슬라이드가 맨 뒤로 넘어감 
 
-    setInterval(function() {
+    const time = 2000
+    const speed = 500
+    const $slide = $(".slide")                 // class="slide" 인 요소들을 선택
+    const $container = $(".slide-container")   // class="slide-container" 인 요소 선택
+    const size = $slide.height()               // 슬라이드 높이
+    const count = $slide.length                // 슬라이드 개수
+    $container.height(size * count)            // 컨테이너 높이 지정
+    // 타이머 함수
+    setInterval(() => {
         $container.animate({
-        /* .animate({ 여기서 부터 아래 전부다 기억 못함....*/
-            top: -size
-        }, speed, function() {
-            $container.css('top','0')
-            $container.append($(".slide").first())
-    })
-    }, time)
+            top: -size                         // 300px 만큼 위로 슬라이드
+        },speed, function() {                  // 0.5초 동안
+            $container.css('top','0')          // 원위치
+            $container.append($slide.first())  // 첫 슬라이드를 맨뒤로 넘김
+        })
+    }, time);
 
 
 

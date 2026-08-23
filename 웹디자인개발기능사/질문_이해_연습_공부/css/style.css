@@ -1,0 +1,124 @@
+/* 공지사항 */
+/* 탭 메뉴      : .tab-menu ~ a */
+/* 탭 컨텐츠    : .tab-content ~ a  */
+/* 우선 HTML 의 class 를 그대로 복사하고 앞에 . */
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+/* 한 줄 복사 : alt + shift + ↓ */
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 마우스 올리거나 선택 시 공지사항/갤러리 메뉴버튼 */
+/* 요소에 마우스 올릴 때를 선택 :hover */
+/* 선택이 됐을 때는 active 클래스를 추가 */
+/* 
+    * 종속 선택자
+    menu-item active 2개이상 클래스가 있으면
+   .menu-item.active 이런 식으로 띄어쓰기 없이
+    붙여서 작성한다.
+ */
+
+.tab-menu .menu-item:hover,
+.tab-menu .menu-item.active {
+    background-color: var(--main-color);
+}
+
+/* 탭 메뉴 선택 시 a 태그 글씨 하얀색 */
+.tab-menu .menu-item:hover a,
+.tab-menu .menu-item.active a {
+    color: white;
+}
+
+
+
+
+.tab-content .content-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px;
+}
+
+
+/* 공지사항 리스트 스트라이프 odd 홀수, even 짝수 */
+
+.tab-content .content-item li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 메뉴 */
+
+nav {
+    position: relative;
+    z-index: 10;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.main-menu li a {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.main-menu li a:hover {
+    background-color: #333333;
+}
+
+.sub-manu { display: none; }
+
+/* ' ' : 하위 선택자 (바로 밑에, 밑에 밑에~) */
+/*  >  : 자식 선택자 (바로 밑에만) */
+.sub-manu li {
+    background-color: white;
+}
+
+.sub-manu li a {
+    color: var(--main-color);
+}
+
+.sub-manu li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}

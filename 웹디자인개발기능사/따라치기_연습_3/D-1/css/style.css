@@ -1,0 +1,478 @@
+@charset "utf-8";
+
+/* D유형 시작 3분 동안 선생님 코드 흝어보고 시작 했음!
+        08월 23일 시작 : 15시 20분 / 종료 : 16시 50분 총 1시간 30분 소요 */
+
+/* 선생님 코드 흝어본 뒤 수정 작업 시작 : 16시 53분 / 종료 : 17시 33분 총 40분 소요*/
+
+/* 너무 많이 틀리거나 빼먹거나 뒤섞여서 멘탈 많이 털림.... */
+
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 100%;
+    --slide-width: 100%;
+    --slide-height: 400px;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+
+/* 갑자기 너무 생각이 많아짐... 멘탈 살짝 흔들리기 시작! */
+.container {
+    display: grid;
+    position: relative;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: calc(400px + 200px + 250px);
+    width: var(--container-width);
+    margin: auto;
+}
+
+/* container 은 전부다 틀림, 난 애초에 display: flex 로 잡고 나눠버림.... */
+
+#contents {
+    position: relative;
+    overflow: hidden;
+}
+
+footer { height: 100px; }
+
+header {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 0 20px;
+    row-gap: 50px; /* 난 그냥 gap: 50px 했는데, 수정 함 */
+    height: calc(400px + 200px + 250px); /* 빼먹은거 추가 함 */
+}
+
+
+
+
+
+
+
+
+
+
+/* 설명 듣고 나서 조금 더 빨리 생각 하게됨 멘탈 살짝 회복 */
+header .logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+header nav {
+    position: relative;
+    z-index: 10;
+}
+
+header nav .main-menu {
+    display: flex;
+    flex-direction: column; /* 빼먹은거 추가 함 */
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+} 
+
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: #333333;
+}
+
+
+
+
+
+
+
+
+
+header nav .sub-menu { display: none; }
+
+header nav .sub-menu > li {
+    background-color: white;
+}
+
+header nav .sub-menu > li a {
+    color: var(--main-color);
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* 갑자기 생각이 또 길어짐... 멘탈 무너지기 시작 함
+        선택자 지정은 바로 기억남 세부 속성 과 속성 값 이 기억 안남 */
+header .spot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    column-gap: 20px;
+}
+/* display:flex 빼고는 다 틀림! 추가 및 수정 함 */
+
+header .spot a {
+    position: relative;
+    color: white;
+}
+/* position: relative 를 .spot 에 주었는데, 거기가 아니였나봄... 수정 함 */
+
+header .spot a:not(:first-of-type)::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: -10px;
+    background-color: var(--back-color);
+    width: 2px;
+    height: 16px;
+}
+/* 위치 가 왜 이런지 도저히 감이 안잡힘... 멘탈 바이바이~ */
+/* 수정 후 위치 제대로 나옴... position: relative 이게 문제였나봄!? */
+
+
+
+
+
+
+
+
+
+/* 일단 이것저것 죄다 하면서 화면 맞춰보는중... 멘탈 바이바이~ */
+.link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    row-gap: 20px;
+}
+/* 난 하나에 몽땅다 집어넣었고, 완성 코드는 .link nav 와 나누어져 있었음 */
+
+.link a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: var(--sub-color);
+    border-radius: 10px; /* 빼먹은거 추가 함 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 빼먹은거 추가 함 */
+}
+
+.link a:hover {
+    transform: translateY(-10%);
+    transition: all 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+    /* 아니 아예 다 통으로 사라지면 어쩌란 거야.. 왜 그래! 나한테! */
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-container .slide {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide a img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+
+
+
+
+
+
+
+
+/* 연속으로 계속... 아무생각도 안나기 시작...
+        어쩌지? 이미 시작한지 56분 지나고 있는데... */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: var(--sub-color);
+}
+/* .inner 와 혼동해서 속성이 들어감.. 다시 나누어서 제대로 수정 함 */
+
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.banner h1 { font-size: 28px;}
+
+.banner span { font-size: 14px; }
+
+.banner p { font-size: 16px; margin: 20px 0; }
+/* margin 빼먹음, 추가 함 */
+
+
+
+
+
+
+
+
+.tab {
+    height: 250px;
+    padding: 20px;
+}
+/* 빼먹은거 추가 함 */
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-menu .menu-item:hover,
+.tab-menu .menu-item.active {
+    background-color: var(--main-color);
+}
+
+.tab-menu .menu-item:hover a,
+.tab-menu .menu-item.active a {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.tab-content .content-item ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 40px;
+}
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+
+
+
+
+
+
+
+
+.btn-modal { cursor: pointer; }
+
+#content-gallery { display: none; }
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 160px;
+}
+
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 빼먹은거 추가 함 */
+
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-logo a img {
+    filter: grayscale(100%);
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+footer .copy { text-align: center; }
+
+footer .sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+footer .sns a img {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .card {
+    width: 400px;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
