@@ -40,7 +40,7 @@ a { text-decoration: none; color: var(--text-color); }
 
 #contents {
     position: relative;
-    /* overflow: hidden; */ /* 왜 처음부터 다 사라지게 하는건지 모르겠음, 보면서 해야하는데!? */
+    overflow: hidden; /* 왜 처음부터 다 사라지게 하는건지 모르겠음, 보면서 해야하는데!? */
 }
 
 #contents > .inner {
@@ -156,7 +156,7 @@ header nav .sub-menu li a:hover {
     height: var(--slide-height);
 }
 
-.slide-container .slide a img {
+.slide-container .slide img {
     width: var(--slide-width);
     height: var(--slide-height);
 }
