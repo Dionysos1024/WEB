@@ -31,7 +31,7 @@ $(function() {
                         left: -size
                 }, speed, function() {
                         $container.css('left','0')
-                        $container.append($($slide).first())
+                        $container.append($(".slide").first())
                 })
         }, time);
 

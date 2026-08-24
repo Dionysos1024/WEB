@@ -8,6 +8,8 @@
 /* 틀린 부분 : 많아서 다못적음, 전체적 파악 한번더 해야함 */
 
 /* 다 작성 했는데, 슬라이드 부분이 계속 상태가 이상함, 파악 해야함! ㅠ ㅠ */
+/* 선택자 지정 실수했었음... 정상적으로 됨, 어휴... 드럽게 머리아프네 -_- */
+
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
 a { text-decoration: none; color: var(--text-color); }
@@ -32,7 +34,7 @@ a { text-decoration: none; color: var(--text-color); }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(200, 1fr);
+    grid-template-columns: 200px 1fr;
     position: relative;
     margin: auto;
     width: var(--container-width);
@@ -176,24 +178,18 @@ header nav .sub-menu li a:hover {
 .banner {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    width: 230px;
-    height: 400px;
+    row-gap: 20px;
+    padding: 20px;
 }
 
 .banner h1 { font-size: 24px; }
 
 .banner span { font-size: 14px; }
 
-.banner p { font-size: 12px; margin: 0; }
+.banner p { font-size: 12px; }
 
-.banner a img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
 
 
 
