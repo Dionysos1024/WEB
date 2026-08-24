@@ -3,8 +3,125 @@
 
 /* 시험지만 보고 스스로 치기 도전! 모든 어려운 요소 총 집합! 제일 짜증나는 시험문제! */
 
-/* 최대한 시간 안따지고 천천히 생각해서 해볼생각임, 목표 틀리거나 빼먹은거 10개 이하 */
+/* 최대한 시간 안따지고 천천히 생각해서 해볼생각임, 목표 틀리거나 빼먹은거 16개 이하 */
 
-/* 시작 시간 : 08월 25일 00시 00분 / 종료 시간 : 00시 00분 */
+/* 시작 시간 : 08월 25일 07시 11분 / 종료 시간 : 07시 35분 */
+/* 시작 시간 : 08월 25일 12시 15분 / 종료 시간 : 13시 00분 */
 
 
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 100%;
+    --slide-width: 100%;
+    --slide-height: 400px;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    /* 속성 더 있는데, 당장에 기억 안남 */
+}
+
+#contents {
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    row-gap: 50px;
+    padding: 0 20px;
+    background-color: var(--main-color);
+    width: 200px;
+    height: calc(400px + 200px + 250px);
+}
+
+footer {
+    width: 100%;
+    height: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+header .logo img {
+    width: 200px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+
+
+
+header nav {
+    position: relative;
+    z-index: 10;
+}
+
+header nav .main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: #333333;
+}
+
+
+
+
+
+header nav.sub 
+header nav.sub .inner 
+header nav.sub .sub-menu 
+header nav.sub .sub-menu > li 
+header nav.sub .sub-menu > li a 
+header nav.sub .sub-menu > li a:hover 
