@@ -8,7 +8,9 @@
 /* 시작 시간 : 08월 25일 07시 11분 / 종료 시간 : 07시 35분 */
 /* 시작 시간 : 08월 25일 12시 15분 / 종료 시간 : 13시 00분 */
 /* 시작 시간 : 08월 25일 17시 05분 / 종료 시간 : 17시 25분 */
+/* 시작 시간 : 08월 25일 21시 45분 / 종료 시간 : 22시 28분 */
 
+/* 틀린 부분 : 08개 / 수정 완료 22시 51분 */
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -41,7 +43,9 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: 200px 1fr;
-    /* 속성 더 있는데, 당장에 기억 안남 */
+    margin: auto;
+    grid-template-rows: calc(400px + 200px + 250px);
+    width: var(--container-width);
 }
 
 #contents {
@@ -58,14 +62,10 @@ header {
     row-gap: 50px;
     padding: 0 20px;
     background-color: var(--main-color);
-    width: 200px;
     height: calc(400px + 200px + 250px);
 }
 
-footer {
-    width: 100%;
-    height: 120px;
-}
+footer { height: 120px; }
 
 
 
@@ -76,7 +76,7 @@ footer {
 
 
 
-header .logo img {
+header .logo a img {
     width: 200px;
     height: 40px;
     object-fit: contain;
@@ -84,7 +84,7 @@ header .logo img {
 
 
 
-
+header .menu { position: relative; }
 
 header nav {
     position: relative;
@@ -94,7 +94,7 @@ header nav {
 header nav .main-menu {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -135,14 +135,14 @@ header nav.sub .sub-menu {
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 100vw; /* 아오 돌겠네.... 나가버리냐... */
+    width: calc(100vw - 200px); /* 아오 돌겠네.... 나가버리냐... */
     height: 50px;
     line-height: 50px;
 }
 
 header nav.sub .sub-menu > li {
     background-color: rgba(255, 255, 255, 0.7);
-    width: 100%;
+    width: 150px;
     height: auto;
     line-height: 50px;
 }
@@ -231,19 +231,18 @@ header .spot a:not(:first-of-type)::before {
 
 
 .link {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 10;
 }
 
 .link nav {
-    position: absolute;
-    top: 0;
-    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    column-gap: 10px;
-    padding: 10px 0;
+    row-gap: 10px;
+    padding: 10px;
     background-color: var(--sub-color);
     border-radius: 10px;
 }
@@ -255,6 +254,7 @@ header .spot a:not(:first-of-type)::before {
     text-align: center;
     color: var(--main-color);
     border-radius: 10px;
+    font-size: 12px;
 }
 
 .link nav a:hover {
@@ -340,8 +340,178 @@ header .spot a:not(:first-of-type)::before {
 
 
 
+
 .tab-content .content-item ul li a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 40px;
+    height: 40px;
+}
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+
+
+
+
+#content-gallery { display: none; }
+
+.gallery {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 40px;
+}
+
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+footer .footer-logo img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+
+
+
+footer .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+footer .fnb {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    padding: 0 20px;
+    justify-content: space-evenly;
+}
+
+footer .fnb a {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    height: auto;
+    font-size: 14px;
+}
+
+footer .fnb a:hover {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+footer .fnb a:not(:first-of-type)::before {
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    content: "";
+    background-color: var(--text-color);
+    width: 1px;
+    height: 16px;
+}
+
+
+
+footer .copy { text-align: center; }
+
+
+
+
+
+
+
+
+
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .card {
+    background-color: white;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }
