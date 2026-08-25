@@ -119,9 +119,160 @@ header nav .main-menu li a:hover {
 
 
 
-header nav.sub 
-header nav.sub .inner 
-header nav.sub .sub-menu 
-header nav.sub .sub-menu > li 
-header nav.sub .sub-menu > li a 
-header nav.sub .sub-menu > li a:hover 
+header nav.sub {
+    position: relative;
+    display: none;
+}
+header nav.sub .inner {
+    position: absolute;
+    top: -200px;
+    left: 200px;
+    column-gap: 50px;
+}
+
+header nav.sub .sub-menu {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100vw; /* 아오 돌겠네.... 나가버리냐... */
+    height: 50px;
+    line-height: 50px;
+}
+
+header nav.sub .sub-menu > li {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: auto;
+    line-height: 50px;
+}
+
+header nav.sub .sub-menu > li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: var(--main-color);
+    text-align: center;
+}
+
+header nav.sub .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+
+
+
+
+header .spot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+}
+
+header .spot a {
+    position: relative;
+    height: auto;
+    color: white;
+    text-align: center;
+    padding: 0 10px;
+}
+
+header .spot a:not(:first-of-type)::before {
+    position: absolute;
+    top: 0;
+    left: -10px; /* 위치 거지같아서 못해먹겠..... */
+    content: "";
+    background-color: var(--sub-color);
+    width: 2px;
+    height: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    position: absolute;
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+
+
+
+
+
+
+
+
+
+.link {
+    position: relative;
+    z-index: 10;
+}
+
+.link nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.link nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.link nav a:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+/* 뭔가 속성 이 빠진게 있는데, 기억이 안남.... */
+
+
+
+
+
+
+
+
+
+
+.banner 
+
+.banner .inner 
+
+.banner h1 
+
+.banner span 
+
+.banner p 
