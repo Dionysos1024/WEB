@@ -2,7 +2,11 @@
 
 /* 시작 : 08월 26일 07시 10분 / 종료 : 07시 40분 / 수정 완료 00시 00분 */
 /* 시작 : 08월 26일 12시 15분 / 종료 : 13시 00분 / 수정 완료 00시 00분 */
-/* 시작 : 08월 26일 17시 05분 / 종료 : 00시 00분 / 수정 완료 00시 00분 */
+/* 시작 : 08월 26일 17시 05분 / 종료 : 17시 25분 / 수정 완료 00시 00분 */
+/* 시작 : 08월 26일 21시 25분 / 종료 : 21시 40분 / 수정 완료 21시 55분 */
+
+/* 뭔가... 시험지랑 완벽하게 일치하게 해보려다가 시간 너무 잡아먹어서 중도포기함! */
+/* 주말에 이번주 일 없으니 한번 시도해보고싶은 욕심은 생김... */
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -33,10 +37,12 @@ a { text-decoration: none; color: var(--text-color); }
     grid-template-columns: 200px 1fr;
     grid-template-rows: calc(400px + 150px + 250px);
     margin: auto;
+    position: relative;
 }
 
 header {
     background-color: var(--main-color);
+    height: calc(400px + 150px + 250px);
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -69,7 +75,6 @@ header .logo a img {
 
 header .menu {
     position: relative;
-    z-index: 10;
 }
 
 header nav {
@@ -78,15 +83,24 @@ header nav {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    z-index: 10;
 }
 
 header nav .main-menu {
-    width: 150px;
+    /* width: 150px;
     line-height: 50px;
-    text-align: center;
+    text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header nav .main-menu li {
+    width: 150px;
+    padding: 10px 0;
+    line-height: 50px;
+    text-align: center;
 /* 속성 . 값 생각 안남.. 일단 다하고나서 필요해 보이는것들 해볼생각 */
 }
 
@@ -107,33 +121,34 @@ header nav.sub {
     position: absolute;
     top: 0;
     left: 100%;
-    /* display: none; */
+    display: none;
 }
 
 header nav .inner {
     display: flex;
+    justify-content: start;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0 30px;
 }
 /* 늘 막히던 곳에서 막히는중... 온갖꺼 다 넣어보는중.. 시간.. 어휴... */
 
-header nav.sub .sub-menu {
+header nav.sub .sub-menu > li {
     display: flex;
-    flex-direction: column;
     align-items: center;
     width: 150px;
-    height: 50px;
     line-height: 50px;
-    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0px 2vw;
 }
 
-header nav.sub .sub-menu > li {
+/* header nav.sub .sub-menu > li {
     display: flex;
     text-align: center;
     line-height: 50px;
     align-items: center;
-}
+} */
 
 header nav.sub .sub-menu > li a {
     color: var(--main-color);
@@ -285,8 +300,9 @@ header nav.sub .sub-menu > li a:hover {
     height: 160px;
 }
 
-.gallery .item {
+.gallery .item a {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -351,12 +367,13 @@ footer .fnb a:not(:first-of-type)::before {
     display: inline-block;
 }
 
-footer .copy { text-align: center; }
+footer .copy { padding: 0 30px; }
 
 footer .family {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
 }
 
 footer .family select {
@@ -376,7 +393,7 @@ footer .family select {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
-    /* display: none; */
+    display: none;
 }
 
 #modal .inner {
@@ -402,6 +419,17 @@ footer .family select {
     color: var(--main-color);
 }
 
-#modal .card p 
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
 
-#modal .colse 
+#modal .close {
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
