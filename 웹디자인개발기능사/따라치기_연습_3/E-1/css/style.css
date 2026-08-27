@@ -16,7 +16,7 @@ a { text-decoration: none; color: var(--text-color); }
     --back-color: #ffffff;
     --text-color: #333333;
     --container-width: 100vw;
-    --slide-width: calc(100vw - 200px - 400px);
+    --slide-width: calc(100vw - 600px);
     --slide-height: calc(100vh - 120px);
 }
 /* container.slide 넓이.높이 계산 부터 생각 길어짐...
@@ -38,16 +38,28 @@ body {
 
 /* 레이아웃 나누는 거에서 부터 너무 심하게 생각 길어지고 막혀버림... */
 .container {
-    /* display: grid;
-    grid-template-columns: calc(200px + 400px + 400px);
-    grid-template-rows: 100%; */
-    display: flex;
+    display: grid;
+    grid-template-columns: 400px calc(100vw - 200px - 400px);
+    grid-template-rows: calc(100% - 120px);
+    margin: auto;
+    width: var(--container-width);
+    /* display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 800px;
+    height: 800px; */
 }
 
-#contents { width: calc(100% - 200px); }
+#contents { 
+    width: 400px;
+    height: calc(100vh - 120px);
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start; */
+}
+
+#slides { width: var(--slide-width) }
 
 footer { height: 120px; }
 
@@ -113,20 +125,119 @@ header nav .main-menu li a:hover {
 
 
 header nav .sub-menu {
-    /* display: none; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0; /* 이번 시험지 처음부터 너무 심하게 막히네... */
+    display: none;
+    text-align: center;
+    width: 150px;
+    line-height: 50px;
+    /* 이번 시험지 처음부터 너무 심하게 막히네... */
 }
 
 header nav .sub-menu > li {
+   background-color: white;
+}
+
+header nav .sub-menu > li a {
+    color: var(--main-color);
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+
+
+
+header .spot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     height: 50px;
     line-height: 50px;
-    text-align: center;
-    background-color: rgba(200, 200, 200, 0.7);
+    column-gap: 20px;
+    padding: 0 10px;
+    font-size: 13px;
 }
-header nav .sub-menu > li a 
-header nav .sub-menu > li a:hover
+
+header .spot a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header .spot a:not(:first-of-type)::before {
+    position: absolute;
+    top: 16px;
+    left: -20px;
+    content: "";
+    width: 2px;
+    height: 16px;
+    background-color: var(--sub-color);
+}
+
+
+
+
+
+
+
+
+
+
+.banner {
+    
+}
+
+.banner .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.banner h1 { font-size: 24px; }
+
+.banner span { font-size: 14px; }
+
+.banner p { font-size: 16px; margin: 0; }
+
+
+
+
+
+
+
+
+
+
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.tab-menu .menu-item a:hover 
+
+.content-item ul li a 
+.content-item ul li:nth-of-type(odd) 
+.content-item ul li:nth-of-type(even) 
+.content-item ul li:hover 
