@@ -39,7 +39,8 @@ body {
 /* 레이아웃 나누는 거에서 부터 너무 심하게 생각 길어지고 막혀버림... */
 .container {
     display: grid;
-    grid-template-columns: 400px calc(100vw - 200px - 400px);
+    grid-template-columns: 200px 400px calc(100vw - 600px);
+    /* 여기서 4시간 동안 헤메임.... 자꾸 1 주고 나머지가 자동 되는지 착각하고있었음 */
     grid-template-rows: calc(100% - 120px);
     margin: auto;
     width: var(--container-width);
@@ -51,7 +52,7 @@ body {
 
 #contents { 
     width: 400px;
-    height: calc(100vh - 120px);
+    height: 880px calc(100vh - 120px);
     overflow: hidden;
     /* display: flex;
     flex-direction: column;
@@ -235,9 +236,148 @@ header .spot a:not(:first-of-type)::before {
     color: white;
 }
 
-.tab-menu .menu-item a:hover 
 
-.content-item ul li a 
-.content-item ul li:nth-of-type(odd) 
-.content-item ul li:nth-of-type(even) 
-.content-item ul li:hover 
+
+
+
+.content-item ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+.content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+
+
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 160px;
+    padding: 0 20px;
+}
+
+.gallery a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+.link nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.link nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.link nav a:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide a img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+footer .footer-logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+footer .fnb {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+footer .fnb a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+footer .fnb a:hover 
+footer .fnb a:not(:first-of-type)::before
