@@ -4,7 +4,8 @@
 /* 08월 28일 / 시작 : 12시 15분 / 종료 : 12시 55분 */
 
 /* 어디선가 뭔가 크게 잘못한게 있는데, 그걸 못찾는중! */
-/* 확인 및 수정 작업 : 17시 16분 - 00시 00분 */
+/* 찾았음! 선택자 속성 하나 빼먹음! ㅠ ㅠ 이것만 아니면 다 성공 이였는데 아쉽네... */
+/* 확인 및 수정 작업 : 22시 06분 - 22시 11분 */
 
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
@@ -56,7 +57,7 @@ header {
     padding: 0 20px;
 }
 
-footer { width: 100%; height: 100px; }
+footer { height: 100px; }
 
 header .logo a img {
     width: 195px;
@@ -80,7 +81,6 @@ header nav .main-menu li {
     width: 150px;
     line-height: 50px;
     text-align: center;
-    background-color: var(--sub-color);
 }
 
 header nav .main-menu li a {
@@ -94,7 +94,11 @@ header nav .main-menu li a:hover {
     background-color: var(--text-color);
 }
 
-header nav .sub-menu > li { display: none; }
+header nav .sub-menu { display: none; }
+
+header nav .sub-menu > li {
+    background-color: white;
+} /* 이걸 빼먹었네..... ㅠ ㅠ */
 
 header nav .sub-menu > li a {
     color: var(--main-color);

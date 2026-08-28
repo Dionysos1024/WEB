@@ -26,7 +26,7 @@ $(function() {
             top: -size
         }, speed, function() {
             $container.css('top','0')
-            $container.append($($slide).first())
+            $container.append($(".slide").first())
         })
     }, time);
 
