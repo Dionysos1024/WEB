@@ -4,7 +4,7 @@
 /* 08월 28일 / 시작 : 12시 15분 / 종료 : 12시 55분 */
 
 /* 어디선가 뭔가 크게 잘못한게 있는데, 그걸 못찾는중! */
-/* 확인 및 수정 작업 : 00시 00분 - 00시 00분 */
+/* 확인 및 수정 작업 : 17시 16분 - 00시 00분 */
 
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
@@ -33,22 +33,20 @@ body {
     display: grid;
     grid-template-columns: 200px 400px calc(100vw - 600px);
     grid-template-rows: calc(100vh - 100px);
-    padding: 0 10px;
+    margin: auto;
 }
 
 #contents {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: start;
+    /* align-items: start; */
     overflow: hidden;
-    width: 100%;
-    height: calc(100vh - 100px);
+    padding: 4% 0; /* 빼먹은것, 추가 수정 함 */
 }
 
 header {
-    width: 200px;
-    height: calc(100vh - 100px);
+    width: 100%;
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
