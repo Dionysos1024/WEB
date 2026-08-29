@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영상박물관</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="script/jquery-1.12.3.js"></script>
+    <script src="script/script.js"></script>
+
+</head>
+<body>
+    <!-- 원래 코드 한번 흝어보고 시작했는데, 아예 한번도 안보고 도전 첫 시작! -->
+    <!-- 08월 29일 시작 : 15시 30분 / 종료 : 15시 52분 -->
+    <!-- 선생님 코드 보고 확인 시작 : 15시 53분 종료 : 15시 57분 -->
+    <!-- 틀린 부분 00개 -->
+    
+
+    <div class="container">
+
+
+        <header>
+
+
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="로고"></a>
+            </div>
+
+
+
+            <nav>
+                <ul class="main-menu">
+                    <li>
+                        <a href="#">메인메뉴</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메인메뉴</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메인메뉴</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메인메뉴</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                            <li><a href="#">서브메뉴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+            <nav class="spot">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+            </nav>
+
+
+        </header>
+
+
+
+        <section id="contents">
+
+
+            <div class="banner">
+
+                <div class="inner">
+                    <a href="#"><img src="images/banner.jpg" alt="배너 이미지"></a>
+
+                    <div>
+                        <h1>배너 제목</h1>
+                        <span>2026.08.29</span>
+                        <p>
+                            배너 내용 입니다--------- <br>
+                            배너 내용 입니다--------- <br>
+                        </p>
+                    </div>
+
+                </div>
+
+                <a href="#"><img src="images/arrow.png" alt="배너 화살표" width="40" height="40"></a>
+            </div>
+
+
+
+            <div>
+                <div class="inner">
+                    <div class="tab-menu">
+                        <div class="menu-item active">
+                            <a href="#" id="btn-notice">공지사항</a>
+                        </div>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="content-item" id="content-notice">
+                            <ul>
+                                <li>
+                                    <a href="#" class="btn-modal">
+                                        <span>레이어 팝업 - 공지사항1</span>
+                                        <span>2026.08.29</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>---------------- 공지사항2</span>
+                                        <span>2026.08.29</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>---------------- 공지사항3</span>
+                                        <span>2026.08.29</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>---------------- 공지사항4</span>
+                                        <span>2026.08.29</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="tab-menu">
+                    <div class="menu-item">
+                        <a href="#" id="btn-gallery">갤러리</a>
+                    </div>
+                </div>
+
+                <div class="content-item" id="content-gallery">
+                    <div class="gallery">
+                        <div class="item">
+                            <a href="#"><img src="images/g1.jpg" alt="갤러리 이미지1"><span>갤러리 이미지1</span></a>
+                        </div>
+                        <div class="item">
+                            <a href="#"><img src="images/g2.jpg" alt="갤러리 이미지2"><span>갤러리 이미지2</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+        <section id="slides">
+            <div class="slide-container">
+                <div class="slide"><a href="#"><img src="images/slide1.jpg" alt="슬라이드 이미지1"></a></div>
+                <div class="slide"><a href="#"><img src="images/slide2.jpg" alt="슬라이드 이미지2"></a></div>
+                <div class="slide"><a href="#"><img src="images/slide3.jpg" alt="슬라이드 이미지3"></a></div>
+            </div>
+        </section>
+
+
+
+    </div> <!-- 이거 살짝 생각이 갈라졌음... 시험지 한 20초 쳐다본듯 내가 그린 그림이 맞길 바래봄! 맞았음! 휴.... -->
+
+
+
+    <footer>
+
+
+        <div class="footer-logo">
+            <a href="#"><img src="images/logo.png" alt="푸터 로고"></a>
+        </div>
+
+
+        <div class="copy">
+            <p>뭔가 오늘은 어제보다는 잘 될것 같은 느낌 왔음</p>
+        </div>
+
+
+        <div class="sns">
+            <a href="#"><img src="images/sns1.jpg" alt="sns1"></a>
+            <a href="#"><img src="images/sns2.jpg" alt="sns2"></a>
+            <a href="#"><img src="images/sns3.jpg" alt="sns3"></a>
+        </div>
+
+
+
+    </footer>
+
+
+
+    <div id="modal">
+        <div class="inner">
+            <div class="card">
+                <h1>레이어 팝업 제목</h1>
+                <p>
+                    ------------------------------- <br>
+                    레이어 팝업 내용 입니다. <br>
+                    레이어 팝업 내용 입니다. <br>
+                    레이어 팝업 내용 입니다. <br>
+                    ------------------------------- <br>
+                </p>
+                <button class="close btn-modal">닫기</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

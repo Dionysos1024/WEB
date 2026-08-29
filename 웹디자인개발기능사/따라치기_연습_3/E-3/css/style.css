@@ -1,0 +1,408 @@
+@charset "utf-8";
+
+/* 08월 29일 시작 : 15시 58분 / 종료 : 17시 21분 */
+/* 확인 및 수정 : 17시 38분 ~ 18시 05분 */
+/* 틀린 부분 총 11부분 : 매번 같은곳 에서 틀리고, 여기서 생각 길어지면
+         마음 급해져서 뒤에 늘 잘하던 부분 까지 갑자기 생각안나서 헤메이게 됨 */
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 100vw;
+    --contianer-height: 100vh; /* 빼먹은거 추가 함 */
+    --slide-width: 400px calc(100vw - 200px - 400px);
+    --slide-height: calc(100vh - 100px);
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: var(--container-width);
+    display: grid;
+    grid-template-columns: 200px 400px calc(100vw - 600px);
+    grid-template-rows: calc(100vh - 100px);
+    margin: auto;
+    position: relative; /* 헷갈린거 틀림, contents 가 아니라 container 오는게 맞음 수정 함 */ /* 왜?? 으음... */
+}
+
+#contents {
+    /* position: relative; */ /* 이거 container 에 주었던가? 헷갈림.. */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: start; */  /* 공지 사항 컨텐츠 왜 적용 안되는지 원인 찾았음! 여기서 내가 불필요한 속성추가 해서 그런거... */
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    padding: 0 20px;
+    background-color: var(--main-color);
+    justify-content: start;  /* 이거 빼먹음, 추가 수정 했음! */
+}
+
+footer { width: 100%; height: 100px; }
+
+
+
+
+
+
+
+
+
+/* 늘 반복하는 실수 줄이기 위해서 오늘은 수업때 배운대로 선택자 먼저 다 써두고 시작 해봄! */
+
+header .logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+header nav {
+    position: relative;
+    z-index: 10;
+}
+
+header nav .main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    position: relative;  /* 빼먹은거 추가 수정 함! 여기 왜 이게 들어가는건지 모르겠음... ㅠ ㅠ */
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+header nav .main-menu li a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: var(--text-color);
+}
+
+
+
+
+
+header nav .sub-menu { 
+    display: none; /* 이거 말고 모르겠음.. 뭔가 더 해야하는데, 뭐였지!? */
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* 어... 이걸 빼먹은거였구나!? 여기 때문에 main-menu li 에서 position: relative 이게 들어간건가? 맞게 이해한건지 잘 모르겠네; */
+ }
+
+header nav .sub-menu > li {
+   background-color: rgba(200, 200, 200, 0.8);
+}
+
+header nav .sub-menu > li a {
+    color: var(--main-color);
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+
+
+
+header .spot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+}
+
+header .spot a {
+    position: relative;
+    color: white;
+} 
+
+header .spot a:not(:first-of-type)::before {
+    position: absolute;
+    top: 2px;
+    left: -10px;
+    content: "";
+    width: 2px;
+    height: 20px;
+    background-color: var(--back-color);
+    display: inline-block; /* 아.. 이걸 빼먹었네... 어쩐지 아무리 해도 안나오더라... ㅠ ㅠ */
+}
+/* 뭔가 잘못... 일단 시간 너무 지체중... 지나치고 나중에 다시와서 생각 해볼것! */
+/* 모르겠음... 뭔가 내가 빼먹은거 같은데... 뭐였지? 아오 ㅠ ㅠ */
+
+
+
+
+
+
+
+
+
+
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: var(--sub-color); /* 빼먹었네!? 생각도 못했음... 수정 추가 함! */
+}
+
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.banner h1 { font-size: 24px; }
+
+.banner span { font-size: 14px; }
+
+.banner p { font-size: 16px; }
+
+
+
+
+
+
+
+
+
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+/* 역시 또 똑같은곳 에서 혼동... .tab-menu / .tab-menu .menu-item 
+         두가지 들어갈 속성 이 자꾸 서로 뒤섞이네... 화면에서 별 차이가 안보여서 그런가... 환장 하것네... */
+.tab-menu .menu-item {
+    background-color: var(--main-color);
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.tab-menu .menu-item a {
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.tab-content .content-item ul li a {
+    display: flex;
+    justify-content: space-between; /* 왜 이거 자꾸만 적용이 안되는거지? */
+    align-items: center;
+    row-gap: 40px;
+    padding: 0 10px;
+}
+/* 또 이게 문제네... 내가 어디서 뭘 잘못한건지 확실하게 모르고 넘어가니
+            계속 같은거에서 같은걸로 매번 이게 적용 안먹히네... 미치겠네... */
+
+/* 원인 찾았음! 레이아웃에서 속성 잘못해서 그럼... 아마도(?) */
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+
+
+
+.gallery {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.gallery a img:hover { opacity: 0.7; }
+
+
+
+
+
+
+
+
+
+
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-container .slide {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+footer .copy {
+    width: 100%;
+    padding: 0 20px;
+}
+
+footer .sns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    column-gap: 10px;
+    
+}
+
+footer .sns a img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .card {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
