@@ -1,0 +1,354 @@
+@charset "utf-8";
+
+/* 08월 29일 / 시작 : 21시 47분 / 종료 : 22시 57분 / 막힌 부분 생각 안하고 그냥 넘어가기 함 */
+/* 1차 완료 후 / 2차 생각 길어지는 곳 다시 하러감
+  ( 총 2군데 :  레이아웃 컨텐츠 부분 / 서브 메뉴 ) 시작 : 22시 58분 종료 : 23시 05분 */
+
+/* html.css.script 다 끝낸뒤 확인 및 수정 시작 함 /
+    시작: 23시 25분 . 종료 : 23시 50분 소요 시간 : 25분 / 틀린부분 08개 */
+
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 100vw;
+    --container-height: 100vh;
+    --slide-width: calc(100vw - 600px);
+    --slide-height: calc(100vh - 120px);
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: var(--container-width);
+    display: grid;
+    grid-template-columns: 200px 400px calc(100vw - 600px);
+    grid-template-rows: calc(100vh - 120px);
+    position: relative;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    row-gap: 50px;
+    background-color: var(--main-color);
+}
+
+#contents {
+    /* overflow: hidden; */ /* 틀린부분 1 : 뭔가 다른점 몰랐는데, 안해도 되는 거였음... */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 첫번째 막힌 부분 해결 30초 소요 */
+}
+
+footer {
+    width: 100%;
+    height: 120px;
+}
+
+header .logo a img {
+    width: 190px;
+    height: 45px;
+    object-fit: contain;
+}
+
+header nav {
+    position: relative;
+    z-index: 10;
+}
+
+header nav .main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    position: relative; /* 틀린부분 2 : 빼먹은거 추가 함! */
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+} 
+
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: var(--text-color);
+}
+
+header nav .sub-menu {
+    display: none;
+    position: absolute; /* 두번째 일단 대충(?) 해결 (아까보다는 좋아짐;;) 07분 소요 */
+    top: 0;
+    left: 100%;
+}
+
+header nav .sub-menu > li {
+    background-color: rgba(200, 200, 200, 0.8)
+}
+
+header nav .sub-menu > li a {
+    color: var(--main-color);
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--sub-color); /* 틀린부분 3 : 빼먹은거 추가 함! (이거 중요한 부분은 아닌것 같았음!) */
+}
+
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.banner h1 { font-size: 20px; }
+
+.banner span { font-size: 12px; }
+
+.banner p { font-size: 12px; }
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    /* text-align: center; */ /* 틀린부분 4 : 또 속성 혼동 됨, 아니 별 다르게 안보이던데... 그냥 여기다 주면 안돼나?; */
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    line-height: 40px;
+    background-color: var(--main-color);
+    text-align: center; /* 틀린부분 5 : 위에서 잘못 쓴거 가지고 와서 추가 함 (대체 뭐가 달라지는거지!? 결과는 같아보이는데!? */
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.tab-content .content-item ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    height: 40px;
+}
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 160px;
+}
+
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 10px;
+    background-color: var(--sub-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 틀린부분 6 : .link / .link a 두 선택자 속성 섞임! 브라우저 는 별 다른거 크게 없음! 그냥 이대로 하면 안되나? */
+
+.link a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link a:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+
+footer .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; /* 틀린부분 7 : 오? 안그래도 이쁘게 안돼서 포기했는데, 찾았다! 추가 함! */
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+footer .fnb {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 30px;
+    padding: 0 20px;
+}
+
+footer .fnb a {
+    position: relative;
+    text-align: center; /* 틀린부분 8 : text-align center 빼먹은거 추가함! */
+    width: 100px;
+}
+
+footer .fnb a:hover {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+footer .fnb a:not(:first-of-type)::before {
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    width: 2px;
+    height: 16px;
+    content: "";
+    background-color: var(--text-color);
+}
+
+footer .copy { padding: 0 30px; }
+
+footer .family {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+footer .family select {
+    padding: 5px 10px;
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .card {
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-variant: var(--text-color);
+}
+
+#modal .close {
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
