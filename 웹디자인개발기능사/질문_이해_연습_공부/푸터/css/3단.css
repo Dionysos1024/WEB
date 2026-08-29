@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-logo img {
+    width: 200px;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+footer .sns {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+footer .sns img {
+    width: 40px;
+    height: 40px;
+}

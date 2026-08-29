@@ -52,8 +52,11 @@ $(function() {
 
 
         /* 탭 부분은 바뀐걸 아직 못외움;; 기존에 계속 쓰던거만 기억나서 그냥 통으로 안써버림.... */
+        // class="menu-item" [공지사항]/[갤러리] 클릭 했을 때
      $(".menu-item").on("click", function() {
+        // class="content-item" 공지, 갤러리를 보여줌/숨김을 전환 toggle -> (show/hide)
         $(".content-item").toggle()
+        // [공지사항]/[갤러리] 메뉴의 active 클래스를 있으면 없애고, 없으면 추가
         $(".menu-item").toggleClass("active")
      })
         /* 얘가 새로 나온애... 더 간단한데, 익숙해지지 않아서 그런지 생각이 바로 안나옴... 큰일... */

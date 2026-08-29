@@ -47,17 +47,17 @@ $(function() {
     })
 
 
-    let index = 0
-    const speed = 500
-    const time = 2000
-    const $slide = $(".slide")
-    const count = $(".slide").length
-    $slide.not(":first").hide()
-    setInterval(function() {
-        index = (index + 1) % count
-        $slide.fadeOut(speed)
-        $slide.eq(index).fadeIn(speed)
-    }, time)
+    let index = 0 // 0번째 슬라이드 부터
+    const speed = 500 // 0.5초 동안 전환
+    const time = 2000 // 2초 동안 페이드
+    const $slide = $(".slide") // 슬라이드 3장 가져오기
+    const count = $(".slide").length // 꼭 쓸필요는 없다고 함
+    $slide.not(":first").hide() // 첫 슬라이드 빼고 나머지 숨기기
+    setInterval(function() { // 타이머 함수
+        index = (index + 1) % count // (0 1 2)번째 슬라이드 반복
+        $slide.fadeOut(speed) // 슬라이드 다 선택 -> 흐려지게
+        $slide.eq(index).fadeIn(speed) // 해당 슬라이드 -> 밝아지게
+    }, time) // 2초 마다 페이드
 
 
     $(".menu-item").on("click", function() {
