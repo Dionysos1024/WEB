@@ -10,7 +10,7 @@ $(function() {
 
     // 세로 슬라이드
 
-    const time = 2000
+    /* const time = 2000
     const speed = 500
     const $slide = $(".slide")  // class="slide" 인 요소들을 선택
     const $container = $(".slide-container")  // class="slide-container" 인 요소들을 선택
@@ -24,7 +24,38 @@ $(function() {
             top: -size  // 300px 만큼 위로 슬라이드
         }, speed, function() { //0.5초 동안
             $container.css('top','0')  // 원위치
-            $container.append($())
-        })
-    })
+            $container.append($(".slide").first())
+        }, time)
+    }) */
+
+    // 페이드 슬라이드
+
+    /* let index = 0;                      // 0번째 슬라이드부터
+    const speed = 500;                  // 0.5초 동안 전환
+    const time = 2000;                  // 2초 동안 페이드
+    const $slide = $(".slide")          // 슬라이드 3장 가져오기
+    $slide.not(":first").hide()         // 첫 슬라이드 빼고 나머지 숨기기
+
+    setInterval(function() {            // 타이머 함수
+        index = (index + 1) % 3;        // (0 1 2)번째 슬라이드 반복
+        $slide.fadeOut(speed)           // 슬라이드 다 선택 -> 흐려지게
+        $slide.eq(index).fadeIn(speed)  // 해당 슬라이드 -> 밝아지게
+    }, time);                           // 2초마다 페이드 */
+
+
+
+
+
+    let index = 0
+    const speed = 500
+    const time = 2000
+    const $slide = $(".slide")
+    const count = $slide.length
+    $slide.not(":first").hide()
+
+    setInterval(() => {
+        index = (index + 1) % count
+        $slide.fadeOut(speed)
+        $slide.eq(index).fadeIn(speed)
+    }, time);
 })
