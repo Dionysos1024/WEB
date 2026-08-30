@@ -1,0 +1,50 @@
+* D유형 레이아웃
+- D-1
+  - .container        (grid 200px 1fr)
+    - header (헤더)   flex column
+    - section.contents 컨텐츠 position: relative;
+      - .link (바로가기)  position: absolute;
+      - section#slides (슬라이드) flex
+      - .banner (배너)  flex space-between center
+      - .tab (공지+갤러리 탭) 
+        - .tab-menu flex  
+        - tab-content flex space-between center
+  - footer flex space-between center
+- D-2
+  - .container (grid 200px 1fr)
+    - header (헤더) fiex column
+    - section.contents 컨텐츠
+      - .inner grid 1fr 230px
+        - section#slides (슬라이드) flex
+        - .banner (배너) flex column
+      - .tab (공지/갤러리 탭) grid auto auto
+  - footer flex space-between 
+- D-3
+  - .container grid 200px 1fr
+    - header (헤더) flex column
+      - .menu position: relative
+        - nav.main flex column
+        - nav.sub position: absolute top: 0 left: 100% flex column
+    - section.contents 컨텐츠 position: relative
+      - .link (바로가기) position: absolute
+      - section#slides (슬라이드) flex
+      - .banner (배너) flex space-between
+      - .tab (공지+갤러리 탭)
+        - .tab-menu flex
+        - tab-contant flex space-between center
+  - footer flex space-between
+    - footer-logo
+    - .inner flex column
+- D-4
+  - .container grid 200px 1fr
+    - header (헤더) flex column
+     - .menu position: relative
+       - nav.main flex column
+       - nav.sub position: absolute top: 0 left: 100% flex column
+    - section.contents 컨텐츠 flex space-between
+      - section#slides (슬라이드) flex
+      - .link (바로가기) flex column space-evenly
+      - .tab (공지/갤러리 탭) grid auto auto
+  - footer flex space-between
+    - empty width 200px
+    - .inner flex column space-evenly
