@@ -4,7 +4,276 @@
 잘 안되었음, (position: relative 와 position: absolute) 의 관계 선택자 지정 혼동해서
 너무 어려움을 느낌! 일단 조금더 이해한 상태로 두번째 도전 시작함 */
 
+/* 아예 선생님 코드 안보고 혼자 생각하고 했을때 보다 어제 잠깐 한번이라도 보고나서
+코드 치니 조금더 수월해짐... 얼마나 이해를 못하는건지 늘 깨달음 ㅠ ㅠ */
 
-/* 08월 31일 / 시작 : 00시 00분 / 종료 : 00시 00분 */
+
+/* 08월 31일 / 시작 : 06시 18분 / 종료 : 07시 28분 */
 /* 08월 31일 / 시작 : 00시 00분 / 종료 : 00시 00분 */
 
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #666666;
+    --container-width: 1340px;
+    --slide-width: 100vw;
+    --slide-height: 350px;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    width: var(--container-width);
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+#slides { height: 350px; }
+
+section { width: 100%; }
+
+footer {
+    width: 100%;
+    height: 120px;
+}
+
+header .logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+header nav {
+    position: relative;
+    z-index: 10;
+    top: 10%; /* 이부분 이해를 못해서 그런가 계속 강제 외우기로 하는 듯 */
+}
+
+header nav .main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    width: 150px;
+    line-height: 50px;
+    height: 50px;
+    text-align: center; /* 얘는 항상 제일 늦게 화면 보고나서 아차! 하고 넣는 듯... */
+} 
+
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: #333333;
+}
+
+header nav .sub-menu { display: none; }
+
+header nav .sub-menu > li {
+    background-color: var(--sub-color);
+}
+
+header nav .sub-menu > li a {
+    color: var(--main-color);
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    position: absolute;
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.link {
+    position: absolute; /* container 이 부모인가? slide 가 부모인가? */
+    top: -15%; /* 부모를 누구를 잡은건지 확실히 몰라서 위치 잡기가 어려움 */
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    /* 이건 아래 컨텐츠 뭐 할때마다 위치가 조금씩 틀어져서 매번 손 대서 다시 맞춰야 하네... */
+}
+
+.link nav {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.link nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.link nav a:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+
+.banner {
+    height: 200px; /* 이거 생각보다 어려움, 처음 레이아웃 부터 안되서 그런듯 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: var(--sub-color);
+}
+.banner .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.banner h1 { font-size: 24px; }
+
+.banner span { font-size: 14px; }
+
+.banner p { font-size: 16px; }
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */ /* 얘도 항상 해보고나서 지우는듯;; */
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-menu .menu-item:hover,
+.tab-menu .menu-item.active {
+    background-color: var(--main-color);
+}
+
+.tab-menu .menu-item:hover a,
+.tab-menu .menu-item.active a {
+    color: white;
+}
+
+.tab-content .content-item ul li a {
+    display: flex; /* 선택자 이게 아닌가? html 에서 이거 맞는데? */
+    justify-content: space-between; /* 계속 같은곳 에서 적용 안되서 애먹는 중 */
+    height: 40px; /* 어디서 꼬인거지? 돌겠네... */ /* 이게 왜 연관되는건지 이해 불가능 */
+    padding: 0 30px;
+    width: 100%;
+}
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+#content-gallery { display: none; } /* 자꾸만 뒤늦게 하는중... */
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%; /* 이것도 항상 이상하게 100px 하고나서 다시 100% 하고있음;; */
+    height: 160px;
+}
+
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+footer .footer-logo a img {
+    filter: grayscale(100%);
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    padding: 0 20px;
+}
+
+footer .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* fnb 선택자 지정 할때마다 헤살려서 애먹음, nav 를 왜 자꾸.... */
+footer .fnb {
+    display: flex;
+    justify-content: start;
+    column-gap: 30px;
+    align-items: center;
+}
+
+footer .fnb a:hover {
+    font-weight: bold;
+    color: var(--main-color);
+}
+/* 아침 공부 요기까지! 일할 준비 하러 고고~ */
+footer .fnb a:not(:first-of-type)::before {
+
+}
