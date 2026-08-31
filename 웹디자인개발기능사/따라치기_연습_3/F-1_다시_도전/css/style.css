@@ -9,7 +9,11 @@
 
 
 /* 08월 31일 / 시작 : 06시 18분 / 종료 : 07시 28분 */
-/* 08월 31일 / 시작 : 00시 00분 / 종료 : 00시 00분 */
+/* 08월 31일 / 시작 : 12시 15분 / 종료 : 12시 26분 */
+
+/* js 까지 다 하고나서, 확인 해야함! */
+
+/* 확인 작업 / 12시 44분 ~ 12시 58분 / 하나가 잘 안됨, 그외 아주 큰 이상은 없음 */
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -129,7 +133,7 @@ header nav .sub-menu > li a:hover {
 
 .link {
     position: absolute; /* container 이 부모인가? slide 가 부모인가? */
-    top: -15%; /* 부모를 누구를 잡은건지 확실히 몰라서 위치 잡기가 어려움 */
+    top: -20%; /* 부모를 누구를 잡은건지 확실히 몰라서 위치 잡기가 어려움 */
     width: 100%;
     height: 100px;
     z-index: 10;
@@ -265,8 +269,9 @@ footer .inner {
 footer .fnb {
     display: flex;
     justify-content: start;
-    column-gap: 30px;
+    column-gap: 40px;
     align-items: center;
+    position: relative; /* 여기다 주는게 맞는건가; 헷갈림... */
 }
 
 footer .fnb a:hover {
@@ -275,5 +280,65 @@ footer .fnb a:hover {
 }
 /* 아침 공부 요기까지! 일할 준비 하러 고고~ */
 footer .fnb a:not(:first-of-type)::before {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    width: 2px;
+    height: 16px;
+    content: "";
+    background-color: var(--text-color);
+    display: inline-block;
+    /* 엥? 뭐지... 이따가 다시 해야함! 왜 이리 되는거지!? */
+    /* 왜 하나 뿐이 안나오는지 모르겠음... ㅠ ㅠ */
+    /* 흐어엉... 얘만 어케 하면 끝인데... 왜!? 어째서!? */
+}
 
+footer .copy { padding: 0 20px; }
+
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .card {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
