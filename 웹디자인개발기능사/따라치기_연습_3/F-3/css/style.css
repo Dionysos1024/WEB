@@ -26,5 +26,166 @@ body {
     position: relative;
     margin: auto;
     width: var(--container-width);
-    
 }
+
+header {
+    width: 1340px;
+    height: 100px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#slides { height: 350px; }
+
+footer {
+    width: 1340px;
+    height: 120px;
+}
+
+header .logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    padding: 0 10px;
+}
+
+header nav {
+    position: relative;
+    z-index: 10;
+}
+
+header nav .main-menu {
+    position: relative;
+    display: flex;
+    align-items: end;
+}
+
+header nav .main-menu li {
+    width: 150px;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: #333333;
+}
+
+header nav.sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    display: none;
+}
+
+header nav.sub .inner {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--sub-color);
+}
+
+header nav.sub .sub-menu > li {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: var(--sub-color);
+}
+
+header nav.sub .sub-menu > li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav.sub .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+#slides {
+    width: var(--slide-width);
+    height: 350px;
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    width: var(--slide-width);
+    height: 350px;
+}
+
+.slide-container .slide img {
+    width: var(--slide-width);
+    height: 350px;
+}
+
+.link {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+}
+
+.link nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.link nav a {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    text-align: center;
+}
+
+.link nav a:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1340px;
+    padding: 5px 20px;
+}
+
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    line-height: 40px;
+}
+
+.banner h1 { font-size: 24px; }
+
+.banner span { font-size: 14px; }
+
+.banner p { font-size: 16px; margin: 0; }
+
+/* 흐잉... 요기까지! 이따가 저녁 밥 시간에 이어서 고고~ */
