@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸른마을</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="script/jquery-1.12.3.js"></script>
+    <script src="script/script.js"></script>
+
+</head>
+<body>
+    <!-- 시험지 만 보고 html.css.js 다 작성 해보기 도전! -->
+    <!-- 09월 02일 시작 : 17시 10분 / 종료 : 17시 27분 -->
+
+    
+
+    <div class="container">
+
+        <header>
+
+
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="로고"></a>
+            </div>
+
+           
+             <nav class="main">
+                <ul class="main-menu">
+                    <li>
+                        <a href="#">메인메뉴</a>
+                    </li>
+                    <li>
+                        <a href="#">메인메뉴</a>
+                    </li>
+                    <li>
+                        <a href="#">메인메뉴</a>
+                    </li>
+                    <li>
+                        <a href="#">메인메뉴</a>
+                    </li>
+                </ul>
+             </nav>
+
+             <nav class="sub">
+                <div class="inner">
+                    <ul class="sub-menu">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                    <ul class="sub-menu">
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                        <li><a href="#">서브메뉴</a></li>
+                    </ul>
+                </div>
+             </nav>
+
+
+             <nav class="spot">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+             </nav>
+
+        </header>
+
+
+        <!-- 컨텐츠 영역에서 slide 와 link 를 inner로 묶어야 하나(?)
+              생각 살짝 길어짐! 결론: 일단 안묶고, 따로 구조 만들고, css 각 위치 잡는걸로(?) -->
+
+        <section id="slides">
+            <div class="slide-container">
+                <div class="slide">
+                    <a href="#"><img src="images/slide1.jpg" alt="슬라이드 이미지1"></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="images/slide2.jpg" alt="슬라이드 이미지2"></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="images/slide3.jpg" alt="슬라이드 이미지3"></a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- section#contents 안으로 link를 넣어야 하나? 이걸로 또 생각 길어짐!
+                결론 : 따로 빼둔 상태로 구조 짜보기로 함! -->
+        <div class="link">
+            <nav>
+                <a href="#"><img src="images/goto1.png" alt="바로가기1"><span>LINK1</span></a>
+                <a href="#"><img src="images/goto2.png" alt="바로가기2"><span>LINK2</span></a>
+                <a href="#"><img src="images/goto3.png" alt="바로가기3"><span>LINK3</span></a>
+            </nav>
+        </div>
+
+
+
+        <section id="contents">
+
+            <div class="banner">
+                <div class="inner">
+                    <a href="#"><img src="images/banner.jpg" alt="배너 이미지"></a>
+                    <div>
+                        <h1>배너 제목</h1>
+                        <span>2026.09.02</span>
+                        <p>
+                            배너 내용 입니다. ---------------------------------------------- <br>
+                            배너 내용 입니다. ---------------------------------------------- <br>
+                        </p>
+                    </div>
+                </div>
+                <a href="#"><img src="images/arrow.png" alt="배너 화살표" width="60" height="60"></a>
+            </div>
+
+
+
+            <div class="tab">
+                <div class="inner">
+                    <div class="tab-menu">
+                        <div class="menu-item active">
+                            <a href="#" id="btn-notice">공지사항</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="#" id="btn-gallery">갤러리</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
+</body>
+</html>
