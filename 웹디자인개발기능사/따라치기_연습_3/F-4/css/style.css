@@ -161,7 +161,7 @@ header nav.sub .sub-menu li a:hover {
 
 .link nav {
     position: absolute;
-    top: -100px;
+    top: -80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -280,7 +280,7 @@ footer .footer-logo a img {
     object-fit: contain;
 }
 
-footer .copy { /* 이따가 다시 해야함! */ }
+footer .copy { padding: 0 30px; } /* 앞에 왼쪽 정렬 하고싶은데 잘 안돼네 */
 
 footer .family {
     display: flex;
