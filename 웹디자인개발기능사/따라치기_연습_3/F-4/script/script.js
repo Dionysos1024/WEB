@@ -10,7 +10,7 @@ $(function() {
     $(".main, .sub").on("mouseenter", function() {
         $(".sub").stop().slideDown()
     })
-    $(".main, .sub").on("mouselengave", function() {
+    $(".main, .sub").on("mouseleave", function() {
         $(".sub").stop().slideUp()
     })
 
