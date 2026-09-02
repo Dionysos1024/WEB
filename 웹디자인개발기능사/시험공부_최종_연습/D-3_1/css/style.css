@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* 시험지 만 보고 html.css.js 다 작성 해보기 도전! */
+
+/* 09월 02일 시작 : 22시 15분 / 종료 : 23시 10분 */
+/* 09월 03일 시작 : 00시 00분 / 종료 : 00시 00분 */
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 100vw;
+    --slide-width: calc(100% - 200px);
+    --slide-height: 400px;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: calc(400px + 200px + 250px);
+}
+
+header {
+    width: 200px;
+    height: calc(400px + 200px + 250px);
+    background-color: var(--main-color);
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+#contents { width: 100%; }
+
+footer { width: 100%; height: 120px; }
+
+header .logo a img {
+    width: 200px;
+    height: 40px;
+    object-fit: contain;
+    padding: 0 20px;
+}
+
+header nav {
+    position: relative;
+    z-index: 10;
+}
+
+header nav .main-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: var(--text-color);
+}
+
+header nav.sub { 
+    position: absolute;
+    top: 3%;
+    left: 200px;
+    width: calc(100vw - 200px);
+    height: calc(50px * 4);
+    background-color: var(--sub-color);
+}
+
+header nav.sub .inner {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+header nav.sub .sub-menu {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav.sub .sub-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: var(--main-color);
+}
+
+header nav.sub .sub-menu li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* 헐... 잘되다가 갑자기 왜 막혀서 안된거지... 시간 엄청 들어갔네... 좌절... */
+/* 나머지 는 내일 회사가서 최대한 빠르게...(?) */

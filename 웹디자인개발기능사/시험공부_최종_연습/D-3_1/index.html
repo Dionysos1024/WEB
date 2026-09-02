@@ -13,18 +13,31 @@
 </head>
 <body>
     <!-- 시험지 만 보고 html.css.js 다 작성 해보기 도전! -->
+    
     <!-- 09월 02일 시작 : 17시 10분 / 종료 : 17시 27분 -->
+
+    <!-- 1차 도전 실패! 시간 너무 짧으니, 뭘 생각할 틈 없이 하니 마음만 조급해져서 안되겠음!
+       html 할때는 되도록이면 시간 여유 있을때 시험지 보고 생각 후, 코드 치는걸로 해야겠음!-->
+
+    <!-- 09월 02일 시작 : 21시 50분 / 종료 : 22시 12분 -->
+
+    <!-- 2차 도전! 5분 동안 시험지 보고 대충 생각 후, 시작! -->
 
     
 
     <div class="container">
 
+
+
         <header>
+
 
 
             <div class="logo">
                 <a href="#"><img src="images/logo.png" alt="로고"></a>
             </div>
+
+
 
            
              <nav class="main">
@@ -74,12 +87,19 @@
              </nav>
 
 
+
+
              <nav class="spot">
                 <a href="#">로그인</a>
                 <a href="#">회원가입</a>
              </nav>
 
+
+
         </header>
+
+
+
 
 
         <!-- 컨텐츠 영역에서 slide 와 link 를 inner로 묶어야 하나(?)
@@ -101,8 +121,12 @@
 
 
 
+
+
+
         <!-- section#contents 안으로 link를 넣어야 하나? 이걸로 또 생각 길어짐!
-                결론 : 따로 빼둔 상태로 구조 짜보기로 함! -->
+             생각 : 따로 빼둔 상태로 구조 짜보기로 함! container 에 들어가 있으니(?) position: relative 주면, 
+                    여기 어짜피 slide 위에 띄워야하니까(?) position: absolute 주고 위치 잡으면 돼지않을까? -->  
         <div class="link">
             <nav>
                 <a href="#"><img src="images/goto1.png" alt="바로가기1"><span>LINK1</span></a>
@@ -113,7 +137,13 @@
 
 
 
+
+
+
         <section id="contents">
+
+
+
 
             <div class="banner">
                 <div class="inner">
@@ -132,8 +162,13 @@
 
 
 
+
+
+
             <div class="tab">
+
                 <div class="inner">
+
                     <div class="tab-menu">
                         <div class="menu-item active">
                             <a href="#" id="btn-notice">공지사항</a>
@@ -142,12 +177,120 @@
                             <a href="#" id="btn-gallery">갤러리</a>
                         </div>
                     </div>
+
+                    <div class="tab-content">
+                        <div class="content-item" id="content-notice">
+                            <ul>
+                                <li>
+                                    <a href="#" class="btn-modal">
+                                        <span>레이어 팝업 - 공지사항1</span>
+                                        <span>2026.09.02</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>---------------- 공지사항2</span>
+                                        <span>2026.09.02</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>---------------- 공지사항3</span>
+                                        <span>2026.09.02</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>---------------- 공지사항4</span>
+                                        <span>2026.09.02</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="content-item" id="content-gallery">
+                            <div class="gallery">
+                                <div class="item">
+                                    <a href="#"><img src="images/g1.jpg" alt="갤러리 이미지1"></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="images/g2.jpg" alt="갤러리 이미지2"></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="images/g3.jpg" alt="갤러리 이미지3"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </section>
 
 
-
+    <!-- 어!? 살짝 생각 해버림, container 닫는거 에서 다시 시험지 보고...
+            낚일뻔.... footer 은 따로 라고!! 닫자!! -->
     </div>
+
+
+
+
+
+
+    <footer>
+
+
+
+        <div class="footer-logo">
+            <a href="#"><img src="images/logo.png" alt="푸터 로고"></a>
+        </div>
+
+
+
+        <div class="inner">
+
+            <nav class="fnb">
+                <a href="#">하단 메뉴1</a>
+                <a href="#">하단 메뉴2</a>
+                <a href="#">하단 메뉴3</a>
+                <a href="#">하단 메뉴4</a>
+                <a href="#">하단 메뉴5</a>
+                <a href="#">하단 메뉴6</a>
+            </nav>
+
+            <div class="copy">
+                <p>
+                    와!! 진짜 아예 안보고 갑자기 하려니 생각이 많아지긴 하넹.... <br>
+                    빨리 익숙해 져야겠네, 생각이 빨리빨리 돼야하는데... <br>
+                </p>
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+
+
+
+    <div id="modal">
+        <div class="inner">
+            <div class="card">
+                <h1>레이어 팝업 제목</h1>
+                <p>
+                    -------------------------------- <br>
+                    레이어 팝업 내용 입니다. <br>
+                    레이어 팝업 내용 입니다. <br>
+                    레이어 팝업 내용 입니다. <br>
+                    -------------------------------- <br>
+                </p>
+                <button class="close btn-modal">닫기</button>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>
