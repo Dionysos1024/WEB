@@ -4,10 +4,11 @@
 
 /* 09월 03일 시작 : 17시 12분 / 종료 : 17시 27분 */
 /* 09월 03일 시작 : 21시 40분 / 종료 : 22시 35분 */
-/* 09월 04일 시작 : 06시 00분 / 종료 : 00시 00분 */
+/* 09월 04일 시작 : 05시 54분 / 종료 : 06시 25분 */
 
 /* 아... 컨텐츠 영역 망해가네.. 이거 그냥 처음 생각대로 flex로 나누어야했었나? ㅠ ㅠ */
 /* 일단 오늘 너무 컨디션 안좋아서 일직 자러 고고~ 낼 회사에서 어케든 마무리를... */
+/* 다됐는데!! 갑자기 화면 왜 이래!? 아오.. 돌겠네... */
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -44,6 +45,14 @@ header {
 
 footer { width: 100%; height: 120px; }
 
+#contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    height: calc(100vh - 120px);
+}
+
 header .logo-a img {
     width: 190px;
     height: 45px;
@@ -66,6 +75,7 @@ header nav .main-menu {
 }
 
 header nav .main-menu li {
+    position: relative; /* 안해서, 한참 헤메이다 넣고 성공; */
     width: 150px;
     height: 50px;
     line-height: 50px;
@@ -101,7 +111,7 @@ header nav .sub-menu > li {
 }
 
 header nav .sub-menu > li a {
-    color: white;
+    color: var(--main-color)
 }
 
 header nav .sub-menu > li a:hover {
@@ -137,7 +147,7 @@ header nav .sub-menu > li a:hover {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 150px;
+    height: 100px;
     padding: 0 10px;
 }
 
@@ -202,7 +212,7 @@ header nav .sub-menu > li a:hover {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 200px;
+    height: 160px;
 }
 
 .gallery .item a {
@@ -211,10 +221,152 @@ header nav .sub-menu > li a:hover {
     align-items: center;
 }
 
-.link 
+/* 으아!? 다시 처음생각한대로 flex 레이아웃 잡고 다시... ㄱㄱ */
+.link {
+    width: 100%;
+    /* height: 100px; */
+}
 
-.link nav 
+.link nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 10px;
+    column-gap: 20px;
+}
 
-.link nav a 
+.link nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.link nav a:hover 
+.link nav a:hover {
+    transform: translateY(-10px);    
+    transition: all 0.3s;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+footer .footer-logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    padding: 0 10px;
+}
+
+footer .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+}
+
+footer nav {
+    width: 100%;
+    height: 100%;
+}
+
+footer nav.fnb {
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    column-gap: 50px;
+}
+
+footer nav.fnb a {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+footer nav.fnb a:hover {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+footer nav.fnb a:not(:first-of-type)::before {
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 2px;
+    height: 18px;
+    content: "";
+    background-color: var(--text-color);
+}
+
+/* 오!? 뭐지!? 망했는데...!? 집에서는 멀쩡해보였는데,
+            왜 회사에서는 화면이 이상해지냐... 뭐지!? */
+
+footer .copy { padding: 0 30px; }
+
+footer .family {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .family select {
+    padding: 5px 10px;
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .card {
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
