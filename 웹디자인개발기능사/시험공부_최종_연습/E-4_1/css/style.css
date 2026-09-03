@@ -3,6 +3,11 @@
 /* 시험지 만 보고 html.css.js 다 작성 해보기 도전! */
 
 /* 09월 03일 시작 : 17시 12분 / 종료 : 17시 27분 */
+/* 09월 03일 시작 : 21시 40분 / 종료 : 22시 35분 */
+/* 09월 04일 시작 : 06시 00분 / 종료 : 00시 00분 */
+
+/* 아... 컨텐츠 영역 망해가네.. 이거 그냥 grid로 나누어야했었나? ㅠ ㅠ */
+/* 일단 오늘 너무 컨디션 안좋아서 일직 자러 고고~ 낼 회사에서 어케든 마무리를... */
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -33,13 +38,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; /* 시험지에는 왼쪽에 가까운데, start 로 해야하나? */
-    row-gap: 30px;
+    align-items: center;
+    row-gap: 50px;
 }
-
-#slides { width: 400px; }
-
-#contents { width: 400px; }
 
 footer { width: 100%; height: 120px; }
 
@@ -51,23 +52,169 @@ header .logo-a img {
 }
 
 header nav {
+    width: 100%;
+    height: 100%;
     position: relative;
     z-index: 10;
 }
 
 header nav .main-menu {
     display: flex;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
 }
 
-header nav .main-menu li 
+header nav .main-menu li {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    /* text-align: center; */
+}
 
-header nav .main-menu li a 
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
 
-header nav .main-menu li a:hover 
+header nav .main-menu li a:hover {
+    background-color: var(--text-color);
+}
 
-header nav .sub-menu > li 
+header nav .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
 
-header nav .sub-menu > li a 
+header nav .sub-menu > li {
+    background-color: var(--sub-color);
+}
 
-header nav .sub-menu > li a:hover 
+header nav .sub-menu > li a {
+    color: white;
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide a img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+/* 흠... 개별로 하면 망하려나.. 일단 해보고(?) */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    padding: 0 10px;
+}
+
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.banner h1 { font-size: 18px; }
+
+.banner span { font-size: 13px; }
+
+.banner p { font-size: 14px; }
+
+.tab-menu {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: var(--main-color);
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.tab-content .content-item ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    line-height: 50px;
+}
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+/* 하면서 점점더 느끼는데, 이거 아무리 생각해도 grid 주고 나누어야했나봄... */
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link 
+
+.link nav 
+
+.link nav a 
+
+.link nav a:hover 
