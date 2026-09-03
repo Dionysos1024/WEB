@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오픈뱅킹</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="script/jquery-1.12.3.js"></script>
+    <script src="script/script.js"></script>
+
+</head>
+<body>
+    
+
+    <!-- 시험지 만 보고 html.css.js 다 작성 해보기 도전! -->
+    <!-- 시험지 보고 레이아웃 생각할 시간 5분 정도 소요 됨(?)
+            header . contents . footer 따로 container 묶고,
+            slides 따로, contents flex(?) footer flex(?) 도전! -->
+    <!-- 09월 04일 시작 : 07시 10분 / 종료 : 07시 40분 -->
+
+    <header class="container">
+
+        <div class="logo">
+            <a href="#"><img src="images/logo.png" alt="로고"></a>
+        </div>
+
+        <nav class="main">
+            <ul class="main-menu">
+                <li>
+                    <a href="#">메인메뉴</a>
+                </li>
+                <li>
+                    <a href="#">메인메뉴</a>
+                </li>
+                <li>
+                    <a href="#">메인메뉴</a>
+                </li>
+                <li>
+                    <a href="#">메인메뉴</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="sub">
+            <div class="inner">
+                <ul class="sub-menu">
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                </ul>
+                <ul class="sub-menu">
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                </ul>
+                <ul class="sub-menu">
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                </ul>
+                <ul class="sub-menu">
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                    <li><a href="#">서브메뉴</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+
+
+    <section id="slides">
+        <div class="slide-container">
+            <div class="slide">
+                <a href="#"><img src="images/slide1.jpg" alt="슬라이드 이미지1"></a>
+            </div>
+            <div class="slide">
+                <a href="#"><img src="images/slide2.jpg" alt="슬라이드 이미지2"></a>
+            </div>
+            <div class="slide">
+                <a href="#"><img src="images/slide3.jpg" alt="슬라이드 이미지3"></a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- 생각 갑자기... 컨테이너 를 컨텐츠로 묶던가!? (이건 아닌거 같은...)
+            컨테이너 안으로 섹션 컨텐츠가 들어가던가!? (이걸로 도전 해봄!) -->
+
+    <div class="container">
+
+        <section id="contents">
+
+            <div class="link">
+                <nav>
+                    <a href="#"><img src="images/goto1.png" alt="바로가기1"><span>LINK1</span></a>
+                    <a href="#"><img src="images/goto2.png" alt="바로가기2"><span>LINK2</span></a>
+                    <a href="#"><img src="images/goto3.png" alt="바로가기3"><span>LINK3</span></a>
+                    <a href="#"><img src="images/goto4.png" alt="바로가기4"><span>LINK4</span></a>
+                    <a href="#"><img src="images/goto5.png" alt="바로가기5"><span>LINK5</span></a>
+                </nav>
+            </div>
+
+
+
+            <div class="banner">
+                <div class="inner">
+                    <a href="#"><img src="images/banner.jpg" alt="배너 이미지"></a>
+                    <div>
+                        <h1>배너 제목</h1>
+                        <span>2026.09.04</span>
+                        <p>
+                            배너 내용 입니다. ------------------------------------- <br>
+                            배너 내용 입니다. ------------------------------------- <br>
+                        </p>
+                    </div>
+                </div>
+                <a href="#"><img src="images/arrow.png" alt="배너 화살표" width="60" height="60"></a>
+            </div>
+
+
+
+
+        <!-- 이거 나누는거 한번 도전해 보고싶었음!
+            안에 공백 하나 만들어서 css 에서 grid 주고, 1fr 1fr 하면(?) -->
+        <!-- 어디에 공백을 넣어야하지!? gallery 아래(?)
+            tab 안에(?) inner 안에는 아닌데... 일단 해보고... -->
+            <div class="tab">
+                <div class="inner">
+                    <div class="tab-menu">
+                        <div class="menu-item active">
+                            <a href="#" id="btn-notice">공지사항</a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="#" id="btn-gallery">갤러리</a>
+                        </div>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="content-item" id="content-notice">
+                            <ul>
+                                <li>
+                                    <a href="#" class="btn-modal">
+                                        <span>레이어 팝업 - 공지사항1</span>
+                                        <span>2026.09.04</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>---------------- 공지사항2</span>
+                                        <span>2026.09.04</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>---------------- 공지사항3</span>
+                                        <span>2026.09.04</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>---------------- 공지사항4</span>
+                                        <span>2026.09.04</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="content-item" id="content-gallery">
+                            <div class="gallery">
+                                <div class="item">
+                                    <a href="#"><img src="images/g1.jpg" alt="갤러리 이미지1"><span>갤러리 이미지1</span></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="images/g2.jpg" alt="갤러리 이미지2"><span>갤러리 이미지2</span></a>
+                                </div>
+                                <div class="item">
+                                    <a href="#"><img src="images/g3.jpg" alt="갤러리 이미지3"><span>갤러리 이미지3</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 공백 도전 부분 -->
+                 <div class="empty">
+                    <p>돼나?</p>
+                 </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+
+
+    <footer class="container">
+
+        <div class="footer-logo">
+            <a href="#"><img src="images/logo.png" alt="푸터 로고"></a>
+        </div>
+
+
+        <div class="inner">
+
+            <nav class="fnb">
+                <a href="#">하단메뉴1</a>
+                <a href="#">하단메뉴2</a>
+                <a href="#">하단메뉴3</a>
+                <a href="#">하단메뉴4</a>
+                <a href="#">하단메뉴5</a>
+                <a href="#">하단메뉴6</a>
+            </nav>
+
+            <div class="copy">
+                <p>
+                    css 멘탈이 강화되는듯... 어지간한걸로는 이제 잘 안무너짐... <br>
+                    하지만, 할때마다 어려움, 생각도 좀더 많아짐, 레이아웃 잡기 제일 어려움.... <br>
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+    <div id="modal">
+        <div class="inner">
+            <div class="card">
+                <h1>레이어 팝업 제목</h1>
+                <p>
+                    -------------------------------------- <br>
+                    레이어 팝업 내용 입니다. <br>
+                    레이어 팝업 내용 입니다. <br>
+                    레이어 팝업 내용 입니다. <br>
+                    -------------------------------------- <br>
+                </p>
+                <button class="close btn-modal">닫기</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
