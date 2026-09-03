@@ -4,6 +4,9 @@
 
 /* 09월 02일 시작 : 22시 15분 / 종료 : 23시 10분 */
 /* 09월 03일 시작 : 06시 10분 / 종료 : 07시 23분 */
+/* 09월 03일 시작 : 12시 34분 / 종료 : 12시 35분 */
+/* sub-menu 위치 다시 잡고, 끝! 마무리! 드럽게 힘들었다 */
+
 
 /* 너무 너무 너무 어렵고, 힘들.... 이거 익숙해 질수 있나!? */
 
@@ -42,6 +45,7 @@ header {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    row-gap: 50px;
 }
 
 #contents { width: 100%; }
@@ -87,7 +91,7 @@ header nav .main-menu li a:hover {
 
 header nav.sub { 
     position: absolute;
-    top: 3%;
+    top: 11%;
     left: 200px;
     width: calc(100vw - 200px);
     height: calc(50px * 4);
