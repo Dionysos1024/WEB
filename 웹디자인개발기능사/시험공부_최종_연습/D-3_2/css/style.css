@@ -1,0 +1,329 @@
+@charset "utf-8";
+
+/* 09월05일 1차 (막히면 다른것 부터 하기) 시작 : 19시58분 / 종료 : 21시 07분 */
+/* 09월05일 2차 (막힌 부분 다시하러 가기) 시작 : 21시07분 / 종료 : 21시 38분 */
+/* 09월05일 3차 (footer 위치 왜이래...?) 시작 : 21시38분 / 종료 : 22시 11분 */
+/* 도저히 뭐가 잘못된건지 못찾겠음, 포기... 멘탈만 털리는데(?) */
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 100%;
+    --slide-width: calc(100vw - 200px);
+    --slide-height: 400px;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: var(--container-width);
+    /* height: var(--container-height); */
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: calc(400px + 200px - 250px);
+    position: relative;
+}
+
+header {
+    /* width: 200px; */
+    height: calc(400px + 200px + 250px);
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    row-gap: 50px;
+}
+
+#contents {
+    position: relative;
+}
+
+footer { 
+    width: 100%;
+    height: 120px;
+}
+
+header .logo a img {
+    width: 200px;
+    height: 40px;
+    padding: 0 20px;
+}
+
+header .menu {
+    position: relative;
+}
+
+header nav {
+    position: relative;
+    z-index: 10;
+    /* width: 100%;
+    height: 100%; */
+}
+
+header nav.main .main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav.main .main-menu li {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav.main .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav.main .main-menu li a:hover {
+    background-color: var(--text-color);
+}
+
+header nav.sub {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 200px;
+    display: none;
+}
+
+header nav.sub .inner {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--sub-color);
+}
+
+header nav.sub .sub-menu > li {
+    /* display: flex; */
+    /* justify-content: start; */
+    /* align-items: center; */
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+
+header nav.sub .sub-menu > li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: var(--main-color);
+}
+
+header nav.sub .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+header .spot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+}
+
+header .spot a {
+    position: relative;
+    color: white;
+}
+
+header .spot a:hover {
+    font-weight: bold;
+}
+
+header .spot a:not(:first-of-type)::before {
+    position: absolute;
+    top: 4px;
+    left: -10px;
+    width: 2px;
+    height: 18px;
+    content: "";
+    background-color: var(--sub-color);
+    display: inline-block;
+}
+
+/* 메뉴 는 그냥 2차때 다시 오자... 지금 하면 시간 엄청 잡을거 같은데(?) */
+/* 예상 적중.. 시간.. 너무 잡아먹네! 이거 하나로도 이미 시험 망했는데(?) */
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+
+.slide-container {
+    display: flex;
+    position: relative;
+}
+
+.slide-container .slide {
+    position: absolute;
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide a img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.link nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.link nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.link nav a:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+
+.banner {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding: 0 10px;
+}
+
+.banner h1 { font-size: 24px; }
+
+.banner span { font-size: 14px; }
+
+.banner p { font-size: 16px; }
+
+.tab { height: 250px; }
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 0 20px;
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-menu .menu-item:hover, 
+.tab-menu .menu-item.active {
+    background-color: var(--main-color);
+}
+
+.tab-menu .menu-item:hover a, 
+.tab-menu .menu-item.active a {
+    color: white;
+}
+
+.tab-content .content-item ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+#content-gallery { display: none; }
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 160px;
+}
+
+footer {
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+/* footer 망함, 한번도 이런적 없었는데... 갑자기 이러니 당황 스럽네 */
+
+footer .footer-logo a img 
+
+footer .inner 
+
+footer .fnb 
+
+footer .fnb a 
+
+footer .fnb a:hover 
+
+footer .fnb a:not(:first-of-type)::before 
+
+footer .copy 
+
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+/* modal 왜 얘까지 안되지!? 아.. 진짜... 당황 스럽네... */
+
+#modal .inner 
+
+#modal .card 
+
+#modal .card h1 
+
+#modal .card p 
+
+#modal .close 
