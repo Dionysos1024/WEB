@@ -3,7 +3,9 @@
 /* 09월05일 1차 (막히면 다른것 부터 하기) 시작 : 19시58분 / 종료 : 21시 07분 */
 /* 09월05일 2차 (막힌 부분 다시하러 가기) 시작 : 21시07분 / 종료 : 21시 38분 */
 /* 09월05일 3차 (footer 위치 왜이래...?) 시작 : 21시38분 / 종료 : 22시 11분 */
+/* 09월06일 3차 (footer 위치 왜이래...?) 시작 : 07시40분 / 종료 : 08시 21분 */
 /* 도저히 뭐가 잘못된건지 못찾겠음, 포기... 멘탈만 털리는데(?) */
+
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -14,7 +16,7 @@ a { text-decoration: none; color: var(--text-color); }
     --sub-color: #eeeeee;
     --back-color: #ffffff;
     --text-color: #333333;
-    --container-width: 100%;
+    --container-width: 100vw;
     --slide-width: calc(100vw - 200px);
     --slide-height: 400px;
 }
@@ -29,7 +31,7 @@ body {
     /* height: var(--container-height); */
     display: grid;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: calc(400px + 200px - 250px);
+    grid-template-rows: calc(400px + 200px + 250px); /* 오타... + 인데, - 돼어있었음, 해결 됨; */
     position: relative;
 }
 
@@ -116,6 +118,7 @@ header nav.sub .sub-menu > li {
     /* align-items: center; */
     width: 150px;
     height: 50px;
+    line-height: 50px;
     text-align: center;
 }
 
@@ -291,22 +294,58 @@ footer {
     width: 100%;
     height: 120px;
     display: flex;
+    justify-content: space-between;
 }
 /* footer 망함, 한번도 이런적 없었는데... 갑자기 이러니 당황 스럽네 */
 
-footer .footer-logo a img 
+footer .footer-logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+}
 
-footer .inner 
+footer .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    padding: 0 10px;
+}
 
-footer .fnb 
+footer .fnb {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 20px;
+    padding: 0 10px;
+}
 
-footer .fnb a 
+footer .fnb a {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+}
 
-footer .fnb a:hover 
+footer .fnb a:hover {
+    font-weight: bold;
+    color: var(--main-color);
+}
 
-footer .fnb a:not(:first-of-type)::before 
+footer .fnb a:not(:first-of-type)::before {
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    content: "";
+    background-color: var(--text-color);
+    width: 2px;
+    height: 18px;
+}
 
-footer .copy 
+footer .copy { padding: 0 10px; }
 
 #modal {
     position: fixed;
@@ -315,15 +354,44 @@ footer .copy
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
+    display: none;
 }
 /* modal 왜 얘까지 안되지!? 아.. 진짜... 당황 스럽네... */
 
-#modal .inner 
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
-#modal .card 
+#modal .card {
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
 
-#modal .card h1 
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
 
-#modal .card p 
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
 
-#modal .close 
+#modal .close {
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

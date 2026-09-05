@@ -7,11 +7,11 @@
 
 $(function() {
 
-    $(".main, .sub").on("mouseover", function() {
-        $(".sub").stop().slideDown()
+    $(".main, .sub").on("mouseenter", function() {
+        $(".sub").stop().fadeIn()
     })
-    $(".main, .sub").on("mouseout", function() {
-        $(".sub").stop().slideUp()
+    $(".main, .sub").on("mouseleave", function() {
+        $(".sub").stop().fadeOut()
     })
 
 
@@ -31,7 +31,7 @@ $(function() {
 
     $(".menu-item").on("click", function() {
         $(".content-item").toggle()
-        $(".menu-item").toggleClass()
+        $(".menu-item").toggleClass("active")
     })
 
 
