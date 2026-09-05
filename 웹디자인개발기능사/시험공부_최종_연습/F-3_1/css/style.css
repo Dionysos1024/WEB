@@ -8,6 +8,7 @@
  시간 다먹음... 퇴근후 집에서 해야함... */
  /* 진짜 망함, 아무리 해도 안됨... 어쩌지(?) 왜 그런지를 모르겠다... */
  /* 내일 수업 후 다시 하는걸로... 지금 뭔가 정신상태가 너무 안좋은듯;; */
+ /* 20분 추가.. 성공...? 이게 성공인가 (?) 그지같네... ㅡ_ㅡ */
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -38,7 +39,7 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: var(--main-color);
     width: 100%;
     height: 100px;
@@ -60,7 +61,7 @@ header .logo a img {
 }
 
 header nav {
-    display: flex;
+    /* position: relative; */
     width: 100%;
     z-index: 10;
     /* display: flex;
@@ -69,9 +70,10 @@ header nav {
 }
 
 header nav .main-menu {
+    /* position: relative; */
     display: flex;
+    justify-content: end; /* 어! 얘다! */
     align-items: end;
-    /* width: 100%; */
 }
 
 header nav .main-menu li {
@@ -93,22 +95,26 @@ header nav .main-menu li a:hover {
 }
 
 header nav.sub {
-    width: 100%;
+    width: 100%; /* 얘가 계속 문제네... */
     height: 200px;
     position: absolute;
     top: 100%;
-    left: 200px;
-    /* display: none; */
+    left: 0; /* 어!? 됐다! */ /* 하씨... 또 틀어지네... ㅡ_ㅡ */
+    display: none;
 }
 
 header nav.sub .inner {
     display: flex;
-    align-items: center;
+   /*  align-items: center;
+    justify-content: center; */
+    align-items: end;
     justify-content: end;
     padding: 0 20px;
     background-color: var(--sub-color);
+    /* width: 100vw;
+    height: 100%; */
 }
-
+/* 하씨 그제는 잘됐는데... ㅠ ㅠ 왜 안되지.... 운빨인생... */
 header nav.sub .sub-menu > li {
     width: 200px;
     height: 50px;
@@ -151,7 +157,7 @@ header nav.sub .sub-menu > li a:hover {
 
 .link {
     position: absolute;
-    top: -13%;
+    top: -20%;
     left: 0;
     z-index: 10;
 }
@@ -193,3 +199,162 @@ header nav.sub .sub-menu > li a:hover {
 .banner span { font-size: 14px; }
 
 .banner p { font-size: 16px; }
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    column-gap: 10px;
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-menu .menu-item:hover,
+.tab-menu .menu-item.active {
+    background-color: var(--main-color);
+}
+
+.tab-menu .menu-item:hover a,
+.tab-menu .menu-item.active a {
+    color: white;
+}
+
+.tab-content .content-item ul li a {
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+#content-gallery { display: none; }
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    /* height: 160px; */
+    /* column-gap: 30px; */
+    padding: 0 20px;
+}
+
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+}
+
+footer .inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+footer nav.fnb {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* column-gap: 30px; */
+    padding: 0 10px;
+}
+
+footer nav.fnb a {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+}
+
+footer nav.fnb a:hover {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+footer nav.fnb a:not(:first-of-type)::before {
+    position: absolute;
+    top: 0; /* 이게 왜? */
+    left: -20px;
+    width: 2px;
+    height: 18px;
+    content: "";
+    background-color: var(--text-color);
+}
+
+footer .copy { padding: 0 30px; }
+
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .card {
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    color: var(--main-color);
+    font-size: 24px;
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+#modal .close {
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

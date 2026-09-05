@@ -128,7 +128,7 @@ header nav .sub-menu > li a:hover {
 
 .link nav {
     position: absolute;
-    top: 29%;
+    top: -100px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
