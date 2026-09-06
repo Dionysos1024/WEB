@@ -1,0 +1,367 @@
+@charset "utf-8";
+
+/* 09월 06일 / 시작 : 13시 57분 / 종료 : 15시 03분 */
+/* 어... footer 이상함, slide  도 문제가... */
+/* js 하고 와서 다시 손봐야 함! */
+/* 09월 06일 / 시작 : 15시 17분 / 종료 : 15시 30분 */
+/* 푸터 빼고는 다 수정 했음, 푸터는 도저히 모르겠음... */
+/* 다시 도전! footer 수정 성공! 15분 소요 */
+/* 09월 06일 / 시작 : 15시 31분 / 종료 : 15시 44분 */
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 100vw;
+    --slide-width: calc(100vw - 600px); /* 두번째 손보기 슬라이드 해결 05분 소요 */
+    --slide-height: calc(100vh - 120px);
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: var(--container-width);
+    display: grid;
+    grid-template-columns: 200px 400px calc(100vw - 400px);
+    /* grid-template-rows: calc(100vh - 120px); */
+}
+
+#contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+}
+
+header {
+    /* position: relative; */
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0 10px;
+    row-gap: 50px;
+    background-color: var(--main-color);
+}
+
+#slides { 
+    height: var(--slide-height);
+    width: var(--slide-width);
+}
+
+footer { height: 120px; }
+
+header .logo a img {
+    width: 190px;
+    height: 45px;
+    padding: 0 10px;
+    object-fit: contain;
+}
+
+header nav {
+    /* position: relative; */
+    z-index: 10;
+}
+
+header nav .main-menu {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+header nav .main-menu li {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative; /* 첫번째 손보기 위치 해결 03분 소요 */
+}
+
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: var(--text-color);
+}
+
+header nav .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    display: none;
+}
+
+header nav .sub-menu > li {
+    background-color: var(--sub-color);
+}
+
+header nav .sub-menu > li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: var(--main-color);
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.banner .inner {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.banner h1 { font-size: 16px; }
+
+.banner span { font-size: 12px; }
+
+.banner p { font-size: 14px; }
+
+.tab-menu {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.tab-menu .menu-item a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    color: var(--main-color);
+}
+
+.tab-menu .menu-item a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.tab-content .content-item ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+}
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 160px;
+    padding: 0 10px;
+    column-gap: 10px;
+}
+
+.gallery .item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.link nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.link nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link nav a:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+footer {
+    /* width: 100%; */
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    padding: 0 10px;
+}
+
+footer .inner {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: start;
+    width: 100%;
+    /* height: 100%; */
+    padding: 0 10px;
+}
+
+footer .fnb {
+    width: 100%;
+}
+
+footer .fnb nav {
+    width: 100%;
+    display: flex;
+    column-gap: 50px;
+    padding: 0 10px;
+}
+
+footer .fnb nav a {
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    display: inline-block;
+}
+
+footer .fnb nav a:hover {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+footer .fnb nav a:not(:first-of-type)::before {
+    position: absolute;
+    top: 2px;
+    left: -25px;
+    content: "";
+    width: 2px;
+    height: 18px;
+    background-color: var(--text-color);
+}
+
+footer .copy { padding: 0 10px; }
+
+footer .family {
+    padding: 5px 10px;
+}
+
+footer .family select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    text-align: center;
+    cursor: pointer;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .card {
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    padding: 5px 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
