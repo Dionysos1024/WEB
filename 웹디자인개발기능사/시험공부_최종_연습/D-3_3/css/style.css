@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+/* css : 06:27 ~ 06:45 / 18분 소요 */
+/* css : 06:52 ~ 07:38 / 38분 소요 */
+/* css : 12:16 ~ 00:00 / 00분 소요 */
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 100vw;
+    --slide-width: calc(100% -200px);
+    --slide-height: 400px;
+}
+
+.container {
+    width: var(--container-width);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: calc(400px + 200px + 250px);
+    position: relative; /* link 위치잡기 부모 */
+}
+
+header {
+    background-color: var(--main-color);
+    width: 200px;
+    height: calc(400px + 200px + 250px);
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* 각 개별 잡는게 좋을듯!? */
+    align-items: center;
+    row-gap: 50px;
+}
+
+#slides { height: 400px; }
+
+footer {
+    width: 100%;
+    height: 120px;
+}
+
+#contents { width: 100%; }
+
+header .logo a img {
+    width: 200px;
+    height: 40px;
+    object-fit: contain;
+    padding: 0 10px;
+}
+
+header menu {
+    z-index: 10;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    /* justify-content: start; */
+    align-items: start;
+    width: 100%;
+}
+
+header nav .main-menu {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    line-height: 50px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+header nav .main-menu li {
+    position: relative;
+    padding: 0 20px;
+}
+
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+header nav.sub {
+    position: absolute;
+    top: 5%;
+    left: 180px;
+    display: none;
+}
+
+header nav.sub .inner {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    /* 헐 나 2개월 만에 처음으로 성공함! 대박.. */
+}
+
+header nav.sub .sub-menu {
+    width: 200px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav.sub .sub-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: var(--main-color);
+}
+
+header nav.sub .sub-menu li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+header .spot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    column-gap: 20px;
+}
+
+header .spot a {
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+
+header .spot a:hover {
+    font-weight: bold;
+}
+
+header .spot a:not(:first-of-type)::before {
+    position: absolute;
+    top: 3px;
+    left: -10px;
+    background-color: var(--sub-color);
+    width: 2px;
+    height: 18px;
+    content: "";
+}
+
+#slides {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    position: absolute;
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.slide-container .slide a img {
+    width: var(--slide-width);
+    height: var(--slide-height);
+}
+
+.link {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.link nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.link nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--sub-color);
+    border-radius: 10px;
+}
+
+.link nav a:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+}
+
+.banner {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    /* 왜 안먹히누? 아오... 앞에꺼 잘돼니 잘되던 애가 막히네... */
+}
+
+.banner .inner 
+
+.banner h1 
+
+.banner span
+
+.banner p 
