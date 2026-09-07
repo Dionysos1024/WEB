@@ -2,10 +2,11 @@
 
 /* css : 06:27 ~ 06:45 / 18분 소요 */
 /* css : 06:52 ~ 07:38 / 38분 소요 */
-/* css : 12:14 ~ 12:59 / 45분 소요
-(아무것도 못함, 어디서 뭐가 문제인지를 못찾고 있음...) */
+/* css : 12:14 ~ 12:59 / 45분 소요 */
+/* 45분 동안 아무것도 못함, 어디서 뭐가 문제인지를 못찾고 있음... */
 /* html 구조 에서 contents 안으로 slides 를 안넣었음, 원인 찾음 */
-/* css : 17:05 ~ 17:28 / 13분 소요 */
+/* css : 17:05 ~ 17:28 / 13분+1분 소요 */
+/* 서브메뉴 위치 다시 잡느라, 1분 소요 함 */
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -95,9 +96,10 @@ header nav .main-menu li a:hover {
 
 header nav.sub {
     position: absolute;
-    top: 5%;
-    left: 180px;
+    top: 11.2%;
+    left: 160px;
     display: none;
+    z-index: 10;
 }
 
 header nav.sub .inner {
@@ -111,6 +113,7 @@ header nav.sub .inner {
 
 header nav.sub .sub-menu {
     width: 200px;
+    height: 200px;
     line-height: 50px;
     text-align: center;
 }
