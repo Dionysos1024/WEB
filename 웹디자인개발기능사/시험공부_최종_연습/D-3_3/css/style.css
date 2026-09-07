@@ -2,7 +2,10 @@
 
 /* css : 06:27 ~ 06:45 / 18분 소요 */
 /* css : 06:52 ~ 07:38 / 38분 소요 */
-/* css : 12:16 ~ 00:00 / 00분 소요 */
+/* css : 12:14 ~ 12:59 / 45분 소요
+(아무것도 못함, 어디서 뭐가 문제인지를 못찾고 있음...) */
+/* html 구조 에서 contents 안으로 slides 를 안넣었음, 원인 찾음 */
+/* css : 17:05 ~ 17:28 / 13분 소요 */
 
 * { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
 
@@ -13,7 +16,7 @@ a { text-decoration: none; color: var(--text-color); }
     --sub-color: #eeeeee;
     --back-color: #ffffff;
     --text-color: #333333;
-    --container-width: 100vw;
+    --container-width: 100%;
     --slide-width: calc(100% -200px);
     --slide-height: 400px;
 }
@@ -24,6 +27,7 @@ a { text-decoration: none; color: var(--text-color); }
     grid-template-columns: 200px 1fr;
     grid-template-rows: calc(400px + 200px + 250px);
     position: relative; /* link 위치잡기 부모 */
+    margin: auto;
 }
 
 header {
@@ -44,8 +48,6 @@ footer {
     width: 100%;
     height: 120px;
 }
-
-#contents { width: 100%; }
 
 header .logo a img {
     width: 200px;
@@ -183,6 +185,8 @@ header .spot a:not(:first-of-type)::before {
 }
 
 .link nav {
+    /* width: 100%;
+    height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,16 +207,181 @@ header .spot a:not(:first-of-type)::before {
 }
 
 .banner {
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    /* 왜 안먹히누? 아오... 앞에꺼 잘돼니 잘되던 애가 막히네... */
+    align-items: center;
+    height: 200px;
 }
 
-.banner .inner 
+.banner .inner {
+    display: flex;
+    padding: 0 10px;
+    column-gap: 30px;
+}
 
-.banner h1 
+.banner h1 { font-size: 24px; }
 
-.banner span
+.banner span { font-size: 13px; }
 
-.banner p 
+.banner p { font-size: 16px; }
+
+.tab { height: 250px; }
+
+.tab-menu {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 10px;
+    /* height: 250px; */
+}
+
+.tab-menu .menu-item {
+   width: 100px;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-menu .menu-item:hover,
+.tab-menu .menu-item.active {
+    background-color: var(--main-color);
+}
+
+.tab-menu .menu-item:hover a,
+.tab-menu .menu-item.active a {
+    color: white;
+}
+
+.tab-content .content-item ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.tab-content .content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.tab-content .content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.tab-content .content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+#content-gallery { display: none; }
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 160px;
+}
+
+footer {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    height: 120px;
+}
+
+footer .footer-logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    padding: 0 10px;
+    filter: grayscale(100%);
+}
+
+footer .inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+footer .fnb nav {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+footer .fnb nav a {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+footer .fnb nav a:hover {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+footer .fnb nav a:not(:first-of-type)::before {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 2px;
+    height: 18px;
+    content: "";
+    background-color: var(--text-color);
+}
+
+footer .copy { padding: 0 10px; }
+
+#modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#modal .card {
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
