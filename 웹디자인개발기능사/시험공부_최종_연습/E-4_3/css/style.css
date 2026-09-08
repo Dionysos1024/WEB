@@ -11,7 +11,7 @@ a { text-decoration: none; color: var(--text-color); }
     --text-color: #333333;
     --container-width: 100%;
     --slide-width: 400px calc(100% - 200px - 400px);
-    --slide-height: calc(100% - 120px); /* 필요없을것 같기도하고...(?) */
+    /* --slide-height: calc(100% - 120px); */ /* 필요없을것 같기도하고...(?) */
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 .container {
     width: var(--container-width);
     display: grid;
-    grid-template-columns: 200px 400px 400px;
+    grid-template-columns: 200px 400px 1fr;
     grid-template-rows: 100%; /* 이게 맞나 살짝 의심이 감... */
 }
 
@@ -68,7 +68,9 @@ header nav .main-menu {
 }
 
 header nav .main-menu li {
-    
+    display: flex;
+    align-items: start;
+    position: relative;
 }
 
 header nav .main-menu li a {
@@ -85,11 +87,11 @@ header nav .main-menu li a:hover {
 }
 
 header nav .sub-menu {
-    z-index: 10;
+    z-index: 11;
     display: none;
     position: absolute;
     top: 0;
-    left: 170px;
+    left: 140px;
     width: 100%;
 }
 
@@ -114,6 +116,8 @@ header nav .sub-menu > li a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    width: 100%;
+    height: 200px;
 }
 
 .banner .inner {
@@ -132,6 +136,8 @@ header nav .sub-menu > li a:hover {
     justify-content: start;
     align-items: center;
     padding: 0 10px;
+    width: 100%;
+    height: 100px;
 }
 
 .tab-menu .menu-item {
@@ -188,6 +194,7 @@ header nav .sub-menu > li a:hover {
     align-items: center;
     padding: 5px 10px;
     column-gap: 20px;
+    height: 200px;
 }
 
 .link nav a {
@@ -203,7 +210,7 @@ header nav .sub-menu > li a:hover {
 
 #slides {
     width: var(--slide-width);
-    height: var(--slide-height);
+    height: 100%;
     overflow: hidden;
 }
 
@@ -214,20 +221,20 @@ header nav .sub-menu > li a:hover {
 
 .slide-container .slide {
     width: var(--slide-width);
-    height: var(--slide-height);
+    height: 100%;
 }
 
 .slide-container .slide a img {
     width: var(--slide-width);
-    height: var(--slide-height);
+    height: 100%;
 }
 
 footer {
-    width: 100%;
+    /* width: 100%; */
     height: 120px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding: 0 10px;
 }
 
@@ -243,8 +250,8 @@ footer .inner {
     flex-direction: column;
     justify-content: start;
     /* align-items: center; */
-    /* width: 100%;
-    height: 100%; */
+    width: 100%;
+    height: 100%;
     padding: 0 10px;
 }
 
