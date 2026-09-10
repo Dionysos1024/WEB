@@ -16,12 +16,13 @@ a { text-decoration: none; color: var(--text-color); }
 
 .container {
     /* width: var(--container-width); */
+    /* height: calc(100% - 100px); */
     display: grid;
     grid-template-columns: 200px 400px 1fr;
-    grid-template-rows: 100%;
+    grid-template-rows: calc(100vh - 100px);
 }
 
-#contents { width: 100%; /* height: 100%; */ }
+#contents { width: 100%; /* height: 100%; */ /* overflow: hidden; */ }
 
 footer { width: 100%; height: 100px; }
 
@@ -213,7 +214,7 @@ header .spot nav a:not(:first-of-type)::before {
 
 #slides {
     width: var(--slide-width);
-    height: var(--slide-height);
+    height: 100%;
     overflow: hidden;
 }
 
@@ -225,12 +226,12 @@ header .spot nav a:not(:first-of-type)::before {
 
 .slide-container .slide {
     width: var(--slide-width);
-    height: var(--slide-height);
+    height: 100%;
 }
 
 .slide-container .slide a img {
     width: var(--slide-width);
-    height: var(--slide-height);
+    height: 100%;
 }
 
 footer {
