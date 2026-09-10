@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --slide-width: 1200px;
+    --slide-height: 300px;
+}
+
+header {
+    width: 100vw;
+    height: 100px;
+    background-color: var(--main-color);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* .container { width: 1200px; margin: auto; } */
+
+#contents {
+    width: 1200px;
+    height: 200px;
+    margin: auto;
+}
+
+#slides {
+    width: 1200px;
+    height: 300px;
+    margin: auto;
+}
+
+footer {
+    width: 100vw;
+    height: 100px;
+}
+
+header .logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+header nav {
+    position: relative;
+    z-index: 10;
+}
+
+header nav .main-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* 무언가 내가 생각한 구조 와 다르게 엇나가는중, 일단 다해보고, 수틀리면 다시 해야... */
+header nav .main-menu li a 
+
+header nav .main-menu li a:hover 
