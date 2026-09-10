@@ -17,9 +17,9 @@ header {
     width: 100vw;
     height: 100px;
     background-color: var(--main-color);
-    padding: 0 20px;
+    padding: 0 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
 }
@@ -43,30 +43,46 @@ footer {
     height: 100px;
 }
 
+header .logo {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
 header .logo a img {
     width: 200px;
     height: auto;
     object-fit: contain;
+    padding: 0 10px;
 }
 
 header nav {
     position: relative;
     z-index: 10;
+    padding: 0 100px;
 }
 
 header nav .main-menu {
     display: flex;
     justify-content: end;
-    align-items: center;
+    align-items: end;
 }
 
 header nav .main-menu li {
     width: 200px;
     height: 50px;
     line-height: 50px;
+    /* text-align: end; */
+    text-align: center;
 }
 
 /* 무언가 내가 생각한 구조 와 다르게 엇나가는중, 일단 다해보고, 수틀리면 다시 해야... */
-header nav .main-menu li a 
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
 
-header nav .main-menu li a:hover 
+header nav .main-menu li a:hover {
+    background-color: var(--text-color);
+}
