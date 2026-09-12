@@ -143,6 +143,7 @@ header nav.sub .sub-menu > li a:hover {
     top: -100px;
     left: 0;
     padding: 0 10px;
+    width: 100%;
 }
 
 .link nav {
