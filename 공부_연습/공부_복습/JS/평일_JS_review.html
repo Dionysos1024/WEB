@@ -901,7 +901,41 @@
     //           정상 / 재검사 / 불량이 각각 몇 개인지 출력하시오.
     //
     //           switch 문을 사용해보시오.
-    //           변수명도 각각의 개수가 드러나도록 지어보시오.
+    //           변수명도 각각의 개수가 드러나도록 지어보시오.  ( 15 )
+
+        
+        let count1 = 0
+        let count2 = 0
+        let count3 = 0
+        
+        for (let i = 1; i <= result; i++)
+            
+        {
+            let result = Number ( prompt("검사 결과 를 입력 하세요.") )
+
+
+            switch (i) {
+            case 1:
+                ( count1 = count1 + 1 )
+                break;
+            case 2:
+                ( count2 = count2 + 1 )
+                break;
+            case 3:
+                ( count3 = count3 + 1 )
+                break;
+        
+            default:
+                break;
+            }     
+        }
+        console.log( ` 검사 결과 ${count1}는 ${count1}개, 
+        ${count2}는 ${count2}개, ${count3}는 ${count3}개 입니다. ` );
+        
+
+
+        
+
 
 
 
