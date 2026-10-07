@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+header {
+    width: 100vw;
+    height: 100px;
+    background-color: var(--main-color);
+    position: relative;
+}
+
+footer {
+    width: 100vw;
+    height: 100px;
+    background-color: var(--sub-color);
+}
+
+#slides {
+    width: 1200px;
+    height: 300px;
+}
+
+#contents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 200px;
+}
+
+header .wrap {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0 10px;
+}
+
+footer .wrap {
+    width: 1200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    padding: 0 10px;
+}
+
+header nav {
+    z-index: 10;
+}
+
+header nav.main {
+    width: 100%;
+    position: relative;
+}
+
+header nav .main-menu {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+header nav .main-menu li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: var(--text-color);
+    color: white;
+}
+
+header nav.sub {
+    width: 100%;
+    height: calc(50 * 4);
+    /* display: none; */
+}
+
+header nav.sub .inner {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 1200px;
+}
+
+header nav.sub .sub-menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header nav.sub .sub-menu > li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav.sub .sub-menu > li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: var(--main-color);
+}
+
+header nav.sub .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
