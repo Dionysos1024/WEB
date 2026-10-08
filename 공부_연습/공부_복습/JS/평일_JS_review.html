@@ -1203,11 +1203,24 @@
     //           총 주문 금액을 출력하시오.
     //
     //           그리고 3만원 이상 주문이 몇 건인지도
-    //           함께 출력하시오.
-    //
-    //           힌트:
-    //           총 주문 금액 → sum
-    //           주문 건수 → count
+    //           함께 출력하시오.   ( 03번 수정, 10분 소요 )
+
+        /* let sum = 0
+        let count = 0
+
+        for (let i = 1; i <= 5; i++)
+
+        {
+            let num = Number ( prompt("금액을 입력 하세요") )
+            sum = num + sum
+
+            if ( num >= 30000 )
+                ( count = count + 1 )
+        }
+            alert( ` 총 주문 금액 : ${sum}원, 3만원 이상 주문은 ${count}건 입니다. ` ) */
+
+
+
 
 
 
@@ -1217,11 +1230,24 @@
     //           총 매출을 출력하시오.
     //
     //           그리고 5,000원 이상인 음료가
-    //           몇 잔인지 출력하시오.
-    //
-    //           힌트:
-    //           총 매출 → total 또는 sum
-    //           5,000원 이상 음료 개수 → count
+    //           몇 잔인지 출력하시오.  ( 01번 수정, 06분 소요 )
+
+        /* let total = 0
+        let count = 0
+
+        for (let i = 1; i <= 5; i++)
+        
+        {
+            let num = Number ( prompt(" 음료 가격을 입력 하세요 ") )
+            total = total + num
+
+            if ( num >= 5000 )
+                ( count = count + 1 )
+        }
+            alert( ` 총 매출 : ${total}원, 5천원 이상 ${count}잔 입니다. ` ) */
+
+
+
 
 
 
@@ -1236,12 +1262,34 @@
     //           5번의 상태를 입력받아
     //           출석 / 지각 / 결석이 각각 몇 번인지 출력하시오.
     //
-    //           switch 문을 사용해보시오.
-    //
-    //           힌트:
-    //           출석 개수 → attendanceCount
-    //           지각 개수 → lateCount
-    //           결석 개수 → absentCount
+    //           switch 문을 사용해보시오.  ( 06번 수정, 10분 소요 )
+    
+        let count1 = 0
+        let count2 = 0
+        let count3 = 0
+
+        for (let i = 1; i <= 5; i++)
+        
+        {
+            let num = Number ( prompt("출석 상태 번호 입력") )
+
+            switch (num) {
+            case 1: 
+                    ( count1 = count1 + 1 )
+                break;
+            case 2: 
+                    ( count2 = count2 + 1 )
+                break;
+            case 3: 
+                    ( count3 = count3 + 1 )
+                break;  }
+
+        }
+            alert( ` 출석 : ${count1}번, 지각 : ${count2}번, 결석 : ${count3}번 입니다. ` )
+        
+
+
+            
 
 
 
