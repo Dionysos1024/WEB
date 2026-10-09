@@ -1401,9 +1401,9 @@
     //           그리고
     //           70점 이상인 사람의 수와
     //           50점 미만인 사람의 수를 각각 구해서
-    //           마지막에 출력하시오.   ( 24 )
+    //           마지막에 출력하시오.   ( 17번 수정, 38분 소요 )
 
-        let pass = 0
+        /* let pass = 0
         let fail = 0
 
         for (let i = 1; i <= 6; i++)
@@ -1414,18 +1414,21 @@
                { ( pass = pass + 1 )
                 console.log( "A등급" ); }
 
-            else if ( num >= 89 )
+            else if ( num >= 70 )
                { ( pass = pass + 1 )
                 console.log( "B등급" ); }
 
-            else if ( num <= 69 )
+            else if ( num >= 50 )
                 console.log( "C등급" );
 
             else if ( num <= 49 )
                { ( fail = fail + 1 )
                 console.log( "재도전" ); }
         }
-            alert( ` 70점 이상 ${pass}명, 50점 미만 ${fail}명 ` )
+            alert( ` 70점 이상 ${pass}명, 50점 미만 ${fail}명 ` ) */
+
+
+
 
 
 
@@ -1441,15 +1444,42 @@
     //
     //           총 지출 : ○○원
     //           10,000원 이상 사용 : ○번
-    //           가장 큰 지출 : ○○원
-    //
-    //           힌트:
-    //           총 지출 → total
-    //           사용 횟수 → count
-    //           가장 큰 금액 → biggest
+    //           가장 큰 지출 : ○○원        ( 03번 수정, 14분 소요 )
+
+        /* let total = 0
+        let count = 0
+        let biggest = 0
+
+        for (let i = 1; i <= 5; i++)
+
+        {
+            let num = Number ( prompt("오늘 사용한 금액을 입력 하세요") )
+
+            total = total + num
+
+            if ( num >= 10000 )
+                ( count = count + 1 )
+
+            if ( num >= biggest )
+                ( biggest = num )
+        }
+            alert( ` 총 지출 : ${total}원
+            10,000원 이상 사용 : ${count}번
+            가장 큰 지출 : ${biggest}원 ` ) */
 
 
-    
+
+
+
+
+// -----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
     </script>
 </head>
 <body>
