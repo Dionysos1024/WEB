@@ -1362,12 +1362,30 @@
     //
     //           그리고
     //           5,000원 이상인 음료가 몇 잔인지 구하고,
-    //           입력받은 음료 중 가장 비싼 가격도 구하시오.
-    //
-    //           힌트:
-    //           총 매출 → total
-    //           5,000원 이상 음료 개수 → count
-    //           가장 비싼 가격 → biggest
+    //           입력받은 음료 중 가장 비싼 가격도 구하시오.    ( 03번 수정, 12분 소요 )
+
+        /* let total = 0
+        let count = 0
+        let biggest = 0
+
+        for (let i = 1; i <= 5; i++)
+        
+        {
+            let num = Number ( prompt("가격을 입력 하세요") )
+            total = total + num
+
+            if( num >= 5000 )
+                ( count = count + 1 )
+
+            if ( biggest < num )
+                ( biggest = num )
+        }
+            alert( ` 총 매출 : ${total}원,
+            5,000원 이상 음료 ${count}개,
+            가장 비싼 음료 ${biggest}원 ` ) */
+
+
+
 
 
 
@@ -1383,11 +1401,31 @@
     //           그리고
     //           70점 이상인 사람의 수와
     //           50점 미만인 사람의 수를 각각 구해서
-    //           마지막에 출력하시오.
-    //
-    //           힌트:
-    //           70점 이상 → passCount
-    //           50점 미만 → failCount
+    //           마지막에 출력하시오.   ( 24 )
+
+        let pass = 0
+        let fail = 0
+
+        for (let i = 1; i <= 6; i++)
+        {
+            let num = Number ( prompt("점수를 입력 하세요") )
+            
+            if ( num >= 90 )
+               { ( pass = pass + 1 )
+                console.log( "A등급" ); }
+
+            else if ( num >= 89 )
+               { ( pass = pass + 1 )
+                console.log( "B등급" ); }
+
+            else if ( num <= 69 )
+                console.log( "C등급" );
+
+            else if ( num <= 49 )
+               { ( fail = fail + 1 )
+                console.log( "재도전" ); }
+        }
+            alert( ` 70점 이상 ${pass}명, 50점 미만 ${fail}명 ` )
 
 
 
