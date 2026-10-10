@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표</title>
+    <script>
+        // 화살표 함수
+        const arrowFunc = (a, b) => {
+            console.log(a + b);
+            return a + b
+        }
+
+        // 실행문이 한 줄 이면, { } 와 return 동시에 생략!
+        const oneFunc = (a, b) => a + b
+
+        // 아래 함수와 같은 내용이다.
+        const testFunc = (a, b) => {
+            return a + b
+        }
+
+        // 함수 호출
+        console.log(`result 1 : ${arrowFunc(10, 20)}`);
+        console.log(`result 2 : ${oneFunc(30, 40)}`);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
