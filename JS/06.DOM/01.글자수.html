@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자수 세기</title>
+
+</head>
+<body>
+    <h1>글자수 세기</h1>
+
+    <textarea name="content" id="content" rows="10" cols="50"
+              placeholder="내용을 입력하세요"></textarea>
+
+<p>
+    글자 수: <span id="count">0</span>
+</p>
+
+<script>
+    // 요소 선택
+    let content = document.getElementById('content')    // 글내용
+    let count = document.getElementById('count')        // 글자수
+
+    // 입력 이벤트 등록
+    content.addEventListener('input', function() {
+        let length = content.value.length   // 글내용의 글자수 가져오기
+        count.textContent = length          // 글자수 표시하기
+    })
+</script>
+
+</body>
+</html>
