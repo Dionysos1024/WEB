@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe Menu</title>
+
+    <script>
+
+        // 매일 조금씩 코드 사용 하고, 이해하고, 연결하고, 익숙해지는 공부 ( 01일 차 완료 )
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const menuItem = document.getElementById('menu');
+            const changeBtn = document.getElementById('changeBtn');
+            
+            changeBtn.addEventListener("click", () => {
+
+            menuItem.textContent = "초코 케이크";
+
+           })
+
+        })
+
+
+    </script>
+
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>오늘의 카페</h1>
+
+        <p id="menu">딸기 케이크</p>
+
+        <button id="changeBtn">메뉴 변경</button>
+
+    </div>
+</body>
+</html>
