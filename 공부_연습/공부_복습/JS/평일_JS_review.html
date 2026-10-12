@@ -1483,16 +1483,19 @@
     // 카페 메뉴 중 "디저트" 종류만 새로운 배열로 만들고,
     // 디저트 이름을 출력하시오.
     //
-    // 조건 : filter, forEach 사용
-    // 힌트 : 각 메뉴의 종류는 item.type,
-    //        메뉴 이름은 item.name으로 확인할 수 있습니다.
+    // 조건 : filter, forEach 사용  ( 03번 수정, 09분 소요 )
 
-        const menuList = [
+        /* const menuList = [
             { name: "아메리카노", type: "음료" },
             { name: "초코 케이크", type: "디저트" },
             { name: "카페라떼", type: "음료" },
             { name: "치즈 타르트", type: "디저트" }
         ];
+
+        menuList.filter( item => item.type == "디저트" )
+                .forEach( item => { document.write( item.name + " . " ) } ) */
+
+
 
 
 
@@ -1502,18 +1505,34 @@
     // "안읽음" 상태인 메시지가 몇 개인지 세고,
     // 그 개수를 return 하시오.
     //
-    // 조건 : 함수, for문, if문, return 사용
-    // 힌트 : 현재 상태는 statusList[i]로 확인합니다.
-    //        개수를 셀 때는 count를 1 증가시키세요.
+    // 조건 : 함수, for문, if문, return 사용    ( 09번 수정, 34분 소요 )
 
-        const msgList = [
+        /* const msgList = [
             "읽음", "안읽음", "읽음",
             "안읽음", "안읽음", "읽음"
         ];
 
+        function List (statusList) {
+
+            let count = 0
+
+            for (let i = 0; i < msgList.length; i++) {
+                
+                if ( statusList[i] == "안읽음" )
+                    ( count = count + 1 )
+            }
+
+            console.log(`${count}`);
+
+            return count
+        }
+            List(msgList) */
+            
+            
 
 
 
+            
     // 문제 48 : 음악 목록 표시하기
     // 음악 정보를 담은 배열을 이용하여
     // 각 음악을 "제목 - 가수" 형식의 문자열로 변환한
