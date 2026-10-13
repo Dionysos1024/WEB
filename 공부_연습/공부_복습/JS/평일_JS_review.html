@@ -1618,9 +1618,13 @@
             { text: "예약이 확정되었습니다.", read: true }
         ];
         
-        function List (item) {
-            
+        function gatList (list) {
+            return list.filter ( item => read = false )
         }
+
+        gatList(msgList).forEach (item => {
+            console.log( ` ${list.item} ${list.text} ` );
+        });
     
 
 
