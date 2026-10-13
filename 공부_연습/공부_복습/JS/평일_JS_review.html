@@ -1605,13 +1605,9 @@
     // 읽지 않은 알림만 새로운 배열로 만들어 return 하시오.
     // 반환된 배열에서 알림 내용을 출력하시오.
     //
-    // 조건 : 함수, 매개변수, return, filter, forEach   ( 40 )
+    // 조건 : 함수, 매개변수, return, filter, forEach   ( 11번 수정, 38분 소요 )
 
-    // 힌트 1 : item.read가 false이면 읽지 않은 알림입니다.
-    // 힌트 2 : filter 결과를 return 하세요.
-    // 힌트 3 : 함수를 호출할 때 알림 배열을 전달하세요.
-
-        const msgList = [
+        /* const msgList = [
             { text: "새 댓글이 등록되었습니다.", read: false },
             { text: "주문이 완료되었습니다.", read: true },
             { text: "새 쿠폰이 도착했습니다.", read: false },
@@ -1619,12 +1615,12 @@
         ];
         
         function gatList (list) {
-            return list.filter ( item => read = false )
+            return list.filter ( item => item.read == false )
         }
 
         gatList(msgList).forEach (item => {
-            console.log( ` ${list.item} ${list.text} ` );
-        });
+            console.log( ` ${item.text} ` );
+        }); */
     
 
 
