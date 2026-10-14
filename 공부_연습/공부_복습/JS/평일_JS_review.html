@@ -1634,44 +1634,77 @@
 
 
 
-    // 문제 52 : 할인 중인 간식 찾기
-    // 조건 : filter, forEach
+    // 문제 52 : 20% 이상 할인 중인 간식 찾기
+    // 조건 : filter, forEach   ( 04번 수정, 12분 소요 )
 
-        const snackList = [
+        /* const snackList = [
             { name: "쿠키", discount: 10 },
             { name: "마카롱", discount: 25 },
             { name: "초콜릿", discount: 30 },
             { name: "푸딩", discount: 15 }
         ];
 
+        snackList.filter( item => item.discount >= 20 )
+                .forEach( item => { console.log( ` ${item.name} ` ); } ); */
+        
+
+
 
 
 
     // 문제 53 : 도서 대여 안내
-    // 조건 : map
+    // 책 목록을 이용해서 다음 형식의 문자열을 만드세요.
+    // 어린 왕자님의 대여 기간은 7일입니다.
+    // 책마다 제목과 대여 기간이 다르게 출력되어야 합니다.
+    // 조건 : map   ( 01번 수정, 04분 소요 )
 
-        const bookList = [
+        /* const bookList = [
             { title: "어린 왕자", days: 7 },
             { title: "달러구트 꿈 백화점", days: 14 },
             { title: "해리 포터", days: 10 }
         ];
 
+        document.write ( bookList.map ( item => 
+                    ` ${item.title}의 대여 기간은 ${item.days}일 입니다. ` ) ) */
+
+
+
 
 
 
     // 문제 54 : 무료 배송 주문 찾기
-    // 조건 : 함수, 매개변수, return, filter, forEach
+    // 주문 목록을 전달받는 함수를 만드세요.
+    // 조건: 주문 금액이 30,000원 이상인 주문만 새로운 배열로 반환하고,
+    // 해당 주문의 이름과 금액을 출력하세요.
+    // 조건 : 함수, 매개변수, return, filter, forEach   ( 03번 수정, 12분 소요 )
 
-        const orderList = [
+        /* const orderList = [
             { name: "민지", price: 18000 },
             { name: "수현", price: 35000 },
             { name: "지우", price: 42000 },
             { name: "하늘", price: 25000 }
         ];
 
+        function order (list) {
+            return list.filter( item => item.price >= 30000 )
+        }
+
+        order(orderList).forEach( item => 
+        { document.write ( ` ${item.name} ${item.price} ` ) } ); */
 
 
 
+
+
+
+// -----------------------------------------------------------------------------------------
+
+
+
+
+
+
+//
     </script>
 </head>
 <body>
