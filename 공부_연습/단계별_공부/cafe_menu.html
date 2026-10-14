@@ -7,7 +7,7 @@
 
     <script>
 
-        // 매일 조금씩 코드 사용 하고, 이해하고, 연결하고, 익숙해지는 공부 ( 02일 차 완료 )
+        // 매일 조금씩 코드 사용 하고, 이해하고, 연결하고, 익숙해지는 공부 ( 03일 차 완료 )
 
         // ========================================
 
@@ -26,7 +26,11 @@
         // - 메뉴별 설명 문구 추가
         // - 조건문을 활용해 메뉴와 설명 연결
         // - 코드 오류 수정 및 실행 확인
-        // - 메뉴 객체 생성 하기
+        // - 객체로 메뉴 이름, 설명, 가격 관리하기
+        // - 배열에 여러 메뉴 객체 담기
+        // - 배열과 객체 속성을 이용해 메뉴 정보 가져오기
+        // - 기존 DOM 기능에 메뉴 데이터 연결하기
+        // - 템플릿 리터럴로 가격 뒤에 '원' 표시하기
 
         // ========================================
 
@@ -37,28 +41,42 @@
             const menuItem = document.getElementById('menu');
             const changeBtn = document.getElementById('changeBtn');
             const pick = document.getElementById('pick');
-            const dese = document.getElementById('dese');
+            const desc = document.getElementById('desc');
             const price = document.getElementById('price');
 
-            // 퇴근후 객체 만들기 도전 해야함!
-            const 
-
             let strawBerry = 0
+
+            const strawBerryMenu =  {
+                menu: "딸기 케이크",
+                desc: "상큼한 딸기와 부드러운 생크림의 만남!",
+                price: 6000
+            }
+
+            const chocoMenu =  {
+                menu: "초코 케이크",
+                desc: "진한 초콜릿의 달콤함을 즐겨보세요!",
+                price: 5000
+            }
+
+            const menus = [
+                strawBerryMenu,
+                chocoMenu
+            ]
 
             changeBtn.addEventListener("click", () => {
 
             if ( strawBerry )
-                { ( menuItem.textContent = "딸기 케이크" );
+                {   ( menuItem.textContent = menus[0].menu );
                     ( pick.textContent = ` 현재 선택한 메뉴 : ${menuItem.textContent} `);
-                    ( dese.textContent = ` 상큼한 딸기와 부드러운 생크림의 만남! `);
-                    ( price.textContent = `  `);
+                    ( desc.textContent = menus[0].desc );
+                    ( price.textContent = ` ${menus[0].price}원 ` );
                 }
             
             else
-                { ( menuItem.textContent = "초코 케이크" );
+                {   ( menuItem.textContent = menus[1].menu );
                     ( pick.textContent = ` 현재 선택한 메뉴 : ${menuItem.textContent} `);
-                    ( dese.textContent = ` 진한 초콜릿의 달콤함을 즐겨보세요! `);
-                    ( price.textContent = `  `);
+                    ( desc.textContent = menus[1].desc );
+                    ( price.textContent = ` ${menus[1].price}원 ` );
                     }
 
             ( strawBerry = !strawBerry ) 
@@ -80,7 +98,7 @@
             <div class="menu-card">
             <p id="menu">딸기 케이크</p>
             <p id="pick">메뉴 이름</p>
-            <p id="dese">메뉴 설명 문구</p>
+            <p id="desc">메뉴 설명 문구</p>
             <p id="price">가격</p>
 
             <button id="changeBtn">메뉴 변경</button>
