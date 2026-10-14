@@ -1704,44 +1704,54 @@
 
 
 
-    // 문제 55 : 5,000원 이하 카페 메뉴 찾기
-    // 조건 : filter, forEach
+    // 문제 55 : 재고가 적은 상품 찾기
+    // 재고가 5개 이하인 상품의 이름과 재고 수량을 출력하세요.
+    // 이번에는 filter를 사용하지 않고 풀어 보세요.
+    // 조건 : for, if
 
-        const cafeList = [
-            { name: "아메리카노", price: 3500 },
-            { name: "카페라떼", price: 4500 },
-            { name: "딸기 케이크", price: 6000 },
-            { name: "레몬차", price: 5000 },
-            { name: "쿠키", price: 2500 }
+        const itemList = [
+            { name: "쿠키", stock: 12 },
+            { name: "우유", stock: 3 },
+            { name: "빵", stock: 5 },
+            { name: "주스", stock: 8 }
         ];
 
 
 
-    // 문제 56 : 독서 진행 상황 안내
-    // 책 목록을 이용해 책마다 다음 형식의 문자열을 만드세요.
-    // 어린 왕자의 독서 진행률은 30%입니다.
-    // 조건 : map
 
-        const readList = [
-            { title: "어린 왕자", percent: 30 },
-            { title: "달러구트 꿈 백화점", percent: 60 },
-            { title: "해리 포터", percent: 15 }
+
+    // 문제 56 : 카페 준비 안내
+    // 함수에 메뉴 이름과 준비 시간을 전달하면,
+    // 안내 문구를 반환하도록 만드세요.
+    // 조건 : 함수, 매개변수, return
+
+        function makeMsg(name, time) {
+            // 여기에 작성하세요.
+        }
+
+        console.log(makeMsg("라떼", 5));
+        console.log(makeMsg("케이크", 3));
+
+
+
+
+
+    // 문제 57 : 재생목록 바꾸기
+    // 재생목록에서 마지막 곡을 제거하고, 새로운 곡을 추가하세요.
+    // 마지막으로 변경된 재생목록과 곡 개수를 출력하세요.
+    // 조건 : pop, push, length
+
+        const songList = [
+            "Bird Set Free",
+            "Try Everything",
+            "Rise Up"
         ];
 
+    // 마지막 곡을 제거하세요.
 
+    // 새로운 곡 "Waka Waka"를 추가하세요.
 
-    // 문제 57 : 예약 확정된 사람 찾기
-    // 예약 목록을 전달받는 함수를 만드세요.
-    // 예약이 확정된 사람만 새로운 배열로 반환하고,
-    // 반환된 배열에서 이름과 예약 시간을 출력하세요.
-    // 조건 : 함수, 매개변수, return, filter, forEach
-
-        const reserveList = [
-            { name: "민지", time: "14:00", confirmed: true },
-            { name: "수현", time: "15:30", confirmed: false },
-            { name: "지우", time: "16:00", confirmed: true },
-            { name: "하늘", time: "17:00", confirmed: false }
-        ];
+    // 변경된 재생목록과 곡 개수를 출력하세요.
 
 
         
