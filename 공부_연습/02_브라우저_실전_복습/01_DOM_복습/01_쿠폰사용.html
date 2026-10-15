@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>쿠폰 사용</title>
+</head>
+<body>
+
+    
+    <!-- 버튼을 누를 때마다 쿠폰이 한 장씩 줄어들도록 만드세요. -->
+    <!-- 쿠폰이 모두 소진되면 안내 문구를 보여 주세요. -->
+    <!-- 완료 조건: 처음에는 쿠폰 3장, -->
+    <!-- 버튼을 누를 때마다 남은 쿠폰 수가 화면에 반영되고 -->
+    <!-- 0장이 되면 "쿠폰이 없습니다."라고 표시되어야 합니다. -->
+
+
+    <h2>쿠폰 사용</h2>
+
+    <p id="couponText">남은 쿠폰: 3장</p>
+    <button id="useBtn">쿠폰 사용하기</button>
+
+    <script>
+        let couponCount = 3;
+
+        const couponText = document.getElementById("couponText");
+        const useBtn = document.getElementById("useBtn");
+
+        useBtn.addEventListener("click", function() {
+
+            // 1. 쿠폰이 남아 있는지 확인하세요.
+
+            // 2. 쿠폰이 남아 있으면 한 장 줄이세요.
+
+            // 3. textContent로 남은 쿠폰 수를 표시하세요.
+            //    0장이 되면 "쿠폰이 없습니다."를 표시하세요.
+
+        });
+    </script>
+</body>
+</html>
