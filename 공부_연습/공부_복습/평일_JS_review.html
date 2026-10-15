@@ -1706,10 +1706,10 @@
 
     // 문제 55 : 재고가 적은 상품 찾기
     // 재고가 5개 이하인 상품의 이름과 재고 수량을 출력하세요.
-    // 이번에는 filter를 사용하지 않고 풀어 보세요.
+    // 이번에는 filter를 사용하지 않고 풀어 보세요. ( 05번 수정, 21분 소요 )
     // 조건 : for, if
 
-        const itemList = [
+        /* const itemList = [
             { name: "쿠키", stock: 12 },
             { name: "우유", stock: 3 },
             { name: "빵", stock: 5 },
@@ -1717,25 +1717,36 @@
         ];
 
 
+        for (let i = 0; i < itemList.length; i++) {
+            
+            if ( itemList[i].stock <= 5 )
+            ( console.log(` 상품: ${itemList[i].name}, 수량: ${itemList[i].stock} `) );
+            
+        } */
+
+
+
 
 
 
     // 문제 56 : 카페 준비 안내
     // 함수에 메뉴 이름과 준비 시간을 전달하면,
-    // 안내 문구를 반환하도록 만드세요.
+    // 안내 문구를 반환하도록 만드세요. ( 02번 수정, 08분 소요 )
     // 조건 : 함수, 매개변수, return
 
-        function makeMsg(name, time) {
-            // 여기에 작성하세요.
+        /* function makeMsg(name, time) {
+            
+            return ` ${name} 는 ${time}분 남았습니다 `
         }
 
         console.log(makeMsg("라떼", 5));
-        console.log(makeMsg("케이크", 3));
+        console.log(makeMsg("케이크", 3)); */
 
 
 
 
 
+        
     // 문제 57 : 재생목록 바꾸기
     // 재생목록에서 마지막 곡을 제거하고, 새로운 곡을 추가하세요.
     // 마지막으로 변경된 재생목록과 곡 개수를 출력하세요.
