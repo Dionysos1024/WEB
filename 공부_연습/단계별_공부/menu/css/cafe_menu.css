@@ -1,0 +1,78 @@
+
+.img a img {
+    width: 200px;
+    height: 150px;
+}
+
+.container {
+    width: 500px;
+    height: 600px;
+    border: 3px solid #F8BBD0;
+    margin: auto;
+    background-color: #FFF0F6;
+    border-radius: 10px;
+}
+
+h1 { 
+    text-align: center;
+    color: #F06292;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.menu-card {
+    width: 450px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid palegreen; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.inner #menu {
+    font-size: 20px;
+    color: #F06292;
+    margin: 0;
+}
+
+.inner #pick {
+    font-size: 18px;
+    color: #63434B;
+    margin: 0;
+}
+
+.inner #desc {
+    font-size: 16px;
+    color: #63434B;
+    margin: 0;
+}
+
+.inner #price {
+    font-size: 16px;
+    margin: 0;
+    color: #FF8A80;
+}
+
+button {
+    margin: 0;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #FF8A80;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}

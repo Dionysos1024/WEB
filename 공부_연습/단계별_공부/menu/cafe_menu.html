@@ -9,7 +9,7 @@
 
     <script>
 
-        // 매일 조금씩 코드 사용 하고, 이해하고, 연결하고, 익숙해지는 공부 ( 03일 차 완료 )
+        // 매일 조금씩 코드 사용 하고, 이해하고, 연결하고, 익숙해지는 공부
 
         // ========================================
 
@@ -32,7 +32,15 @@
         // - 배열에 여러 메뉴 객체 담기
         // - 배열과 객체 속성을 이용해 메뉴 정보 가져오기
         // - 기존 DOM 기능에 메뉴 데이터 연결하기
-        // - 템플릿 리터럴로 가격 뒤에 '원' 표시하기
+
+        // DAY 04 | 2026-10-15
+        // - HTML 메뉴 카드 구조 정리하기
+        // - 이미지 영역과 메뉴 정보 영역 분리하기
+        // - CSS로 카페 메뉴판 디자인하기
+        // - 이미지 요소를 getElementById()로 선택하기
+        // - src 속성을 변경해 메뉴별 이미지 바꾸기
+        // - 버튼 클릭 시 메뉴 이름, 설명, 가격, 이미지 함께 변경하기
+        // - 딸기 케이크와 초코 케이크 메뉴판 완성 및 실행 확인하기
 
         // ========================================
 
@@ -45,6 +53,7 @@
             const pick = document.getElementById('pick');
             const desc = document.getElementById('desc');
             const price = document.getElementById('price');
+            const menuImg = document.getElementById('menuImg');
 
             let strawBerry = 0
 
@@ -72,6 +81,7 @@
                     ( pick.textContent = ` 현재 선택한 메뉴 : ${menuItem.textContent} `);
                     ( desc.textContent = menus[0].desc );
                     ( price.textContent = ` ${menus[0].price}원 ` );
+                    ( menuImg.src = "img/berry.jpg" );
                 }
             
             else
@@ -79,6 +89,7 @@
                     ( pick.textContent = ` 현재 선택한 메뉴 : ${menuItem.textContent} `);
                     ( desc.textContent = menus[1].desc );
                     ( price.textContent = ` ${menus[1].price}원 ` );
+                    ( menuImg.src = "img/choco.jpg" );
                     }
 
             ( strawBerry = !strawBerry ) 
@@ -95,17 +106,21 @@
 <body>
     
     <div class="container">
-
         <h1>오늘의 카페</h1>
-            <div class="menu-card">
-            <p id="menu">딸기 케이크</p>
-            <p id="pick">메뉴 이름</p>
-            <p id="desc">메뉴 설명 문구</p>
-            <p id="price">가격</p>
-
-            <button id="changeBtn">메뉴 변경</button>
+        <div class="menu-card">
+            <div class="img">
+                <a href="#"><img id="menuImg" src="img/berry.jpg" alt="딸기 케이크 이미지"></a>
+            </div>
+            <div class="inner">
+                <p id="menu">딸기 케이크</p>
+                <p id="pick">메뉴 이름</p>
+                <p id="desc">메뉴 설명 문구</p>
+                <p id="price">가격</p>
+                <button id="changeBtn">메뉴 변경</button>
+            </div>
         </div>
-
     </div>
+
+
 </body>
 </html>
