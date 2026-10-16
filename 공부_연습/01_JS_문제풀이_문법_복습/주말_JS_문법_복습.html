@@ -1150,7 +1150,183 @@
 
 
 
-//
+    // 문제 52 : 무료 배송비 계산
+    // 주문 금액을 전달하면 배송비를 반환하는 함수를 작성하세요.
+    // 조건은 다음과 같아요.
+    // - 주문 금액이 30,000원 이상이면 배송비는 0원입니다.
+    // - 30,000원 미만이면 배송비는 3,000원입니다.
+    // 조건 : 함수, 매개변수, if/else, return
+
+        function getDeliveryFee(totalPrice) {
+
+            // 여기에 작성하세요.
+
+        }
+
+        console.log(getDeliveryFee(18000));
+        console.log(getDeliveryFee(35000));
+        console.log(getDeliveryFee(30000));
+
+
+
+
+
+
+    // 문제 53 : 관람 가능한 영화 찾기
+    // 상영 시간이 120분 이하인 영화의 제목만 출력하세요.
+    // filter와 forEach는 사용하지 않고 반복문으로 직접 처리해 보세요.
+    // 조건 : for, if, 배열, 객체의 속성
+
+        const movieList = [
+            { title: "별빛 여행", runtime: 105 },
+            { title: "시간의 정원", runtime: 145 },
+            { title: "고양이 탐정", runtime: 90 },
+            { title: "여름 소풍", runtime: 130 }
+        ];
+
+        // 여기에 작성하세요.
+
+
+
+
+
+
+    // 문제 54 : 예약 완료 알림
+    // 예약 완료 메시지가 2초 후에 콘솔에 출력되도록 작성하세요.
+    // 조건은 다음과 같아요.
+    // - 메시지를 출력하는 함수를 따로 만드세요.
+    // - setTimeout을 사용하세요.
+    // - 함수 이름을 콜백으로 전달하세요.
+    // 조건 : 함수, 콜백, setTimeout
+
+        function showNotice() {
+
+            // 예약 완료 메시지를 출력하세요.
+
+        }
+
+        // 2초 뒤에 함수를 실행하도록 작성하세요.
+
+
+
+
+
+
+    // 문제 55 : 책 정보 만들기
+    // 책 제목과 페이지 수를 전달받아
+    // 책 객체를 만드는 생성자 함수를 작성하세요.
+    // 조건 : 생성자 함수, this, new
+
+        function Book(title, pages) {
+
+            // 전달받은 제목과 페이지 수를 객체에 저장하세요.
+
+        }
+
+        const book1 = new Book("어린 왕자", 120);
+        const book2 = new Book("마틸다", 240);
+
+        console.log(book1.title, book1.pages);
+        console.log(book2.title, book2.pages);
+
+
+
+
+
+
+    // 문제 56 : VIP 회원 만들기
+    // 일반 회원과 VIP 회원 클래스를 작성하세요.
+    // 완료 조건은 다음과 같아요.
+    // - Member 클래스는 회원 이름을 저장하고 인사말을 반환합니다.
+    // - VipMember 클래스는 Member를 상속받습니다.
+    // - VIP 회원은 등급도 저장합니다.
+    // - VIP 회원의 인사말 메서드는 부모 클래스의 메서드와 다르게 동작해야 합니다.
+    // 조건 : class, extends, super, 오버라이딩
+
+        class Member {
+            constructor(name) {
+                this.name = name;
+            }
+
+            introduce() {
+                return `${this.name}님, 환영합니다.`;
+            }
+        }
+
+        class VipMember extends Member {
+            constructor(name, grade) {
+
+                // 부모 생성자 호출과 등급 저장을 작성하세요.
+
+            }
+
+            introduce() {
+
+                // VIP 회원 전용 인사말을 반환하세요.
+
+            }
+        }
+
+        const normal = new Member("수현");
+        const vip = new VipMember("민지", "VIP");
+
+        console.log(normal.introduce());
+        console.log(vip.introduce());
+
+
+
+
+
+
+    // 문제 57 : 여러 상품의 총액 계산
+    // 여러 개의 상품 가격을 전달하면 총합을 반환하는 함수를 작성하세요.
+    // 몇 개의 가격이 전달되든 합계를 계산할 수 있어야 합니다.
+    // 조건 : 나머지 매개변수, for, 누적 계산, return
+
+        function getTotal(...prices) {
+
+            let total = 0;
+
+            for (let i = 0; i < prices.length; i++) {
+
+                // 각 가격을 total에 누적하세요.
+
+            }
+
+            return total;
+        }
+
+        console.log(getTotal(1200, 2500, 4000));
+        console.log(getTotal(3500, 4500));
+        console.log(getTotal(1000, 2000, 3000, 4000));
+
+
+
+
+
+
+    // 문제 58 : 세일 가격 목록 만들기
+    // 상품 가격 목록을 이용해 10% 할인된 가격으로 구성된 새로운 배열을 만드세요.
+    // 완료 조건은 다음과 같아요.
+    // - map을 사용하세요.
+    // - 할인된 가격을 담은 새 배열을 만드세요.
+    // - 원본 배열은 변경하지 마세요.
+    // - 원본 가격 목록과 할인 가격 목록을 모두 출력하세요.
+    // 조건 : map, 콜백, 새 배열
+
+        const priceList = [1200, 2500, 4000, 5500];
+
+        // 할인 가격을 담은 새 배열을 만드세요.
+
+
+        // 원본 배열과 할인 가격 배열을 각각 출력하세요.
+
+
+
+
+
+
+
     </script>
 </head>
 <body>
