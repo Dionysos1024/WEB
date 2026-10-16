@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>케이크 장바구니</title>
+</head>
+<body>
+
+
+    <!-- 케이크 수량을 증가·감소시키고, 총액을 화면에 표시하세요. -->
+    <!-- 완료 조건은 다음과 같아요. -->
+    <!-- - 케이크 한 개의 가격은 6,000원입니다. -->
+    <!-- - 처음 수량은 1개입니다. -->
+    <!-- - + 버튼은 수량을 1 증가시킵니다. -->
+    <!-- - - 버튼은 수량을 1 감소시킵니다. -->
+    <!-- - 수량은 1개보다 작아질 수 없습니다. -->
+    <!-- - 수량과 총액이 화면에 함께 반영되어야 합니다. -->
+
+
+    <h2>딸기 케이크</h2>
+
+    <p>가격: 6000원</p>
+    <p id="quantityText">수량: 1개</p>
+    <p id="totalText">총액: 6000원</p>
+
+    <button id="minusBtn">-</button>
+    <button id="plusBtn">+</button>
+
+    <script>
+        const price = 6000;
+        let quantity = 1;
+
+        const quantityText = document.getElementById("quantityText");
+        const totalText = document.getElementById("totalText");
+
+        const minusBtn = document.getElementById("minusBtn");
+        const plusBtn = document.getElementById("plusBtn");
+
+        plusBtn.addEventListener("click", function() {
+
+            // 1. 수량을 1 증가시키세요.
+
+            // 2. 수량과 총액을 화면에 반영하세요.
+
+        });
+
+        minusBtn.addEventListener("click", function() {
+
+            // 1. 수량이 1보다 클 때만 감소시키세요.
+
+            // 2. 수량과 총액을 화면에 반영하세요.
+
+        });
+    </script>
+</body>
+</html>

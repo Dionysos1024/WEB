@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>예약 환영 문구</title>
+</head>
+<body>
+
+
+    <!-- 사용자가 이름을 입력하고 확인 버튼을 누르면 환영 문구를 화면에 표시하세요. -->
+    <!-- 완료 조건은 다음과 같아요. -->
+    <!-- - 입력한 이름이 있으면 민지님, 예약을 환영합니다!처럼 표시하세요. -->
+    <!-- - 아무것도 입력하지 않았다면 이름을 입력해 주세요.라고 표시하세요. -->
+    <!-- - 입력 요소의 값은 .value로 가져오세요. -->
+    <!-- - 화면 변경은 textContent를 사용하세요. -->
+
+
+    <h2>예약 확인</h2>
+
+    <input id="nameInput" type="text" placeholder="이름을 입력하세요">
+    <button id="checkBtn">확인</button>
+
+    <p id="resultText"></p>
+
+    <script>
+        const nameInput = document.getElementById("nameInput");
+        const checkBtn = document.getElementById("checkBtn");
+        const resultText = document.getElementById("resultText");
+
+        checkBtn.addEventListener("click", function() {
+
+            // 1. 입력한 이름을 가져오세요.
+
+            // 2. 이름이 비어 있는지 확인하세요.
+
+            // 3. 조건에 따라 환영 문구 또는 입력 안내를 표시하세요.
+
+        });
+    </script>
+</body>
+</html>

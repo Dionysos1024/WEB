@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>오늘의 디저트 추천</title>
+</head>
+<body>
+
+
+    <!-- 버튼을 클릭할 때마다 디저트가 하나씩 바뀌도록 만드세요. -->
+    <!-- 마지막 디저트까지 표시한 후 다시 처음 디저트로 돌아와야 합니다. -->
+
+
+    <h2>오늘의 디저트 추천</h2>
+
+    <p id="dessertText">버튼을 눌러 추천받으세요!</p>
+    <button id="nextBtn">다음 디저트</button>
+
+    <script>
+        const dessertList = [
+            "딸기 케이크",
+            "초콜릿 쿠키",
+            "바닐라 푸딩",
+            "레몬 타르트"
+        ];
+
+        let index = 0;
+
+        const dessertText = document.getElementById("dessertText");
+        const nextBtn = document.getElementById("nextBtn");
+
+        nextBtn.addEventListener("click", function() {
+
+            // 1. 현재 index에 해당하는 디저트를 화면에 표시하세요.
+
+            // 2. index를 1 증가시키세요.
+
+            // 3. index가 배열의 길이에 도달하면
+            //    다시 처음 위치로 돌아가게 하세요.
+
+        });
+    </script>
+</body>
+</html>
