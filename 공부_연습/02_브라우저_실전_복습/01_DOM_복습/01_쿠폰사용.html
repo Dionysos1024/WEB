@@ -19,7 +19,9 @@
     <p id="couponText">남은 쿠폰: 3장</p>
     <button id="useBtn">쿠폰 사용하기</button>
 
+
     <script>
+
         let couponCount = 3;
 
         const couponText = document.getElementById("couponText");
@@ -27,14 +29,18 @@
 
         useBtn.addEventListener("click", function() {
 
-            // 1. 쿠폰이 남아 있는지 확인하세요.
+            if ( couponCount > 0 )
 
-            // 2. 쿠폰이 남아 있으면 한 장 줄이세요.
+               {
+                    couponCount = couponCount - 1
+                    couponText.textContent = `남은 쿠폰: ${couponCount}장`
+                }
 
-            // 3. textContent로 남은 쿠폰 수를 표시하세요.
-            //    0장이 되면 "쿠폰이 없습니다."를 표시하세요.
-
+            if ( couponCount == 0 )
+                couponText.textContent = "쿠폰이 없습니다."
         });
+            
     </script>
+
 </body>
 </html>
