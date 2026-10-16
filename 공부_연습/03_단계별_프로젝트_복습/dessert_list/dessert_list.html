@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dessert_list</title>
+
+    <link rel="stylesheet" href="css/dessert_list.css">
+    <script src="js/dessert_list.js"></script>
+
 </head>
 <body>
+
+        <!-- ========================================
+
+        DAY 01 | 2026-10-16
+        - HTML로 입력창, 추가 버튼, 빈 목록 구조 만들기
+        - CSS로 기본 레이아웃과 스타일 적용하기
+        - DOM 요소를 getElementById()로 선택하기
+        - addEventListener()로 버튼 클릭 이벤트 연결하기
+        - input의 value로 입력한 값 가져오기
+        - createElement()로 새로운 li 요소 생성하기
+        - textContent로 li 요소에 입력한 글자 넣기
+        - appendChild()로 목록에 새로운 요소 추가하기
+        - 버튼을 여러 번 눌러 목록에 항목이 누적되는지 확인하기
+
+        ======================================== -->
+
+
+
+
+    <div class="container">
+
+        <h1>나만의 디저트 리스트</h1>
+
+        <div class="section">
+            <input type="text" id="dessertInput">
+            <button id="addBtn">추가</button>
+        </div>
+
+        <div class="inner">
+
+            <h2>디저트 목록</h2>
+
+            <ul id="dessertList">
+
+            </ul>
+
+        </div>
+    </div>
     
 </body>
 </html>
