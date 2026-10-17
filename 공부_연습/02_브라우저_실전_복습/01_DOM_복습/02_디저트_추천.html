@@ -31,13 +31,12 @@
 
         nextBtn.addEventListener("click", function() {
 
-            // 1. 현재 index에 해당하는 디저트를 화면에 표시하세요.
+            (dessertText.textContent = dessertList[index] );
 
-            // 2. index를 1 증가시키세요.
+            ( index = index + 1 )
 
-            // 3. index가 배열의 길이에 도달하면
-            //    다시 처음 위치로 돌아가게 하세요.
-
+            if ( dessertList.length == index )
+                ( index = 0 )
         });
     </script>
 </body>
