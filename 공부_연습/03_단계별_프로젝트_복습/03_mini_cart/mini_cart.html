@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 미니 장바구니</title>
+
+    <link rel="stylesheet" href="css/mini_cart.css">
+
+    <script src="script/mini_cart.js"></script>
+
+</head>
+<body>
+
+    <!-- ========================================
+
+    DAY 01 | 2026-10-18
+        - HTML로 미니 장바구니의 전체 구조 설계하기
+        - container, inner, wrap, box 클래스로 상품 영역 구성하기
+        - 상품 카드 6개에 이미지, 상품명, 가격, 담기 버튼 배치하기
+        - class="box"로 상품 카드의 공통 클래스 통일하기
+        - CSS Grid로 상품 카드를 3열 2행으로 배치하기
+        - gap, padding, margin으로 상품 카드 간격 조절하기
+        - 과일·채소 이미지 6종을 HTML에 연결하기
+        - CSS로 상품 카드, 가격, 버튼 및 장바구니 영역 디자인하기
+        - flex를 활용해 상품 메뉴와 장바구니 영역 나란히 배치하기
+        - getElementById()로 cartItems 요소 선택하기
+        - querySelectorAll('.btn')로 담기 버튼 여러 개 선택하기
+        - forEach()로 담기 버튼을 하나씩 순회하기
+        - addEventListener()로 각 담기 버튼에 클릭 이벤트 연결하기
+        - parentElement로 클릭한 버튼의 부모 상품 박스 찾기
+        - querySelector('p')로 해당 상품의 이름 요소 찾기
+        - textContent로 상품 이름 가져오기
+        - console.log()로 선택한 상품 이름 출력하기
+        - 브라우저에서 상품별 담기 버튼 이벤트와 상품 이름 출력 테스트하기
+
+        ======================================== -->
+
+        
+
+    <div class="container"> <!-- 가장 큰 박스 -->
+
+
+        <h1>나의 미니 장바구니</h1> <!-- 박스 안에 들어갈 타이틀 제목 -->
+        <p>건강한 간식을 즐기기 위한 쇼핑 시간!</p> 
+
+        <div class="panels"> <!-- 상품 리스트 와 장바구니 박스 묶어줄 박스 -->
+
+            <div class="inner"> <!-- 상품 목록이 들어갈 중간 박스 -->
+
+                <h2>상품 메뉴</h2> <!-- 상품 목록을 나타내는 글 -->
+
+                <div class="wrap"> <!-- 상품이 직접 들어갈 박스 -->
+
+                    <div class="box"> <!-- 상품 박스 총 6개 구성 -->
+                        <a href="#"><img src="img/banana.jpg" alt="상품 이미지1"></a> <!-- 상품 사진 -->
+                        <p>바나나</p> <!-- 상품 이름 -->
+                        <span>3,000원</span> <!-- 상품 가격 -->
+                        <button class="btn">담기</button> <!-- 해당 상품 바구니에 담을 버튼 -->
+                    </div>
+                    <div class="box">
+                        <a href="#"><img src="img/cherry_tomato.jpg" alt="상품 이미지2"></a>
+                        <p>방울 토마토</p>
+                        <span>5,000원</span>
+                        <button class="btn">담기</button>
+                    </div>
+                    <div class="box">
+                        <a href="#"><img src="img/blueberry.jpg" alt="상품 이미지3"></a>
+                        <p>블루베리</p>
+                        <span>8,000원</span>
+                        <button class="btn">담기</button>
+                    </div>
+                    <div class="box">
+                        <a href="#"><img src="img/bell_pepper.jpg" alt="상품 이미지4"></a>
+                        <p>파프리카</p>
+                        <span>3,000원</span>
+                        <button class="btn">담기</button>
+                    </div>
+                    <div class="box">
+                        <a href="#"><img src="img/carrot.jpg" alt="상품 이미지5"></a>
+                        <p>당근</p>
+                        <span>2,000원</span>
+                        <button class="btn">담기</button>
+                    </div>
+                    <div class="box">
+                        <a href="#"><img src="img/cucumber.jpg" alt="상품 이미지6"></a>
+                        <p>오이</p>
+                        <span>2,000원</span>
+                        <button class="btn">담기</button>
+                    </div>
+                </div>
+
+            </div> <!-- inner 끝 -->
+
+
+            <div class="cart"> <!-- cart 시작 -->
+
+                <h2>장바구니</h2>
+                <span>아직 담긴 상품이 없습니다.</span>
+
+                <div id="cartItems"> <!-- 동작 기능 넣을 빈 영역 만들기 -->
+
+                </div>
+
+            </div> <!-- cart 끝 -->
+
+            
+
+        </div> <!-- panels 끝 -->
+
+    </div> <!-- container 끝 -->
+    
+</body>
+</html>
