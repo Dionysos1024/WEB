@@ -29,12 +29,14 @@
 
         checkBtn.addEventListener("click", function() {
 
-            // 1. 입력한 이름을 가져오세요.
+            // nameInput.textContent = ""
 
-            // 2. 이름이 비어 있는지 확인하세요.
+            if ( nameInput.value == "" )
+                ( resultText.textContent = "이름을 입력 해주세욤" );
 
-            // 3. 조건에 따라 환영 문구 또는 입력 안내를 표시하세요.
-
+            else
+                ( resultText.textContent = ` ${ nameInput.value} 님, 예약을 환영 합니다 ` );
+            
         });
     </script>
 </body>
