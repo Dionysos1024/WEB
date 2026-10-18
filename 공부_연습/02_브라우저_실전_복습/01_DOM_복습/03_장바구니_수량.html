@@ -38,18 +38,22 @@
 
         plusBtn.addEventListener("click", function() {
 
-            // 1. 수량을 1 증가시키세요.
+            ( quantity = quantity + 1 )
 
-            // 2. 수량과 총액을 화면에 반영하세요.
+            quantityText.textContent = `구매 수량 : ${quantity}개 입니다.`
+
+            totalText.textContent = `구매 총 금액 : ${price * quantity}원 입니다.`
 
         });
 
         minusBtn.addEventListener("click", function() {
 
-            // 1. 수량이 1보다 클 때만 감소시키세요.
+            if ( quantity > 1 )
 
-            // 2. 수량과 총액을 화면에 반영하세요.
+            quantityText.textContent = `구매 수량 : ${quantity = quantity - 1}개 입니다.`
 
+            totalText.textContent = `구매 총 금액 : ${price * quantity}원 입니다.`
+            
         });
     </script>
 </body>
