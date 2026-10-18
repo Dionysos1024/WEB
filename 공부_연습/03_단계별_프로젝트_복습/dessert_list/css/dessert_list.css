@@ -1,10 +1,14 @@
+
 * { margin: 0; padding: 0; list-style: none; }
+
+body {
+    background-color: #F7F3FF;
+}
 
 .container {
     width: 400px;
     height: 700px;
     margin: auto;
-    border: 1px solid green;
 }
 
 h1 {
@@ -49,5 +53,33 @@ h2 {
     margin: auto auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    background-color: #ffffff;
 }
 
+#dessertList li {
+    margin-bottom: 5px;
+    padding: 0 10px;
+    transition: all 0.2s;
+}
+
+#dessertList li:hover {
+    background-color: #D7C5F4;
+    color: #5B3A8A;
+    border-radius: 6px;
+}
+
+#dessertList button {
+    margin-left: 10px;
+    border: none;
+    padding: 1px 3px;
+    background-color: #E9DDFC;
+    border-radius: 5px;
+    color: #7B61A8;
+    cursor: pointer;
+    text-align: center;
+}
+
+#dessertList button:hover {
+    background-color: #D7C5F4;
+    color: #5B3A8A;
+}
