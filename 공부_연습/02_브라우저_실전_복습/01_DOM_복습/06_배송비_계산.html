@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>배송비 계산</title>
+</head>
+<body>
+  <h2>배송 방식 선택</h2>
+
+  <select id="deliverySelect">
+    <option value="">배송 방법 선택</option>
+    <option value="normal">일반 배송</option>
+    <option value="fast">빠른 배송</option>
+    <option value="pickup">매장 픽업</option>
+  </select>
+
+  <button id="checkBtn">배송비 확인</button>
+  <p id="resultText">배송 방법을 선택해 주세요.</p>
+
+  <script>
+    /*
+    [브라우저 실전 06번]
+
+    사용할 문법과 역할:
+    - getElementById(): HTML 요소 선택
+    - addEventListener(): 버튼 클릭 이벤트 등록
+    - select.value: 선택한 항목의 value 읽기
+    - if / else if / else: 배송 방법 구분
+    - textContent: 배송비 안내를 화면에 표시
+
+    요구사항:
+    1. 선택하지 않았다면 "배송 방법을 선택해 주세요." 표시
+    2. 일반 배송은 3000원
+    3. 빠른 배송은 5000원
+    4. 매장 픽업은 0원
+    5. 버튼을 클릭할 때마다 결과 갱신
+
+    확인 결과:
+    - 일반 배송 → 배송비: 3000원
+    - 빠른 배송 → 배송비: 5000원
+    - 매장 픽업 → 배송비: 0원
+    */
+
+    // 이 아래에서 직접 작성
+  </script>
+</body>
+</html>
