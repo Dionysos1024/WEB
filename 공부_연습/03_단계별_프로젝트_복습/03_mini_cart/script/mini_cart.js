@@ -8,16 +8,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
        addBtn.addEventListener("click", () => {
 
-        const productBox = addBtn.parentElement
-        const productName = productBox.querySelector('p').textContent
+            const productBox = addBtn.parentElement
+            const productName = productBox.querySelector('p').textContent
+            const cartItem = document.createElement('p')
+            const emptyMessage = document.getElementById('emptyMessage')
+            const productPrice = productBox.querySelector('span').textContent
+            const productBtn = document.createElement('button')
 
-        console.log(productName);
-        
+            cartItem.textContent = productName + " " + productPrice
+            productBtn.textContent = '삭제'
+            cartItem.appendChild(productBtn)
+            cartItems.appendChild(cartItem)
+            emptyMessage.style.display = "none"
 
-    })
+            productBtn.addEventListener("click", () => {
 
+                cartItem.remove()
+
+            })
+
+        })
 
     })
     
-
 })
