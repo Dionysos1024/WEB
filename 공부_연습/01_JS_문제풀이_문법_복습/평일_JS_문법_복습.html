@@ -2031,7 +2031,7 @@
     // 출력 형식은 "상품명: 가격원"이다.
     // map()과 for 반복문은 사용하지 않는다.
 
-        const productList = [
+        /* const productList = [
         { name: "딸기 케이크", price: 6000 },
         { name: "초코 쿠키", price: 2500 },
         { name: "레몬 타르트", price: 4500 }
@@ -2041,7 +2041,7 @@
             
             console.log(`${element.name} : ${element.price}원`);
             
-        });
+        }); */
             
 
 
@@ -2064,12 +2064,18 @@
     //    주문 이름과 콜백 함수를 전달받아 콜백을 실행한다.
     // 3. 두 함수를 연결해 아래 호출문이 작동하게 한다.
 
-        completeOrder("딸기 케이크", showOrderMessage);
-        completeOrder("초코 쿠키", showOrderMessage);
+        /* function showOrderMessage(orderName) {
 
-        // 예상 출력:
-        // 딸기 케이크 주문이 접수되었습니다.
-        // 초코 쿠키 주문이 접수되었습니다.
+            console.log(`${orderName} 주문 접수 완료`);
+        }
+
+        function completeOrder(orderName, callback) {
+
+            callback(orderName)
+        }
+        
+        completeOrder("딸기 케이크", showOrderMessage);
+        completeOrder("초코 쿠키", showOrderMessage); */
 
 
 
@@ -2088,6 +2094,15 @@
     // getMaxPrice 함수를 만든다.
     // 가격을 몇 개 전달하든 가장 큰 가격을 반환한다.
     // Math.max()는 사용하지 않고 반복문으로 해결한다.
+
+        function getMaxPrice(item) {
+
+            for (let i = 0; i < item.length; i++) {
+                
+                
+                
+            }
+        }
 
         console.log(getMaxPrice(1200, 2500, 4000));       // 4000
         console.log(getMaxPrice(3500, 4500));             // 4500
