@@ -25,10 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 cartItem.remove()
 
+                if ( cartItems.children.length === 0 ) {
+
+                    ( emptyMessage.style.display = "" )
+                }
             })
-
         })
-
     })
-    
 })
