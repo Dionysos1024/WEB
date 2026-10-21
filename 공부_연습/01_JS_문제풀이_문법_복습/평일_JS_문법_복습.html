@@ -2095,18 +2095,22 @@
     // 가격을 몇 개 전달하든 가장 큰 가격을 반환한다.
     // Math.max()는 사용하지 않고 반복문으로 해결한다.
 
-        function getMaxPrice(item) {
+        /* function getMaxPrice(... item) {
+
+            let maxPrice = item[0]
 
             for (let i = 0; i < item.length; i++) {
-                
-                
-                
-            }
+
+                if ( item[i] > maxPrice ) {
+                    maxPrice = item[i]
+                }
+
+            } return(maxPrice)
         }
 
-        console.log(getMaxPrice(1200, 2500, 4000));       // 4000
-        console.log(getMaxPrice(3500, 4500));             // 4500
-        console.log(getMaxPrice(1000, 2000, 6000, 4000)); // 6000
+        console.log(getMaxPrice(1200, 2500, 4000));       
+        console.log(getMaxPrice(3500, 4500));             
+        console.log(getMaxPrice(1000, 2000, 6000, 4000)); */
 
 
 
@@ -2127,16 +2131,14 @@
     // map()을 사용하고 원본 productList는 수정하지 않는다.
     // 새 배열과 원본 배열을 모두 출력한다.
 
-        /* const productList = [
+        const productList = [
         { name: "텀블러", price: 12000 },
         { name: "에코백", price: 8500 },
         { name: "머그컵", price: 6000 }
-        ]; */
+        ];
 
-        // 이 아래에서 직접 작성
-
-        // 예상 infoList:
-        // ["텀블러 - 12000원", "에코백 - 8500원", "머그컵 - 6000원"]
+        // productList.map( info => ` ${info.name} - ${info.price}`)
+        
 
 
 
