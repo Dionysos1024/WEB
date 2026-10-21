@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 기록장</title>
+
+    <link rel="stylesheet" href="css/movie_log.css">
+
+    <script src="script/movie_log.js" defer></script>
+
+</head>
+<body>
+
+    <!-- ========================================
+
+    DAY 01 | 2026-10-21
+        - HTML 기본 구조 설계
+        - 페이지 제목과 소개 문구 작성
+        - 영화 목록 영역 구성 (#movielist)
+        - 감상 관리 영역 구성 (#manage)
+        - 보고 싶은 영화 목록 준비 (#wantList)
+        - 감상 완료 영화 목록 준비 (#watchedList)
+        - CSS 파일과 JavaScript 파일 연결
+        - defer를 사용해 JavaScript 실행 순서 설정
+        - HTML 구조 설계 완료
+        
+        다음 단계:
+        DAY 02 | CSS 레이아웃 만들기
+
+    ======================================== -->
+
+
+    
+    <div class="container"> <!-- 전체를 감싸는 container 시작 -->
+
+        <h1>나만의 영화 기록장</h1>
+        <span>취향저격 나만의 Movie log</span>
+
+        <div class="inner"> <!-- 목록 과 관리 두 박스 감싸는 inner 시작 -->
+
+            <div id="movielist" class="list"> <!-- 카드 3개 묶을 .list 시작 -->
+
+                    <!-- 카드 생성은 js 에서 할거임 -->
+
+            </div> <!-- 카드 3개 묶을 list 끝 -->  
+
+            <div id="manage"> <!-- 영화 감상 관리 #manage 시작 -->
+
+                <div class="manage">    <!-- 보고싶은거 . 다 본거 감싸는 .manage 시작 -->
+
+                    <div class="want"> <!-- 보고싶은 영화 시작 -->
+
+                        <h2>보고싶은 영화</h2>
+
+                        <ul id="wantList">
+                            <!-- li 는 js 에서 생성 할거임 -->
+                        </ul>
+
+                    </div>  <!-- 보고싶은 영화 끝 -->
+
+                    <div class="watched"> <!-- 감상 완료 영화 시작 -->
+
+                        <h2>감상 완료 영화</h2>
+
+                        <ul id="watchedList">
+                            <!-- li 는 js 에서 생성 할거임 -->
+                        </ul>
+
+                    </div>  <!-- 감상 완료 영화 끝 -->
+
+                </div>  <!-- 보고싶은거 . 다 본거 감싸는 .manage 끝 -->
+
+            </div>  <!-- 영화 감상 관리 .manage 끝 -->
+
+        </div>  <!-- 목록 과 관리 두 박스 감싸는 inner 끝 -->
+
+    </div>  <!-- 전체를 감싸는 container 끝 -->
+
+</body>
+</html>
