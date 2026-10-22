@@ -2232,12 +2232,26 @@
     //    "VIP [이름]님, 특별 혜택을 누리세요."를 반환한다.
     // 6. 부모의 이름 저장 기능은 super를 사용한다.
 
-        const normal = new Member("수현");
-        const vip = new VipMember("민지", "VIP");
+        class Member {
 
-        console.log(normal.greet()); // 수현님, 환영합니다.
-        console.log(vip.greet());    // VIP 민지님, 특별 혜택을 누리세요.
-        console.log(vip.grade);      // VIP
+            constructor(name) {
+
+                this.name = name
+            }
+
+            greet() {
+
+                let member = `${this.name}님, 환영 합니다.`
+               
+                return member
+            }
+        }
+                const normal = new Member("수현");
+                // const vip = new VipMember("민지", "VIP");
+
+        console.log(normal.greet());
+        console.log(vip.greet()); 
+        console.log(vip.grade); 
 
 
 
