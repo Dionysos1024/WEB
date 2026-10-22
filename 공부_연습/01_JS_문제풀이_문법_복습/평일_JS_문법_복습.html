@@ -2162,9 +2162,19 @@
     // "가을 쿠폰은 10% 할인 쿠폰입니다."를 반환해야 한다.
     // 문구를 만들 때 this로 객체의 속성을 가져온다.
 
-        
-        console.log(coupon.getMessage());
+        /* let name = "가을 쿠폰"
+        let discount = 10
 
+        let coupon = {
+
+            name : '가을 쿠폰',
+            discount : 10,
+
+            getMessage : function() {
+            return (`${this.name}은 ${this.discount}% 할인 쿠폰 입니다.`) }
+        }
+            console.log(coupon.getMessage()); */
+        
 
 
 
@@ -2183,11 +2193,21 @@
     // 상품명과 가격을 전달받아 객체에 저장한다.
     // getInfo() 메서드는 "상품명: 가격원" 형식의 문자열을 반환한다.
 
+        /* function Product (name, price) {
+
+            this.name = name
+            this.price = price
+
+            this.getInfo = function() {
+                    return ( ` ${this.name} : ${this.price}원 ` )
+            }
+        }
+
         const item1 = new Product("텀블러", 12000);
         const item2 = new Product("에코백", 8500);
 
-        console.log(item1.getInfo()); // 텀블러: 12000원
-        console.log(item2.getInfo()); // 에코백: 8500원
+        console.log(item1.getInfo());
+        console.log(item2.getInfo()); */
 
 
 
