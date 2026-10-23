@@ -2232,26 +2232,31 @@
     //    "VIP [이름]님, 특별 혜택을 누리세요."를 반환한다.
     // 6. 부모의 이름 저장 기능은 super를 사용한다.
 
-        class Member {
-
+        /* class Member {
             constructor(name) {
-
                 this.name = name
             }
-
             greet() {
-
                 let member = `${this.name}님, 환영 합니다.`
-               
                 return member
             }
         }
+        class VipMember extends Member {
+            constructor(name, grade) {
+                super(name)
+                this.grade = grade
+            }
+            greet() {
+                let VipMember = ` VIP ${this.name}님 특별 혜택을 누리세요.`
+                return VipMember
+            }
+        }
                 const normal = new Member("수현");
-                // const vip = new VipMember("민지", "VIP");
+                const vip = new VipMember("민지", "VIP");
 
         console.log(normal.greet());
         console.log(vip.greet()); 
-        console.log(vip.grade); 
+        console.log(vip.grade);  */
 
 
 
@@ -2272,10 +2277,11 @@
     // 함수는 "예약 시간이 다가왔습니다!"를 출력한다.
     // 함수를 1초 뒤 실행하도록 설정한다.
 
-        setTimeout(showReminder, 1000);
+        let  = setTimeout (() => {
+            console.log(`예약 시간이 다가왔습니다!`);
+        }, 1000)
 
-        // 예상 출력: 약 1초 뒤
-        // 예약 시간이 다가왔습니다!
+        setTimeout(showReminder, 1000);
 
 
 
