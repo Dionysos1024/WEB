@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; list-style: none; box-sizing: border-box; }
+
+a { text-decoration: none; color: var(--text-color); }
+
+:root {
+    --main-color: #0331aa;
+    --sub-color: #eeeeee;
+    --back-color: #ffffff;
+    --text-color: #333333;
+    --container-width: 1000px;
+}
+
+body {
+    background-color: var(--back-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: var(--container-width);
+    display: flex;
+}
+
+#slides { height: 350px; }
+
+#contents { height: 200px; }
+
+header {
+    width: 200px;
+    height: calc(350px + 200px + 100px);
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+}
+
+footer { height: 100px; }
+
+header .logo a img {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+    padding: 5px 10px;
+}
+
+header nav {
+    position: relative;
+    z-index: 10;
+}
+
+header nav .main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .main-menu li {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+header nav .main-menu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+header nav .main-menu li a:hover {
+    background-color: var(--text-color);
+    color: white;
+}
+
+header nav .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 180px;
+    z-index: 10;
+    display: none;
+}
+
+header nav .sub-menu > li {
+    background-color: rgba(200, 200, 200, 0.8);
+}
+
+header nav .sub-menu > li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: var(--main-color);
+}
+
+header nav .sub-menu > li a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+#slides {
+    width: 800px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.slide-container {
+    position: relative;
+    display: flex;
+}
+
+.slide-container .slide {
+    width: 800px;
+    height: 350px;
+}
+
+.slide-container .slide a img {
+    width: 800px;
+    height: 350px;
+}
+
+#contents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
+    column-gap: 10px;
+}
+
+.tab-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.tab-menu .menu-item {
+    width: 100px;
+    line-height: 40px;
+    text-align: center;
+    background-color: var(--main-color);
+}
+
+.tab-menu .menu-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.content-item ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.content-item ul li:nth-of-type(odd) {
+    background-color: var(--sub-color);
+}
+
+.content-item ul li:nth-of-type(even) {
+    background-color: var(--back-color);
+}
+
+.content-item ul li:hover {
+    filter: brightness(90%);
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0;
+}
+
+footer {
+    width: 800px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+footer .footer-logo a img {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+footer .copy { text-align: center; }
+
+footer .family select {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--sub-color);
+    color: var(--main-color);
+    text-align: center;
+    cursor: pointer;
+}
+
+#modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+#modal .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal .card {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#modal .close {
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
