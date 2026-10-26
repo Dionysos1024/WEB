@@ -51,7 +51,7 @@
         let result = price
 
         if ( check.checked ) {
-            ( result = 12000 - 12000 / 10 )
+            ( result = price - price / 10 )
             resultText.textContent = `쿠폰 적용 금액: ${result}원`
             return
         }
