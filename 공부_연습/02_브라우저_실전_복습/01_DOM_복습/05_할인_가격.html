@@ -44,20 +44,22 @@
       const resultText = document.getElementById("resultText");
 
       calcBtn.addEventListener("click", function() {
-          Number()
-        if ( priceInput.value == "" )
-            ( resultText.textContent = "가격을 입력해 주세요" )
+
+        if ( priceInput.value === "" ) {
+            resultText.textContent = "가격을 입력해 주세요"
+            return
+        }
+           let price = Number(priceInput.value)
         
-        if ( priceInput.placeholder ) {
-          ( 20000 < resultText )
-            ( 20000 * 0.1 )
+        if ( price >= 20000 ) {
+          let result = price - price / 10
+          resultText.textContent = `할인 후 가격 : ${result}원`
         }
 
         else
-        ( resultText.textContent`${resultText}` )
-
-        return ()
-      }) 
+        resultText.textContent = `할인 대상이 아닙니다. 결제금액 : ${price}원`
+        
+      })
 
   </script>
 </body>
