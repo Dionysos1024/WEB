@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품 수량과 주문 금액</title>
+</head>
+<body>
+
+  <!-- [브라우저 실전 08번]
+
+    사용할 문법과 역할:
+    - getElementById(): HTML 요소 선택
+    - addEventListener(): 버튼 클릭 이벤트 등록
+    - input.value: 입력한 수량 가져오기
+    - Number(): 입력값을 숫자로 변환
+    - if / else: 수량에 따라 처리
+    - textContent: 결과를 화면에 표시
+
+    요구사항:
+    1. 상품 가격은 2500원이다.
+    2. 사용자가 입력한 수량을 가져온다.
+    3. 수량을 입력하지 않았거나 0 이하라면
+       "수량을 1개 이상 입력해 주세요."를 표시한다.
+    4. 올바른 수량이면 상품 가격과 수량을 곱한다.
+    5. 계산 결과를 화면에 표시한다.
+    6. 버튼을 누를 때마다 결과가 갱신되어야 한다.
+
+    확인 결과:
+    - 수량 3개 → 주문 금액: 7500원
+    - 수량 5개 → 주문 금액: 12500원
+    - 수량 미입력 → 수량을 1개 이상 입력해 주세요.
+    - 수량 0개 → 수량을 1개 이상 입력해 주세요. -->
+
+  <h2>상품 수량 확인</h2>
+
+  <p>상품 가격: 2500원</p>
+
+  <label>
+    구매 수량:
+    <input id="quantityInput" type="number">
+  </label>
+
+  <button id="totalBtn">금액 계산</button>
+
+  <p id="resultText">수량을 입력해 주세요.</p>
+
+  <script>
+
+    
+
+  </script>
+
+</body>
+</html>
