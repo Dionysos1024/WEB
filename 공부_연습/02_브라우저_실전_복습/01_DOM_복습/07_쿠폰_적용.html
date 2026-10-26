@@ -5,21 +5,8 @@
   <title>쿠폰 적용</title>
 </head>
 <body>
-  <h2>쿠폰 적용 확인</h2>
 
-  <p>상품 금액: 12000원</p>
-
-  <label>
-    <input id="couponCheck" type="checkbox">
-    10% 할인 쿠폰 사용
-  </label>
-
-  <button id="applyBtn">금액 확인</button>
-  <p id="resultText">쿠폰 적용 여부를 선택해 주세요.</p>
-
-  <script>
-    /*
-    [브라우저 실전 07번]
+    <!-- [브라우저 실전 07번]
 
     사용할 문법과 역할:
     - getElementById(): HTML 요소 선택
@@ -36,10 +23,45 @@
 
     확인 결과:
     - 쿠폰 선택 → 쿠폰 적용 금액: 10800원
-    - 쿠폰 미선택 → 쿠폰 미적용 금액: 12000원
-    */
+    - 쿠폰 미선택 → 쿠폰 미적용 금액: 12000원 -->
 
-    // 이 아래에서 직접 작성
+  <h2>쿠폰 적용 확인</h2>
+
+  <p>상품 금액: 12000원</p>
+
+  <label>
+    <input id="couponCheck" type="checkbox">
+    10% 할인 쿠폰 사용
+  </label>
+
+  <button id="applyBtn">금액 확인</button>
+  <p id="resultText">쿠폰 적용 여부를 선택해 주세요.</p>
+
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const check = document.getElementById('couponCheck')
+      const btn = document.getElementById('applyBtn')
+      const resultText = document.getElementById('resultText')
+
+      btn.addEventListener("click", () => {
+
+        const price = 12000
+        let result = price
+
+        if ( check.checked ) {
+            ( result = 12000 - 12000 / 10 )
+            resultText.textContent = `쿠폰 적용 금액: ${result}원`
+            return
+        }
+
+        else
+          resultText.textContent = `쿠폰 미적용 금액: ${result}원`
+
+      })
+    })
+
   </script>
 </body>
 </html>
