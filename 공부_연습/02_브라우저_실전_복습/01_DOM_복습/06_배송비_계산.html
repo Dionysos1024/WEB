@@ -5,21 +5,8 @@
   <title>배송비 계산</title>
 </head>
 <body>
-  <h2>배송 방식 선택</h2>
 
-  <select id="deliverySelect">
-    <option value="">배송 방법 선택</option>
-    <option value="normal">일반 배송</option>
-    <option value="fast">빠른 배송</option>
-    <option value="pickup">매장 픽업</option>
-  </select>
-
-  <button id="checkBtn">배송비 확인</button>
-  <p id="resultText">배송 방법을 선택해 주세요.</p>
-
-  <script>
-    /*
-    [브라우저 실전 06번]
+    <!-- [브라우저 실전 06번]
 
     사용할 문법과 역할:
     - getElementById(): HTML 요소 선택
@@ -38,10 +25,53 @@
     확인 결과:
     - 일반 배송 → 배송비: 3000원
     - 빠른 배송 → 배송비: 5000원
-    - 매장 픽업 → 배송비: 0원
-    */
+    - 매장 픽업 → 배송비: 0원 -->
+  
+  <h2>배송 방식 선택</h2>
 
-    // 이 아래에서 직접 작성
+  <select id="deliverySelect">
+    <option value="">배송 방법 선택</option>
+    <option value="normal">일반 배송</option>
+    <option value="fast">빠른 배송</option>
+    <option value="pickup">매장 픽업</option>
+  </select>
+
+  <button id="checkBtn">배송비 확인</button>
+  <p id="resultText">배송 방법을 선택해 주세요.</p>
+
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const select = document.getElementById('deliverySelect')
+      const btn = document.getElementById('checkBtn')
+      const result = document.getElementById('resultText')
+
+      btn.addEventListener("click", () => {
+
+        const selectedDelivery = select.value
+
+        if ( selectedDelivery === "" ) {
+          result.textContent = "배송 방법을 선택해 주세요."
+          return
+        }
+
+        else if ( selectedDelivery === "normal" ) {
+          result.textContent = `배송비 : 3000원`
+        }
+
+        else if ( selectedDelivery === "fast" ) {
+          result.textContent = `배송비 : 5000원`
+        }
+
+        else if ( selectedDelivery === "pickup" ) {
+          result.textContent = `배송비 : 0원`
+        }
+
+      })
+      
+    })
+
   </script>
 </body>
 </html>
