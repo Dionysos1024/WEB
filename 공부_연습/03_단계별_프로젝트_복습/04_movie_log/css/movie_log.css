@@ -36,6 +36,12 @@ span {
     height: 600px;
     background-color: #ffffff;
     border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 180px);
+    gap: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+    align-content: start;
 }
 
 #manage {
@@ -73,4 +79,27 @@ h2 {
     padding: 0 10px;
     font-weight: bold;
     color: #302020;
+}
+
+.movie-card {
+    width: 180px;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid #E9DCD5;
+    border-radius: 16px;
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.movie-card p {
+    margin-top: 10px;
+    color: #302020;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
 }
