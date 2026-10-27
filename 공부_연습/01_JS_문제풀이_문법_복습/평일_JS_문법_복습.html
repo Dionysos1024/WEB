@@ -2406,7 +2406,7 @@
     // grade가 "B"이면
     // 좋아요, 조금만 더 복습해요!
 
-        const grade = "B";
+        /* const grade = "B";
 
         let message = "";
 
@@ -2426,7 +2426,175 @@
                 break;
         }
 
-        console.log(message);
+        console.log(message); */
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
+
+
+
+
+
+
+    // 문제 79 : 재고가 적은 상품 찾기
+    // 사용할 개념: 함수, filter(), 객체 속성
+    //
+    // 문법 메모:
+    // filter()는 조건을 만족하는 항목만 모아 새 배열을 반환한다.
+    //
+    // 요구사항:
+    // getLowStockProducts() 함수를 작성한다.
+    // stock이 5 이하인 상품만 반환한다.
+    // 원본 stockList는 수정하지 않는다.
+
+        const stockList = [
+            { name: "텀블러", stock: 12 },
+            { name: "에코백", stock: 4 },
+            { name: "머그컵", stock: 5 },
+            { name: "도시락통", stock: 0 },
+            { name: "보온병", stock: 8 }
+        ];
+
+        // 함수 작성 후 아래 코드로 확인
+        console.log(getLowStockProducts(stockList));
+        console.log(stockList);
+
+    // 첫 번째 출력에 포함되어야 하는 상품:
+    // 에코백, 머그컵, 도시락통
+    //
+    // 원본 stockList는 기존 순서와 재고를 유지해야 한다.
+
+
+
+
+
+
+    // 문제 80 : 일정 금액 이상인 주문 개수 세기
+    // 사용할 개념: 함수, for문, if문, 카운트 변수
+    //
+    // 요구사항:
+    // countLargeOrders() 함수를 작성한다.
+    // total이 10000 이상인 주문의 개수를 반환한다.
+    // filter()는 사용하지 않고 for문과 if문으로 해결한다.
+
+        const orderList80 = [
+            { orderNo: 101, total: 6500 },
+            { orderNo: 102, total: 12000 },
+            { orderNo: 103, total: 18000 },
+            { orderNo: 104, total: 9000 },
+            { orderNo: 105, total: 15000 }
+        ];
+
+        // 함수 작성 후 아래 코드로 확인
+        console.log(countLargeOrders(orderList80));
+
+        // 예상 출력:
+        // 3
+
+
+
+
+
+
+    // 문제 81 : 할인된 상품 정보 만들기
+    // 사용할 개념: 함수, map(), 객체, 산술 연산
+    //
+    // 문법 메모:
+    // map()은 각 항목을 새로운 값으로 변환해 새 배열을 반환한다.
+    //
+    // 요구사항:
+    // makeDiscountList() 함수를 작성한다.
+    // 각 상품의 이름과 10% 할인된 가격을 담은 새 객체를 만든다.
+    // 새 객체의 가격 속성 이름은 discountedPrice로 한다.
+    // 원본 상품 객체와 가격은 수정하지 않는다.
+
+        const productsForDiscount = [
+            { name: "텀블러", price: 12000 },
+            { name: "에코백", price: 8500 },
+            { name: "머그컵", price: 6000 }
+        ];
+
+        // 함수 작성 후 아래 코드로 확인
+        console.log(makeDiscountList(productsForDiscount));
+        console.log(productsForDiscount);
+
+        // 새 배열의 할인 가격:
+        // 텀블러: 10800원
+        // 에코백: 7650원
+        // 머그컵: 5400원
+        //
+        // 원본 배열의 가격은 12000, 8500, 6000으로 유지되어야 한다.
+
+
+
+
+
+
+    // 문제 82 : 상품을 비싼 순서로 정렬하기
+    // 사용할 개념: 함수, 배열 복사, sort(), 비교 함수, 객체 속성
+    //
+    // 문법 메모:
+    // sort()의 비교 함수로 숫자 속성의 정렬 순서를 지정할 수 있다.
+    // 배열을 복사한 뒤 정렬하면 원본 배열을 보존할 수 있다.
+    //
+    // 요구사항:
+    // sortProductsByPrice() 함수를 작성한다.
+    // 가격이 높은 상품부터 낮은 상품 순서로 새 배열을 반환한다.
+    // 원본 productList82의 순서는 변경하지 않는다.
+
+        const productList82 = [
+            { name: "노트", price: 2500 },
+            { name: "파우치", price: 9000 },
+            { name: "펜 세트", price: 4500 },
+            { name: "다이어리", price: 12000 }
+        ];
+
+        // 함수 작성 후 아래 코드로 확인
+        console.log(sortProductsByPrice(productList82));
+        console.log(productList82);
+
+        // 정렬된 순서:
+        // 다이어리 → 파우치 → 펜 세트 → 노트
+        //
+        // 원본 배열의 순서는 그대로 유지되어야 한다.
+
+
+
+
+
+
+    // 문제 83 : 예산에 맞는 첫 번째 상품 찾기
+    // 사용할 개념: 함수, find(), 객체 속성, 비교 연산
+    //
+    // 문법 메모:
+    // find()는 조건을 처음 만족하는 항목 하나를 반환한다.
+    // 조건에 맞는 항목이 없으면 undefined를 반환한다.
+    //
+    // 요구사항:
+    // findAffordableProduct() 함수를 작성한다.
+    // 전달받은 예산 이하인 상품 중 첫 번째 상품을 반환한다.
+    // 상품 목록의 순서를 바꾸지 않는다.
+
+        const catalog83 = [
+            { name: "텀블러", price: 12000 },
+            { name: "초코 쿠키", price: 2500 },
+            { name: "에코백", price: 8500 },
+            { name: "푸딩", price: 4000 }
+        ];
+
+        // 함수 작성 후 아래 코드로 확인
+        console.log(findAffordableProduct(catalog83, 5000));
+        console.log(findAffordableProduct(catalog83, 2000));
+
+        // 첫 번째 호출 결과:
+        // { name: "초코 쿠키", price: 2500 }
+        //
+        // 두 번째 호출 결과:
+        // undefined
     </script>
 </head>
 <body>
