@@ -55,6 +55,13 @@
 
       totalBtn.addEventListener("click", () => {
 
+        quantityInput.value = Number(2500)
+
+        if ( quantityInput === "" )
+            ( resultText.value = resultText * quantityInput.value )
+
+        else
+            resultText.textContent = "수량을 1개 이상 입력해 주세요"
         
 
       })
