@@ -57,15 +57,14 @@
 
         let p = Number(quantityInput.value)
 
-        if ( quantityInput.value === "" )
-            ( resultText.value = resultText * quantityInput.value )
+        if ( quantityInput.value !== "" && p >= 1 )
+            ( resultText.textContent = `금액 : ${2500 * p}원` )
 
         else
             resultText.textContent = "수량을 1개 이상 입력해 주세요"
         
       })
     })
-    
 
   </script>
 
