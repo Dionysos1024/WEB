@@ -2459,8 +2459,9 @@
             { name: "보온병", stock: 8 }
         ];
 
-        // 함수 작성 후 아래 코드로 확인
-        console.log(getLowStockProducts(stockList));
+        let getLowStockProducts = stockList.filter(list => list.stock <= 5)
+
+        console.log(getLowStockProducts);
         console.log(stockList);
 
     // 첫 번째 출력에 포함되어야 하는 상품:
