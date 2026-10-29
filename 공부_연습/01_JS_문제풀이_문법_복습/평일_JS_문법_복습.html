@@ -2553,14 +2553,11 @@
             { name: "다이어리", price: 12000 }
         ];
 
-        // 함수 작성 후 아래 코드로 확인
+        function sortProductsByPrice (productList82) {
+          return [... productList82].sort(( (a, b) => a.price - b.price ))
+        } 
         console.log(sortProductsByPrice(productList82));
         console.log(productList82);
-
-        // 정렬된 순서:
-        // 다이어리 → 파우치 → 펜 세트 → 노트
-        //
-        // 원본 배열의 순서는 그대로 유지되어야 한다.
 
 
 
