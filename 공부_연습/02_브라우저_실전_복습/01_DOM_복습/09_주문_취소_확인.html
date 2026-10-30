@@ -38,6 +38,26 @@
 
   <script>
 
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const cancelBtn = document.getElementById('cancelBtn')
+    const resultText = document.getElementById('resultText')
+
+    cancelBtn.addEventListener("click", () => {
+
+      let result = confirm("주문 취소 하시겠습니까?")
+
+      if ( result == true )
+          resultText.textContent = ("주문 취소가 완료 되었습니다.")
+
+      else
+          resultText.textContent = ("주문 취소를 진행하지 않았습니다.")
+
+      })
+
+    })
+
+      
     
 
   </script>
