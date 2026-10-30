@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 금액 계산</title>
+</head>
+<body>
+    
+<!--
+        [브라우저 실전 11번]
+
+        목표: 상품을 여러 번 담고 장바구니 총액을 관리하는 기능
+
+        요구사항:
+        1. 사과 주스 담기 버튼을 누르면 총액에 3,500원을 추가한다.
+        2. 당근 주스 담기 버튼을 누르면 총액에 2,500원을 추가한다.
+        3. 상품을 담을 때마다 상품 개수도 1개씩 증가한다.
+        4. 상품 개수와 총액을 화면에 갱신한다.
+        5. 장바구니 비우기 버튼을 누르면 상품 개수와 총액을
+            모두 0으로 초기화한다.
+        6. 초기화 후 다시 상품을 담아도 정상 작동해야 한다.
+
+        확인 결과:
+        - 사과 주스 2개 + 당근 주스 1개
+            → 9,500원 / 3개
+        - 장바구니 비우기
+            → 0원 / 0개
+-->
+
+  <h2>나의 장바구니</h2>
+
+  <div>
+    <p>사과 주스 - 3,500원</p>
+    <button id="juiceBtn">담기</button>
+  </div>
+
+  <div>
+    <p>당근 주스 - 2,500원</p>
+    <button id="carrotBtn">담기</button>
+  </div>
+
+  <hr>
+
+  <p>담은 상품 수: <span id="countText">0</span>개</p>
+  <p>총 주문 금액: <span id="totalText">0</span>원</p>
+
+  <button id="resetBtn">장바구니 비우기</button>
+
+  <p id="resultText"></p>
+
+  <script>
+
+  </script>
+
+</body>
+</html>

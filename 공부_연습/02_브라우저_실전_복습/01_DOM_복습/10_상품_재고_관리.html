@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 재고 관리</title>
+</head>
+<body>
+    
+<!--
+        [브라우저 실전 10번]
+
+        목표: 주문 수량에 따라 실제 재고를 차감하는 기능
+
+        요구사항:
+        1. 주문하기 버튼을 누르면 입력한 수량을 확인한다.
+        2. 수량이 비어 있거나 0 이하라면 입력 안내 문구를 표시한다.
+        3. 입력 수량이 현재 재고보다 많으면 재고 부족 메시지를 표시한다.
+        4. 정상 주문이면 재고에서 주문 수량을 차감한다.
+        5. 차감된 재고를 화면에 갱신한다.
+        6. 주문을 여러 번 해도 재고가 누적해서 차감되어야 한다.
+
+        확인 결과:
+        - 재고 8개, 주문 3개 → 재고 5개
+        - 재고 5개, 주문 2개 → 재고 3개
+        - 재고 3개, 주문 5개 → 주문 불가
+-->
+
+
+  <h2>간식 재고 주문</h2>
+
+  <p>상품명: 과일 바구니</p>
+  <p>상품 재고: <span id="stockText">8</span>개</p>
+
+  <input id="quantityInput" type="number" placeholder="주문 수량">
+
+  <button id="orderBtn">주문하기</button>
+
+  <p id="resultText">주문 수량을 입력해 주세요.</p>
+
+  <script>
+
+  </script>
+
+</body>
+</html>
