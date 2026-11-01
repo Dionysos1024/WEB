@@ -122,6 +122,7 @@ header nav .sub-menu > li a:hover {
 
 .slide-container {
     display: flex;
+    flex-direction: column;
     position: relative;
 }
 
