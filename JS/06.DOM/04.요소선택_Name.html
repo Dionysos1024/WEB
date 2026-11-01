@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소선택 - Name</title>
+    <script>
+        // 아직 HTML 요소가 로딩이 안되어서
+        // 문서 준비 이벤트가 필요함!
+    </script>
+</head>
+<body>
+    <h1 id="text">안녕하세요</h1>
+    <textarea name="input" rows="5" color="40" placeholder="입력해보세요!"></textarea>
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", () => {})
+        const inputs = document.getElementsByName("input")
+        const input = inputs[0]
+
+        // 키 입력 이벤트
+        input.addEventListener("keyup", (event) => {
+            const $text = document.getElementById("text")
+            $text.textContent = input.value
+            // <textarea> 에 키보드르르 입력할때마다 입력된 값을 가져와서
+            // <h1> 태그의 텍스트로 지정해준다.
+        })
+    </script>
+</body>
+</html>
