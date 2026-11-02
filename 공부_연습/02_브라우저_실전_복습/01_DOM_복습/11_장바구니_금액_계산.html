@@ -67,15 +67,21 @@
         count.textContent = countNum
         total.textContent = totalNum
       })
+
       carrotBtn.addEventListener("click", () => {
         countNum = countNum + 1
         totalNum = 2500 + totalNum
         count.textContent = countNum
         total.textContent = totalNum
       })
+
       resetBtn.addEventListener("click", () => {
-        
+        count.textContent = 0
+        total.textContent = 0
+        countNum = 0
+        totalNum = 0
       })
+
     })
   </script>
 
