@@ -57,17 +57,21 @@
       const count = document.getElementById('countText')
       const total = document.getElementById('totalText')
       const resetBtn = document.getElementById('resetBtn')
-      const result = document.getElementById('resultText')
 
       let countNum = 0
       let totalNum = 0
 
       juiceBtn.addEventListener("click", () => {
-        countNum + 1
-        
+        countNum = countNum + 1
+        totalNum = 3500 + totalNum
+        count.textContent = countNum
+        total.textContent = totalNum
       })
       carrotBtn.addEventListener("click", () => {
-        countNum + 1
+        countNum = countNum + 1
+        totalNum = 2500 + totalNum
+        count.textContent = countNum
+        total.textContent = totalNum
       })
       resetBtn.addEventListener("click", () => {
         
