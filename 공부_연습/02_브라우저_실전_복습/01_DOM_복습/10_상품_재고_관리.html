@@ -39,7 +39,30 @@
   <p id="resultText">주문 수량을 입력해 주세요.</p>
 
   <script>
+    document.addEventListener("DOMContentLoaded", () => {
 
+      const stockText = document.getElementById('stockText')
+      const input = document.getElementById('quantityInput')
+      const result = document.getElementById('resultText')
+      const orderBtn = document.getElementById('orderBtn')
+
+      orderBtn.addEventListener("click", () => {
+
+        const quantity = Number(input.value)
+        const stock = Number(stockText.textContent)
+
+        if ( quantity <= 0 )
+            ( result.textContent = "수량을 입력 해주세요" )
+
+        else if ( quantity > stock )
+                ( result.textContent = "재고 부족 입니다" )
+
+        else {
+              ( stockText.textContent = stock - quantity )
+              ( result.textContent = " 주문이 완료 되었습니다." )
+            }
+      })
+    })
   </script>
 
 </body>
