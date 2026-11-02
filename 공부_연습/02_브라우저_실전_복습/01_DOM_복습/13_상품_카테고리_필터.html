@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품 카테고리 필터</title>
+</head>
+<body>
+
+<!--
+        [브라우저 실전 13번]
+
+        목표: 상품 목록에서 원하는 카테고리만 화면에 표시하기
+
+        요구사항:
+        1. 음료만 보기 버튼을 누르면 음료 상품만 표시한다.
+        2. 간식만 보기 버튼을 누르면 간식 상품만 표시한다.
+        3. 전체 보기 버튼을 누르면 모든 상품을 다시 표시한다.
+        4. 상품을 표시하거나 숨길 때마다 현재 표시된 상품 개수를 갱신한다.
+        5. 상품 목록을 직접 하나씩 선택하지 말고 반복문으로 처리한다.
+
+        새롭게 활용할 내용:
+        - getElementsByTagName()
+        - HTMLCollection의 length와 인덱스 접근
+        - 반복문과 조건문
+        - 요소의 style.display 변경
+
+        확인 결과:
+        - 음료만 보기 → 3개
+        - 간식만 보기 → 3개
+        - 전체 보기 → 6개
+-->
+
+  <h2>상품 목록</h2>
+
+  <button id="drinkBtn">음료만 보기</button>
+  <button id="snackBtn">간식만 보기</button>
+  <button id="allBtn">전체 보기</button>
+
+  <p id="countText">현재 표시 상품: 6개</p>
+
+  <ul id="productList">
+    <li><span>음료</span> 사과 주스</li>
+    <li><span>간식</span> 초코 쿠키</li>
+    <li><span>음료</span> 당근 주스</li>
+    <li><span>간식</span> 감자칩</li>
+    <li><span>음료</span> 딸기 주스</li>
+    <li><span>간식</span> 치즈 케이크</li>
+  </ul>
+
+  <script>
+
+  </script>
+
+</body>
+</html>
