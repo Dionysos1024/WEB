@@ -50,7 +50,29 @@
   <p id="resultText"></p>
 
   <script>
+    document.addEventListener("DOMContentLoaded", () => {
 
+      const juiceBtn = document.getElementById('juiceBtn')
+      const carrotBtn = document.getElementById('carrotBtn')
+      const count = document.getElementById('countText')
+      const total = document.getElementById('totalText')
+      const resetBtn = document.getElementById('resetBtn')
+      const result = document.getElementById('resultText')
+
+      let countNum = 0
+      let totalNum = 0
+
+      juiceBtn.addEventListener("click", () => {
+        countNum + 1
+        
+      })
+      carrotBtn.addEventListener("click", () => {
+        countNum + 1
+      })
+      resetBtn.addEventListener("click", () => {
+        
+      })
+    })
   </script>
 
 </body>
