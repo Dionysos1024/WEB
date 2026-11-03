@@ -44,27 +44,26 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-
       const Input = document.getElementById('reviewInput')
       const Btn = document.getElementById('addReviewBtn')
       const Count = document.getElementById('reviewCount')
       const List = document.getElementById('reviewList')
       const result = document.getElementById('resultText')
+      let countNum = 0
 
       Btn.addEventListener("click", () => {
-
         const review = Input.value.trim()
 
         if ( review ) {
-
           const newReview = document.createElement("li")
-          
-          ( newReview.textContent = review.value )
+          List.appendChild(newReview) 
+          ( newReview.textContent = review )
+          countNum = countNum + 1
         }
-
         else
          result.textContent = "리뷰를 등록 해주세요"
-      })
+
+        })
     })
   </script>
 
