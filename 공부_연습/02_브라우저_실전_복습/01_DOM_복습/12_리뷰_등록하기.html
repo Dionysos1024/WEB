@@ -56,9 +56,11 @@
 
         if ( review ) {
           const newReview = document.createElement("li")
-          List.appendChild(newReview) 
-          ( newReview.textContent = review )
+          newReview.textContent = review
+          List.appendChild(newReview)
           countNum = countNum + 1
+          Count.textContent = countNum
+          Input.value = ""
         }
         else
          result.textContent = "리뷰를 등록 해주세요"
