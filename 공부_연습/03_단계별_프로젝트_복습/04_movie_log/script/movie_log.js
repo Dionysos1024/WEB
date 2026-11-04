@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const wantList = document.getElementById('wantList')
     const watchedList = document.getElementById('watchedList')
     const movielist = document.getElementById('movielist')
+    const wantEmpty = document.getElementById('wantEmpty')
     const movies = [
     { title: '라라 랜드',
         image: 'https://placehold.co/180x240?text=La+La+Land' },
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         list.textContent = Element.title
         img.src = Element.image
         button.textContent = "보고 싶어요"
-
+        
         div.appendChild(img)
         div.appendChild(list)
         movielist.appendChild(div)
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         li.textContent = Element.title
         Btn.textContent = "감상 완료"
         deletBtn.textContent = "삭제"
+        wantEmpty.style.display = "none"
 
         wantList.appendChild(li)
         li.appendChild(Btn)
@@ -46,7 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
         deletBtn.addEventListener("click", () => {
 
             li.remove()
-            
+
+            if ( wantList.children.length === 0 )
+                wantEmpty.style.display = ""
             })
         })
     });
