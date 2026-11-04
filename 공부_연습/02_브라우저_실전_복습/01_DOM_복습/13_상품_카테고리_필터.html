@@ -61,23 +61,24 @@
       const productList = document.getElementsByTagName('li')
 
       function category (desser) {
-
         for (let item = 0; item < productList.length; item++) {
-
           let categoryText = productList[item].querySelector("span")
           let span = categoryText.textContent
-
           if ( span === desser || desser === "전체" ) {
             productList[item].style.display = ""
           }
-
           else
             productList[item].style.display = "none"
         }
       }
-
       drinkBtn.addEventListener("click", () => {
-        
+        category("음료")
+      })
+      snackBtn.addEventListener("click", () => {
+        category("간식")
+      })
+      allBtn.addEventListener("click", () => {
+        category("전체")
       })
     })
   </script>
