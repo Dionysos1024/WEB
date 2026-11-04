@@ -52,6 +52,25 @@
 
   <script>
 
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const drinkBtn = document.getElementById('drinkBtn')
+      const snackBtn = document.getElementById('snackBtn')
+      const allBtn = document.getElementById('allBtn')
+      const countText = document.getElementById('countText')
+      const productList = document.getElementsByTagName('li')
+
+      function category (desser) {
+
+        for (let item = 0; item < productList.length; item++) {
+          
+          let categoryText = productList[item].querySelector("span")
+          let span = categoryText.textContent
+
+          if (  )
+        }
+      }
+    })
   </script>
 
 </body>
