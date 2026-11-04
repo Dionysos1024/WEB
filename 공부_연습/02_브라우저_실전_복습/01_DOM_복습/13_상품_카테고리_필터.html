@@ -63,13 +63,22 @@
       function category (desser) {
 
         for (let item = 0; item < productList.length; item++) {
-          
+
           let categoryText = productList[item].querySelector("span")
           let span = categoryText.textContent
 
-          if (  )
+          if ( span === desser || desser === "전체" ) {
+            productList[item].style.display = ""
+          }
+
+          else
+            productList[item].style.display = "none"
         }
       }
+
+      drinkBtn.addEventListener("click", () => {
+        
+      })
     })
   </script>
 
