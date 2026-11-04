@@ -61,16 +61,27 @@
       const productList = document.getElementsByTagName('li')
 
       function category (desser) {
+
+        let count = 0
+
         for (let item = 0; item < productList.length; item++) {
+
           let categoryText = productList[item].querySelector("span")
           let span = categoryText.textContent
+
           if ( span === desser || desser === "전체" ) {
             productList[item].style.display = ""
+            count = count + 1
+            
           }
           else
             productList[item].style.display = "none"
         }
+
+          countText.textContent = `현재 표시 상품 : ${count}개`
+
       }
+
       drinkBtn.addEventListener("click", () => {
         category("음료")
       })
@@ -80,6 +91,7 @@
       allBtn.addEventListener("click", () => {
         category("전체")
       })
+
     })
   </script>
 
