@@ -60,7 +60,24 @@
   </ul>
 
   <script>
+    const searchInput = document.getElementById('searchInput')
+    const searchBtn = document.getElementById('searchBtn')
+    const allBtn = document.getElementById('allBtn')
+    const resultText = document.getElementById('resultText')
+    const productList = document.getElementsByTagName('li')
 
+    searchBtn.addEventListener("click", () => {
+      let searchText = searchInput.value
+      if ( searchText === "" ) {
+          resultText.textContent = "검색어 를 입력해주세요"
+      }
+      else
+        for (let item = 0; item < productList.length; item++) {
+          
+          let 
+          
+        }
+    })
   </script>
 
 </body>
