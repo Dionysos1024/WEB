@@ -78,22 +78,37 @@
 
       for (let item = 0; item < productList.length; item++) {
           
-        let productText = productList[item].textContent
+      let productText = productList[item].textContent
           
-        if ( productText.includes(searchText) ) {
-          productList[item].style.display = ""
-          count = count + 1
-        }
-
-        else
-        productList[item].style.display = "none"
-  
+      if ( productText.includes(searchText) ) {
+        productList[item].style.display = ""
+        count = count + 1
       }
 
+      else
+      productList[item].style.display = "none"
+    }
+
+      if ( count === 0 )
       resultText.textContent = ` 검색 결과가 없습니다. `
+
+      else
+        resultText.textContent = `${count}`
 
       }
     })
+
+    allBtn.addEventListener("click", () => {
+
+      for (let i = 0; i < productList.length; i++) {
+      
+        productList[i].style.display = ""
+        
+      }
+        resultText.textContent = ""
+        searchInput.value = ""
+    })
+    
   </script>
 
 </body>
