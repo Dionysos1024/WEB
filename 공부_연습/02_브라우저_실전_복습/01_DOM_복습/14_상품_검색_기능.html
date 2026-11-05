@@ -67,16 +67,32 @@
     const productList = document.getElementsByTagName('li')
 
     searchBtn.addEventListener("click", () => {
+
+      let count = 0
       let searchText = searchInput.value
+
       if ( searchText === "" ) {
           resultText.textContent = "검색어 를 입력해주세요"
       }
-      else
-        for (let item = 0; item < productList.length; item++) {
+      else {
+
+      for (let item = 0; item < productList.length; item++) {
           
-          let 
+        let productText = productList[item].textContent
           
+        if ( productText.includes(searchText) ) {
+          productList[item].style.display = ""
+          count = count + 1
         }
+
+        else
+        productList[item].style.display = "none"
+  
+      }
+
+      resultText.textContent = ` 검색 결과가 없습니다. `
+
+      }
     })
   </script>
 
