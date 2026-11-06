@@ -75,15 +75,10 @@
             { name: "푸딩", price: 4000, stock: 2 }
         ];
 
-    // findAvailableProduct() 함수를 만들어라.
-    //
-    // 1. 전달받은 최대 가격 이하인 상품을 찾는다.
-    // 2. 재고가 1개 이상인 상품만 찾는다.
-    // 3. 조건에 맞는 첫 번째 상품을 반환한다.
-    // 4. 조건에 맞는 상품이 없으면 undefined를 반환한다.
-    //
-    // 실행 결과를 console.log()로 확인한다.
-    // 최대 가격을 다르게 전달하여 결과를 확인한다.
+        function findAvailableProduct (productList03, maxPrice) {
+           return productList03.find ( productList03 => productList03.price <= maxPrice && productList03.stock >= 1 )
+        }   console.log(findAvailableProduct(productList03, 5000));
+        
 
     </script>
 </body>
