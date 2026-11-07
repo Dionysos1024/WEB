@@ -1,0 +1,79 @@
+@charset 'UTF-8';
+
+.page-main {
+    padding: 50px 0 100px;
+}
+
+.page-main h2 {
+    color: #2d3142;
+    text-align: center;
+    margin: 0 0 40px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+/* 회원 카드 그리드 레이아웃 */
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 976px;
+    margin: 0 auto;
+}
+
+.member-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(45, 49, 66, 0.08);
+    transition: box-shadow 0.2s ease;
+}
+
+.member-card .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e6e8f5;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.member-card .name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #2d3142;
+}
+
+.member-card .role {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #9a9ea9;
+}
+
+.member-card .tag {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6c63ff;
+    background-color: #e6e8f5;
+    border-radius: 20px;
+}
+
+.member-card .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff9f1c;
+    border-radius: 50%;
+}

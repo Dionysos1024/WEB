@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실전 예제 - 회원 카드 스타일 적용하기</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/02.css.css">
+
+  <script src="js/jquery-4.0.0.min.js"></script>
+  <script src="js/02.css.js"></script>
+</head>
+<body>
+  <header class="page-header" role="banner">
+    <img src="img/logo.png" alt="">
+    <h1>회원 관리 대시보드</h1>
+  </header>
+
+  <div class="page-main" role="main">
+    <h2>jQuery css() 로 회원 카드 상태 표시하기</h2>
+
+    <div class="member-grid">
+
+      <!-- 단일 스타일 지정 : css('color', '값') -->
+      <div class="member-card" id="member1">
+        <img class="avatar" src="img/logo.png" alt="">
+        <p class="name">김아로하</p>
+        <p class="role">신규 회원</p>
+        <span class="tag">NEW</span>
+      </div>
+
+      <!-- 단일 스타일 지정 : css('transform', '값') -->
+      <div class="member-card" id="member2">
+        <img class="avatar" src="img/logo.png" alt="">
+        <p class="name">이클래스</p>
+        <p class="role">인기 회원</p>
+        <span class="badge">★</span>
+      </div>
+
+      <!-- 단일 스타일 지정 : css('opacity', '값') -->
+      <div class="member-card" id="member3">
+        <img class="avatar" src="img/logo.png" alt="">
+        <p class="name">박휴면</p>
+        <p class="role">휴면 회원</p>
+        <span class="tag">OFF</span>
+      </div>
+
+      <!-- 여러 스타일 지정(객체, 케밥케이스) : css({ '속성' : '값' }) -->
+      <div class="member-card" id="member4">
+        <img class="avatar" src="img/logo.png" alt="">
+        <p class="name">최프리미엄</p>
+        <p class="role">프리미엄 회원</p>
+        <span class="badge">P</span>
+      </div>
+
+      <!-- 여러 스타일 지정(객체, 카멜케이스) : css({ 속성 : '값' }) -->
+      <div class="member-card" id="member5">
+        <img class="avatar" src="img/logo.png" alt="">
+        <p class="name">정브이아이피</p>
+        <p class="role">VIP 회원</p>
+        <span class="badge">VIP</span>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer" role="contentinfo">
+    Copyright © 2026 ALOHA CLASS .co.,Ltd. All rights reserved.
+  </footer>
+</body>
+</html>
