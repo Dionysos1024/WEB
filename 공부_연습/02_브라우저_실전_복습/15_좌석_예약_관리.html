@@ -62,7 +62,37 @@
   <button id="resetBtn">전체 초기화</button>
 
   <script>
-
+    const seatArea = document.getElementById('seatArea')
+    const seatBtn = seatArea.getElementsByTagName('button')
+    const bookedText = document.getElementById('bookedText')
+    const remainText = document.getElementById('remainText')
+    const resetBtn = document.getElementById('resetBtn')  
+    let count = 0
+    for (let result = 0; result < seatBtn.length; result++) {   
+      seatBtn[result].addEventListener("click", () => {
+        if ( seatBtn[result].textContent === "예약 가능") {
+          count = count + 1
+          seatBtn[result].textContent = "예약 완료"
+          seatBtn[result].style.backgroundColor = "blue"
+        }
+        else {
+          count = count - 1
+          seatBtn[result].textContent = "예약 가능"
+          seatBtn[result].style.backgroundColor = ""
+        }
+        bookedText.textContent = `예약된 좌석: ${count}개`
+        remainText.textContent = `남은 좌석: ${5 - count}개`
+      })
+    }
+    resetBtn.addEventListener("click", () => {
+      for (let re = 0; re < seatBtn.length; re++) {
+        seatBtn[re].textContent = "예약 가능"
+        seatBtn[re].style.backgroundColor = ""
+      }
+        count = 0
+        bookedText.textContent = `예약된 좌석: 0개`
+        remainText.textContent = `남은 좌석: 5개`
+    })
   </script>
 
 </body>
