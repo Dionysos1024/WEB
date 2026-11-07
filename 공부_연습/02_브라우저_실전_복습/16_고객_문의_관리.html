@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고객 문의 관리</title>
+</head>
+<body>
+
+<!--
+        [브라우저 실전 16번]
+
+        목표: 고객 문의를 등록하고 처리 상태를 관리하기
+
+        요구사항:
+
+        1. 문의 정보를 입력하고 새로운 문의를 등록한다.
+        2. 이름 또는 문의 내용이 비어 있으면 등록하지 않는다.
+        3. 등록된 문의는 목록에 하나씩 추가한다.
+        4. 각 문의에는 이름, 문의 종류, 문의 내용,
+           처리 상태가 표시되어야 한다.
+        5. 새로 등록된 문의의 기본 상태는 답변 대기다.
+
+        6. 각 문의의 처리 버튼을 누르면 처리 완료로 변경한다.
+        7. 처리 완료 버튼을 다시 누르면 답변 대기로 변경한다.
+        8. 삭제 버튼을 누르면 해당 문의만 삭제한다.
+
+        9. 전체 문의 수를 화면에 표시한다.
+        10. 답변 대기와 처리 완료 문의 수도 표시한다.
+        11. 문의 추가, 상태 변경, 삭제 시 현황을 갱신한다.
+
+        12. 문의가 없으면 안내 문구를 표시한다.
+        13. 문의가 등록되면 안내 문구를 숨긴다.
+        14. 등록 완료 후 입력창을 초기화한다.
+
+        구현 조건:
+        - createElement()
+        - appendChild()
+        - addEventListener()
+        - textContent
+        - value
+        - if / else
+        - 함수와 변수
+        - 개별 요소 삭제
+        - 동적 요소에 이벤트 등록하기
+
+        확인 결과:
+        - 문의 2개 등록 → 전체 2건
+        - 1개 완료 처리 → 대기 1건 / 완료 1건
+        - 완료 상태를 다시 대기로 변경
+        - 문의 1개 삭제 → 전체 1건
+        - 전부 삭제 → 빈 목록 안내 표시
+-->
+
+  <h2>고객 문의 관리</h2>
+
+  <div>
+    <h3>문의 등록</h3>
+
+    <p>
+      이름:
+      <input type="text" id="nameInput" placeholder="이름 입력">
+    </p>
+
+    <p>
+      문의 종류:
+      <select id="categorySelect">
+        <option value="">문의 종류 선택</option>
+        <option value="상품 문의">상품 문의</option>
+        <option value="배송 문의">배송 문의</option>
+        <option value="기타 문의">기타 문의</option>
+      </select>
+    </p>
+
+    <p>
+      문의 내용:
+      <textarea id="messageInput" placeholder="문의 내용을 입력하세요"></textarea>
+    </p>
+
+    <button id="addBtn">문의 등록</button>
+    <p id="formMessage"></p>
+  </div>
+
+  <hr>
+
+  <h3>문의 현황</h3>
+
+  <p id="totalText">전체 문의: 0건</p>
+  <p id="waitingText">답변 대기: 0건</p>
+  <p id="doneText">처리 완료: 0건</p>
+
+  <hr>
+
+  <h3>문의 목록</h3>
+
+  <p id="emptyText">등록된 문의가 없습니다.</p>
+
+  <ul id="inquiryList"></ul>
+
+  <script>
+
+  </script>
+
+</body>
+</html>

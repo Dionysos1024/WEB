@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>학습 자료실</title>
+</head>
+<body>
+
+<!--
+        [브라우저 실전 17번]
+
+        목표: 학습 자료 검색, 분류, 즐겨찾기 관리
+
+        요구사항:
+
+        1. 자료실의 자료 6개를 화면에 표시한다.
+        2. 각 자료에는 종류, 제목, 설명이 표시되어야 한다.
+
+        3. 검색창에 입력한 제목을 기준으로 자료를 검색한다.
+        4. 자료 종류를 선택하여 해당 자료만 표시한다.
+        5. 검색어와 자료 종류는 동시에 적용되어야 한다.
+        6. 검색어가 비어 있으면 검색어 조건은 적용하지 않는다.
+
+        7. 각 자료의 즐겨찾기 버튼을 누르면 등록한다.
+        8. 다시 누르면 즐겨찾기를 해제한다.
+        9. 즐겨찾기만 보기 버튼으로 등록된 자료만 표시한다.
+        10. 즐겨찾기 필터와 검색 및 종류 필터는 함께 적용한다.
+
+        11. 현재 표시된 자료 수를 화면에 표시한다.
+        12. 전체 즐겨찾기 자료 수를 화면에 표시한다.
+        13. 검색 결과가 없으면 안내 문구를 표시한다.
+
+        14. 전체 초기화 버튼을 누르면 검색 조건을 초기화한다.
+        15. 전체 자료와 즐겨찾기 상태는 유지한다.
+
+        구현 조건:
+        - getElementsByTagName()
+        - querySelector()
+        - includes()
+        - 반복문
+        - if / else
+        - 비교 및 논리 연산자
+        - 함수 재사용
+        - 변수로 현재 필터 상태 관리
+        - textContent와 style 변경
+
+        확인 결과:
+        - 개발 분야 선택 → 개발 자료만 표시
+        - JavaScript 검색 + 개발 분야 → 2개 표시
+        - 즐겨찾기 2개 등록 → 즐겨찾기 2개
+        - 즐겨찾기만 보기 → 2개 표시
+        - 검색 조건과 즐겨찾기 조건이 일치하지 않으면 결과 없음
+        - 전체 초기화 → 자료 6개 표시
+
+        주의:
+        검색, 자료 종류, 즐겨찾기 조건을
+        각각 따로 처리하는 것이 아니라 함께 적용해야 한다.
+-->
+
+  <h2>학습 자료실</h2>
+
+  <div>
+    <input type="text" id="searchInput" placeholder="자료 제목 검색">
+
+    <select id="categorySelect">
+      <option value="">전체 종류</option>
+      <option value="개발">개발</option>
+      <option value="디자인">디자인</option>
+      <option value="문서">문서</option>
+    </select>
+
+    <button id="applyBtn">검색 및 필터 적용</button>
+    <button id="favoriteOnlyBtn">즐겨찾기만 보기</button>
+    <button id="resetBtn">전체 초기화</button>
+  </div>
+
+  <hr>
+
+  <p id="visibleText">표시 자료: 6개</p>
+  <p id="favoriteText">즐겨찾기 자료: 0개</p>
+  <p id="noResultText" style="display: none;">검색 결과가 없습니다.</p>
+
+  <ul id="resourceList">
+
+    <li>
+      <span class="resourceCategory">개발</span>
+      <h3 class="resourceTitle">JavaScript 기초 문법</h3>
+      <p>변수, 조건문, 반복문 학습 자료</p>
+      <button class="favoriteBtn">즐겨찾기 추가</button>
+    </li>
+
+    <li>
+      <span class="resourceCategory">개발</span>
+      <h3 class="resourceTitle">JavaScript 배열 활용</h3>
+      <p>배열과 반복문 응용 자료</p>
+      <button class="favoriteBtn">즐겨찾기 추가</button>
+    </li>
+
+    <li>
+      <span class="resourceCategory">개발</span>
+      <h3 class="resourceTitle">React 입문</h3>
+      <p>컴포넌트 기반 프론트엔드 학습 자료</p>
+      <button class="favoriteBtn">즐겨찾기 추가</button>
+    </li>
+
+    <li>
+      <span class="resourceCategory">디자인</span>
+      <h3 class="resourceTitle">CSS 레이아웃</h3>
+      <p>Flexbox와 Grid 학습 자료</p>
+      <button class="favoriteBtn">즐겨찾기 추가</button>
+    </li>
+
+    <li>
+      <span class="resourceCategory">디자인</span>
+      <h3 class="resourceTitle">반응형 웹 디자인</h3>
+      <p>화면 크기에 따른 웹페이지 구성</p>
+      <button class="favoriteBtn">즐겨찾기 추가</button>
+    </li>
+
+    <li>
+      <span class="resourceCategory">문서</span>
+      <h3 class="resourceTitle">프로젝트 체크리스트</h3>
+      <p>웹 프로젝트 진행 단계 정리</p>
+      <button class="favoriteBtn">즐겨찾기 추가</button>
+    </li>
+
+  </ul>
+
+  <script>
+
+  </script>
+
+</body>
+</html>

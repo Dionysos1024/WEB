@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>온라인 주문 관리</title>
+</head>
+<body>
+
+<!--
+        [브라우저 실전 18번]
+
+        목표: 여러 상품의 주문 금액과 최종 결제 금액 계산하기
+
+        요구사항:
+
+        1. 상품 목록에서 각 상품의 주문 수량을 입력한다.
+        2. 주문 계산 버튼을 누르면 상품별 금액을 계산한다.
+        3. 각 상품 금액은 상품 가격과 주문 수량을 곱해서 계산한다.
+        4. 상품 수량이 0이면 해당 상품 금액도 0원이다.
+
+        5. 모든 상품 금액을 합산한다.
+        6. 전체 주문 수량을 합산한다.
+        7. 상품 금액 합계와 주문 수량을 화면에 표시한다.
+
+        8. 상품 금액 합계가 30,000원 미만이면 배송비 3,000원
+        9. 상품 금액 합계가 30,000원 이상이면 무료 배송
+        10. 전체 주문 수량이 0이면 배송비도 0원으로 처리한다.
+        11. 최종 결제 금액을 화면에 표시한다.
+
+        12. 전체 초기화 버튼을 누르면 모든 수량을 0으로 변경한다.
+        13. 상품별 금액과 주문 현황도 초기화한다.
+        14. 초기화 후 다시 주문 계산이 정상 작동해야 한다.
+
+        입력 조건:
+        - 수량은 0 이상의 정수
+        - 빈 수량은 0으로 처리
+        - 음수 수량은 허용하지 않는다.
+
+        구현 조건:
+        - getElementsByTagName()
+        - querySelector()
+        - Number()
+        - value와 textContent
+        - 반복문
+        - if / else
+        - 누적 계산 변수
+        - 함수로 계산 및 초기화 기능 분리
+
+        확인 결과:
+        - 텀블러 1개 + 노트 2개 → 상품 합계 19,000원
+        - 배송비 3,000원 → 최종 22,000원
+        - 텀블러 3개 → 상품 합계 36,000원 / 무료 배송
+        - 전체 수량 0개 → 최종 0원
+        - 전체 초기화 후 재계산 → 정상 작동
+
+        참고:
+        상품 가격은 계산에 사용할 수 있도록 숫자만 표시한다.
+-->
+
+  <h2>온라인 주문</h2>
+
+  <h3>상품 목록</h3>
+
+  <ul id="productList">
+
+    <li class="productItem">
+      <h3>텀블러</h3>
+      <p>가격: <span class="productPrice">12000</span>원</p>
+      <p>
+        주문 수량:
+        <input type="number" class="quantityInput" min="0" step="1" value="0">
+      </p>
+      <p>상품 금액: <span class="itemTotal">0</span>원</p>
+    </li>
+
+    <li class="productItem">
+      <h3>노트</h3>
+      <p>가격: <span class="productPrice">3500</span>원</p>
+      <p>
+        주문 수량:
+        <input type="number" class="quantityInput" min="0" step="1" value="0">
+      </p>
+      <p>상품 금액: <span class="itemTotal">0</span>원</p>
+    </li>
+
+    <li class="productItem">
+      <h3>펜 세트</h3>
+      <p>가격: <span class="productPrice">5000</span>원</p>
+      <p>
+        주문 수량:
+        <input type="number" class="quantityInput" min="0" step="1" value="0">
+      </p>
+      <p>상품 금액: <span class="itemTotal">0</span>원</p>
+    </li>
+
+    <li class="productItem">
+      <h3>파우치</h3>
+      <p>가격: <span class="productPrice">9000</span>원</p>
+      <p>
+        주문 수량:
+        <input type="number" class="quantityInput" min="0" step="1" value="0">
+      </p>
+      <p>상품 금액: <span class="itemTotal">0</span>원</p>
+    </li>
+
+  </ul>
+
+  <button id="calculateBtn">주문 금액 계산</button>
+  <button id="resetBtn">전체 초기화</button>
+
+  <hr>
+
+  <h3>주문 현황</h3>
+
+  <p id="quantityText">전체 주문 수량: 0개</p>
+  <p id="subtotalText">상품 금액 합계: 0원</p>
+  <p id="shippingText">배송비: 0원</p>
+  <p id="finalText">최종 결제 금액: 0원</p>
+
+  <p id="messageText"></p>
+
+  <script>
+
+  </script>
+
+</body>
+</html>
